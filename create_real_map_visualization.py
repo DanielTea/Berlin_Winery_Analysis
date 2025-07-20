@@ -40,9 +40,9 @@ def create_real_berlin_wineries_map():
     )
     
     # Add different tile layers for user choice
-    folium.TileLayer('cartodbpositron', name='CartoDB Positron').add_to(m)
-    folium.TileLayer('cartodbdark_matter', name='CartoDB Dark').add_to(m)
-    folium.TileLayer('stamenterrain', name='Terrain').add_to(m)
+    folium.TileLayer('cartodbpositron', name='CartoDB Positron', attr='© CartoDB').add_to(m)
+    folium.TileLayer('cartodbdark_matter', name='CartoDB Dark', attr='© CartoDB').add_to(m)
+    folium.TileLayer('stamenterrain', name='Terrain', attr='© Stamen Design').add_to(m)
     
     # Prepare data for heatmap
     heat_data = [[row['latitude'], row['longitude']] for idx, row in df_berlin.iterrows()]
