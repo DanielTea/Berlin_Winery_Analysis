@@ -1,0 +1,4310 @@
+[
+  {
+    "id": 370449039,
+    "type": "node",
+    "name": "Weinladen Schmidt",
+    "latitude": 52.5077329,
+    "longitude": 13.3099406,
+    "amenity": "",
+    "shop": "wine",
+    "craft": "",
+    "address": {
+      "street": "Pestalozzistraße",
+      "housenumber": "85",
+      "postcode": "10625",
+      "city": "Berlin"
+    },
+    "contact": {
+      "phone": "+49 30 200039558",
+      "website": "",
+      "email": ""
+    },
+    "opening_hours": "Mo,Su off; Tu-Th 11:00-20:00; Fr 11:00-21:00; Sa 10:00-21:00",
+    "description": "",
+    "wine_types": "retail",
+    "all_tags": {
+      "addr:city": "Berlin",
+      "addr:country": "DE",
+      "addr:housenumber": "85",
+      "addr:postcode": "10625",
+      "addr:street": "Pestalozzistraße",
+      "addr:suburb": "Charlottenburg",
+      "bar": "yes",
+      "check_date": "2023-02-19",
+      "contact:website": "https://weinladen.com/weinhandlung/charlottenburg/",
+      "drink:wine": "retail",
+      "name": "Weinladen Schmidt",
+      "opening_hours": "Mo,Su off; Tu-Th 11:00-20:00; Fr 11:00-21:00; Sa 10:00-21:00",
+      "phone": "+49 30 200039558",
+      "shop": "wine",
+      "wheelchair": "no"
+    }
+  },
+  {
+    "id": 476155707,
+    "type": "node",
+    "name": "Köpenicker Weinladen",
+    "latitude": 52.5026652,
+    "longitude": 13.4392338,
+    "amenity": "",
+    "shop": "wine",
+    "craft": "",
+    "address": {
+      "street": "Köpenicker Straße",
+      "housenumber": "8",
+      "postcode": "10997",
+      "city": "Berlin"
+    },
+    "contact": {
+      "phone": "",
+      "website": "",
+      "email": ""
+    },
+    "opening_hours": "Mo-Fr 11:00-19:30; Sa 10:00-14:00",
+    "description": "",
+    "wine_types": "retail",
+    "all_tags": {
+      "addr:city": "Berlin",
+      "addr:country": "DE",
+      "addr:housenumber": "8",
+      "addr:postcode": "10997",
+      "addr:street": "Köpenicker Straße",
+      "addr:suburb": "Kreuzberg",
+      "check_date:opening_hours": "2025-05-13",
+      "contact:phone": "+49 30 6119009",
+      "contact:website": "https://www.koepenicker-weinladen.de/",
+      "drink:wine": "retail",
+      "name": "Köpenicker Weinladen",
+      "opening_hours": "Mo-Fr 11:00-19:30; Sa 10:00-14:00",
+      "shop": "wine",
+      "wheelchair": "no"
+    }
+  },
+  {
+    "id": 496275215,
+    "type": "node",
+    "name": "Antik Wein",
+    "latitude": 52.5184441,
+    "longitude": 13.43252,
+    "amenity": "",
+    "shop": "wine",
+    "craft": "",
+    "address": {
+      "street": "Karl-Marx-Allee",
+      "housenumber": "67",
+      "postcode": "10243",
+      "city": "Berlin"
+    },
+    "contact": {
+      "phone": "+49 30 25563300",
+      "website": "https://www.antikwein.de/",
+      "email": "info@antikwein.de"
+    },
+    "opening_hours": "Mo-Th 11:00-18:00; Fr 11:00-19:00",
+    "description": "",
+    "wine_types": "",
+    "all_tags": {
+      "addr:city": "Berlin",
+      "addr:housenumber": "67",
+      "addr:postcode": "10243",
+      "addr:street": "Karl-Marx-Allee",
+      "check_date": "2025-03-08",
+      "check_date:opening_hours": "2025-03-08",
+      "email": "info@antikwein.de",
+      "name": "Antik Wein",
+      "opening_hours": "Mo-Th 11:00-18:00; Fr 11:00-19:00",
+      "operator": "Johannes Gibbels",
+      "payment:american_express": "yes",
+      "payment:cash": "yes",
+      "payment:credit_cards": "yes",
+      "payment:maestro": "yes",
+      "payment:mastercard": "yes",
+      "payment:visa": "yes",
+      "phone": "+49 30 25563300",
+      "shop": "wine",
+      "source": "local knowledge",
+      "start_date": "01.12.2016",
+      "toilets:wheelchair": "yes",
+      "website": "https://www.antikwein.de/",
+      "wheelchair": "limited"
+    }
+  },
+  {
+    "id": 534876458,
+    "type": "node",
+    "name": "Jacques' Wein-Depot",
+    "latitude": 52.4863287,
+    "longitude": 13.2970244,
+    "amenity": "",
+    "shop": "wine",
+    "craft": "",
+    "address": {
+      "street": "Hohenzollerndamm",
+      "housenumber": "58",
+      "postcode": "14199",
+      "city": "Berlin"
+    },
+    "contact": {
+      "phone": "+49 30 51654014",
+      "website": "https://www.jacques.de/depot/265/berlin-grunewald/",
+      "email": "grunewald@jacques.de"
+    },
+    "opening_hours": "Mo-Th 13:00-19:00; Fr 12:00-19:00; Sa 10:00-15:00",
+    "description": "",
+    "wine_types": "retail",
+    "all_tags": {
+      "addr:city": "Berlin",
+      "addr:housenumber": "58",
+      "addr:postcode": "14199",
+      "addr:street": "Hohenzollerndamm",
+      "brand": "Jacques' Wein-Depot",
+      "brand:wikidata": "Q1678150",
+      "drink:whisky": "retail",
+      "drink:wine": "retail",
+      "email": "grunewald@jacques.de",
+      "name": "Jacques' Wein-Depot",
+      "opening_hours": "Mo-Th 13:00-19:00; Fr 12:00-19:00; Sa 10:00-15:00",
+      "operator": "Thorsten Geitel",
+      "phone": "+49 30 51654014",
+      "shop": "wine",
+      "website": "https://www.jacques.de/depot/265/berlin-grunewald/",
+      "wheelchair": "yes"
+    }
+  },
+  {
+    "id": 534936280,
+    "type": "node",
+    "name": "Jacques' Wein-Depot",
+    "latitude": 52.4167066,
+    "longitude": 13.3995313,
+    "amenity": "",
+    "shop": "wine",
+    "craft": "",
+    "address": {
+      "street": "Mariendorfer Damm",
+      "housenumber": "428-430",
+      "postcode": "12107",
+      "city": "Berlin"
+    },
+    "contact": {
+      "phone": "+49 30 70 76 55 17",
+      "website": "https://www.jacques.de/",
+      "email": ""
+    },
+    "opening_hours": "Mo-Fr 13:00-19:00; Sa 10:00-16:00",
+    "description": "",
+    "wine_types": "retail",
+    "all_tags": {
+      "addr:city": "Berlin",
+      "addr:country": "DE",
+      "addr:housenumber": "428-430",
+      "addr:postcode": "12107",
+      "addr:street": "Mariendorfer Damm",
+      "addr:suburb": "Lichtenrade",
+      "brand": "Jacques' Wein-Depot",
+      "brand:wikidata": "Q1678150",
+      "drink:wine": "retail",
+      "fax": "+49 30 70 76 57 26",
+      "name": "Jacques' Wein-Depot",
+      "opening_hours": "Mo-Fr 13:00-19:00; Sa 10:00-16:00",
+      "phone": "+49 30 70 76 55 17",
+      "shop": "wine",
+      "website": "https://www.jacques.de/",
+      "wheelchair": "no"
+    }
+  },
+  {
+    "id": 560145206,
+    "type": "node",
+    "name": "PanAroma",
+    "latitude": 52.5471842,
+    "longitude": 13.4167556,
+    "amenity": "",
+    "shop": "wine",
+    "craft": "",
+    "address": {
+      "street": "Stargarder Straße",
+      "housenumber": "76",
+      "postcode": "10437",
+      "city": "Berlin"
+    },
+    "contact": {
+      "phone": "+49 30 44719808",
+      "website": "",
+      "email": ""
+    },
+    "opening_hours": "Tu-Th 16:00-21:00; Fr,Sa 12:00-21:00",
+    "description": "",
+    "wine_types": "retail",
+    "all_tags": {
+      "addr:city": "Berlin",
+      "addr:country": "DE",
+      "addr:housenumber": "76",
+      "addr:postcode": "10437",
+      "addr:street": "Stargarder Straße",
+      "addr:suburb": "Prenzlauer Berg",
+      "check_date": "2025-02-04",
+      "check_date:opening_hours": "2025-02-04",
+      "contact:website": "https://www.panaroma-weinhandlung.de/",
+      "drink:wine": "retail",
+      "name": "PanAroma",
+      "opening_hours": "Tu-Th 16:00-21:00; Fr,Sa 12:00-21:00",
+      "payment:credit_cards": "yes",
+      "phone": "+49 30 44719808",
+      "shop": "wine",
+      "wheelchair": "limited"
+    }
+  },
+  {
+    "id": 662653794,
+    "type": "node",
+    "name": "Jacques' Wein-Depot",
+    "latitude": 52.4358315,
+    "longitude": 13.2629691,
+    "amenity": "",
+    "shop": "wine",
+    "craft": "",
+    "address": {
+      "street": "Berliner Straße",
+      "housenumber": "9",
+      "postcode": "14169",
+      "city": "Berlin"
+    },
+    "contact": {
+      "phone": "",
+      "website": "https://www.jacques.de/depot/71/berlin-zehlendorf/",
+      "email": ""
+    },
+    "opening_hours": "",
+    "description": "",
+    "wine_types": "retail",
+    "all_tags": {
+      "addr:city": "Berlin",
+      "addr:country": "DE",
+      "addr:housenumber": "9",
+      "addr:postcode": "14169",
+      "addr:street": "Berliner Straße",
+      "addr:suburb": "Zehlendorf",
+      "brand": "Jacques' Wein-Depot",
+      "brand:wikidata": "Q1678150",
+      "brand:wikipedia": "de:Jacques’ Wein-Depot",
+      "contact:fax": "+49 30 81298189",
+      "contact:phone": "+49 30 81298188",
+      "contact:website": "http://www.jacques.de/depot/71/berlin-zehlendorf/",
+      "drink:wine": "retail",
+      "name": "Jacques' Wein-Depot",
+      "shop": "wine",
+      "website": "https://www.jacques.de/depot/71/berlin-zehlendorf/",
+      "wheelchair": "limited"
+    }
+  },
+  {
+    "id": 699851942,
+    "type": "node",
+    "name": "Weinhandlung Bruhn",
+    "latitude": 52.4911085,
+    "longitude": 13.3256754,
+    "amenity": "",
+    "shop": "wine",
+    "craft": "",
+    "address": {
+      "street": "Güntzelstraße",
+      "housenumber": "46",
+      "postcode": "10717",
+      "city": "Berlin"
+    },
+    "contact": {
+      "phone": "",
+      "website": "https://www.weinhandlung-bruhn.com/",
+      "email": ""
+    },
+    "opening_hours": "Mo-Th 10:00-19:00; Sa 10:00-16:00; Fr 10:00-20:00",
+    "description": "",
+    "wine_types": "retail",
+    "all_tags": {
+      "addr:city": "Berlin",
+      "addr:country": "DE",
+      "addr:housenumber": "46",
+      "addr:postcode": "10717",
+      "addr:street": "Güntzelstraße",
+      "addr:suburb": "Wilmersdorf",
+      "drink:wine": "retail",
+      "name": "Weinhandlung Bruhn",
+      "opening_hours": "Mo-Th 10:00-19:00; Sa 10:00-16:00; Fr 10:00-20:00",
+      "shop": "wine",
+      "website": "https://www.weinhandlung-bruhn.com/",
+      "wheelchair": "limited"
+    }
+  },
+  {
+    "id": 721661534,
+    "type": "node",
+    "name": "Jacques' Wein-Depot",
+    "latitude": 52.4923161,
+    "longitude": 13.3304617,
+    "amenity": "",
+    "shop": "wine",
+    "craft": "",
+    "address": {
+      "street": "",
+      "housenumber": "",
+      "postcode": "",
+      "city": ""
+    },
+    "contact": {
+      "phone": "",
+      "website": "",
+      "email": ""
+    },
+    "opening_hours": "Mo-Th 15:00-19:00; Fr 12:00-19:00; Sa 10:00-16:00",
+    "description": "",
+    "wine_types": "",
+    "all_tags": {
+      "brand": "Jacques' Wein-Depot",
+      "brand:wikidata": "Q1678150",
+      "brand:wikipedia": "de:Jacques’ Wein-Depot",
+      "check_date": "2024-07-29",
+      "name": "Jacques' Wein-Depot",
+      "opening_hours": "Mo-Th 15:00-19:00; Fr 12:00-19:00; Sa 10:00-16:00",
+      "shop": "wine",
+      "wheelchair": "yes"
+    }
+  },
+  {
+    "id": 747457670,
+    "type": "node",
+    "name": "Wein et Cetera",
+    "latitude": 52.5812029,
+    "longitude": 13.404466,
+    "amenity": "",
+    "shop": "wine",
+    "craft": "",
+    "address": {
+      "street": "Dietzgenstraße",
+      "housenumber": "16",
+      "postcode": "13156",
+      "city": "Berlin"
+    },
+    "contact": {
+      "phone": "",
+      "website": "",
+      "email": ""
+    },
+    "opening_hours": "Tu-Fr 12:00-18:00; Sa 10:00-16:00",
+    "description": "",
+    "wine_types": "",
+    "all_tags": {
+      "addr:city": "Berlin",
+      "addr:country": "DE",
+      "addr:housenumber": "16",
+      "addr:postcode": "13156",
+      "addr:street": "Dietzgenstraße",
+      "addr:suburb": "Niederschönhausen",
+      "check_date:opening_hours": "2024-09-04",
+      "contact:website": "https://www.wein-et-cetera-berlin.de",
+      "name": "Wein et Cetera",
+      "opening_hours": "Tu-Fr 12:00-18:00; Sa 10:00-16:00",
+      "operator": "Heidrun Becker",
+      "shop": "wine",
+      "wheelchair": "limited"
+    }
+  },
+  {
+    "id": 846251056,
+    "type": "node",
+    "name": "Jacques' Wein-Depot",
+    "latitude": 52.4677462,
+    "longitude": 13.3285927,
+    "amenity": "",
+    "shop": "wine",
+    "craft": "",
+    "address": {
+      "street": "Bundesallee",
+      "housenumber": "115",
+      "postcode": "12161",
+      "city": "Berlin"
+    },
+    "contact": {
+      "phone": "+49 30 8593574",
+      "website": "",
+      "email": "friedenau@jacques.de"
+    },
+    "opening_hours": "Mo-We 14:00-19:00; Th,Fr 12:00-19:00; Sa 10:00-16:00",
+    "description": "",
+    "wine_types": "retail",
+    "all_tags": {
+      "addr:city": "Berlin",
+      "addr:country": "DE",
+      "addr:housenumber": "115",
+      "addr:postcode": "12161",
+      "addr:street": "Bundesallee",
+      "addr:suburb": "Friedenau",
+      "brand": "Jacques' Wein-Depot",
+      "brand:wikidata": "Q1678150",
+      "brand:wikipedia": "de:Jacques’ Wein-Depot",
+      "contact:website": "https://www.jacques.de/depot/95/berlin-friedenau/",
+      "drink:wine": "retail",
+      "email": "friedenau@jacques.de",
+      "name": "Jacques' Wein-Depot",
+      "opening_hours": "Mo-We 14:00-19:00; Th,Fr 12:00-19:00; Sa 10:00-16:00",
+      "phone": "+49 30 8593574",
+      "shop": "wine",
+      "wheelchair": "limited"
+    }
+  },
+  {
+    "id": 948130071,
+    "type": "node",
+    "name": "Cavatappi",
+    "latitude": 52.4901327,
+    "longitude": 13.40878,
+    "amenity": "",
+    "shop": "wine",
+    "craft": "",
+    "address": {
+      "street": "Körtestraße",
+      "housenumber": "28",
+      "postcode": "10967",
+      "city": "Berlin"
+    },
+    "contact": {
+      "phone": "",
+      "website": "",
+      "email": ""
+    },
+    "opening_hours": "Mo-Fr 12:00-20:00; Sa 11:00-19:00; PH,Su off",
+    "description": "",
+    "wine_types": "",
+    "all_tags": {
+      "addr:city": "Berlin",
+      "addr:country": "DE",
+      "addr:housenumber": "28",
+      "addr:postcode": "10967",
+      "addr:street": "Körtestraße",
+      "addr:suburb": "Kreuzberg",
+      "check_date": "2023-09-24",
+      "contact:facebook": "https://www.facebook.com/pages/Cavatappi-Weine-am-S%C3%BCdstern/365488390176054?fref=ts",
+      "contact:phone": "+49 30 69503846",
+      "contact:website": "http://www.cavatappi-weine.com",
+      "name": "Cavatappi",
+      "opening_hours": "Mo-Fr 12:00-20:00; Sa 11:00-19:00; PH,Su off",
+      "owner": "Frank Dietrich",
+      "shop": "wine",
+      "wheelchair": "no"
+    }
+  },
+  {
+    "id": 990951520,
+    "type": "node",
+    "name": "Jacques' Wein-Depot",
+    "latitude": 52.4433063,
+    "longitude": 13.3159808,
+    "amenity": "",
+    "shop": "wine",
+    "craft": "",
+    "address": {
+      "street": "Hindenburgdamm",
+      "housenumber": "39",
+      "postcode": "12203",
+      "city": "Berlin"
+    },
+    "contact": {
+      "phone": "+49 30 8341028",
+      "website": "https://www.jacques.de/depot.php/id/27",
+      "email": ""
+    },
+    "opening_hours": "Mo-We 14:00-19:00; Th,Fr 12:00-19:00; Sa 10:00-16:00",
+    "description": "",
+    "wine_types": "retail",
+    "all_tags": {
+      "addr:city": "Berlin",
+      "addr:country": "DE",
+      "addr:housenumber": "39",
+      "addr:postcode": "12203",
+      "addr:street": "Hindenburgdamm",
+      "addr:suburb": "Lichterfelde",
+      "brand": "Jacques' Wein-Depot",
+      "brand:wikidata": "Q1678150",
+      "drink:wine": "retail",
+      "name": "Jacques' Wein-Depot",
+      "opening_hours": "Mo-We 14:00-19:00; Th,Fr 12:00-19:00; Sa 10:00-16:00",
+      "phone": "+49 30 8341028",
+      "shop": "wine",
+      "website": "https://www.jacques.de/depot.php/id/27",
+      "wheelchair": "yes",
+      "wheelchair:description": "Eingang Klingsorstr."
+    }
+  },
+  {
+    "id": 1289561274,
+    "type": "node",
+    "name": "Lehmann’s Weinhandel",
+    "latitude": 52.4711725,
+    "longitude": 13.2908614,
+    "amenity": "",
+    "shop": "wine",
+    "craft": "",
+    "address": {
+      "street": "",
+      "housenumber": "",
+      "postcode": "",
+      "city": ""
+    },
+    "contact": {
+      "phone": "",
+      "website": "https://www.lehmanns-stuben.de",
+      "email": ""
+    },
+    "opening_hours": "",
+    "description": "",
+    "wine_types": "",
+    "all_tags": {
+      "name": "Lehmann’s Weinhandel",
+      "shop": "wine",
+      "website": "https://www.lehmanns-stuben.de"
+    }
+  },
+  {
+    "id": 1336794753,
+    "type": "node",
+    "name": "Jacques' Wein-Depot",
+    "latitude": 52.5351558,
+    "longitude": 13.4164095,
+    "amenity": "",
+    "shop": "wine",
+    "craft": "",
+    "address": {
+      "street": "Kollwitzstraße",
+      "housenumber": "55",
+      "postcode": "10405",
+      "city": "Berlin"
+    },
+    "contact": {
+      "phone": "",
+      "website": "",
+      "email": ""
+    },
+    "opening_hours": "Mo-Fr 13:00-20:00; Sa 10:00-16:00",
+    "description": "",
+    "wine_types": "retail",
+    "all_tags": {
+      "addr:city": "Berlin",
+      "addr:country": "DE",
+      "addr:housenumber": "55",
+      "addr:postcode": "10405",
+      "addr:street": "Kollwitzstraße",
+      "addr:suburb": "Prenzlauer Berg",
+      "brand": "Jacques' Wein-Depot",
+      "brand:wikidata": "Q1678150",
+      "brand:wikipedia": "de:Jacques’ Wein-Depot",
+      "check_date": "2024-06-10",
+      "contact:phone": "+493044032569",
+      "contact:website": "http://www.jacques.de/depot.php/id/195",
+      "drink:wine": "retail",
+      "level": "0",
+      "name": "Jacques' Wein-Depot",
+      "opening_hours": "Mo-Fr 13:00-20:00; Sa 10:00-16:00",
+      "payment:cash": "yes",
+      "payment:credit_cards": "yes",
+      "payment:debit_cards": "yes",
+      "shop": "wine",
+      "wheelchair": "yes",
+      "wheelchair:description": "Wein"
+    }
+  },
+  {
+    "id": 1336859622,
+    "type": "node",
+    "name": "Noer",
+    "latitude": 52.4988336,
+    "longitude": 13.44238,
+    "amenity": "",
+    "shop": "wine",
+    "craft": "",
+    "address": {
+      "street": "Falckensteinstraße",
+      "housenumber": "10",
+      "postcode": "10997",
+      "city": "Berlin"
+    },
+    "contact": {
+      "phone": "",
+      "website": "",
+      "email": ""
+    },
+    "opening_hours": "Tu-Sa 13:00-20:00",
+    "description": "",
+    "wine_types": "",
+    "all_tags": {
+      "addr:city": "Berlin",
+      "addr:country": "DE",
+      "addr:housenumber": "10",
+      "addr:postcode": "10997",
+      "addr:street": "Falckensteinstraße",
+      "addr:suburb": "Kreuzberg",
+      "contact:phone": "+4930 675 162 85",
+      "contact:website": "http://www.noer.de/index.html",
+      "name": "Noer",
+      "opening_hours": "Tu-Sa 13:00-20:00",
+      "shop": "wine",
+      "wheelchair": "limited"
+    }
+  },
+  {
+    "id": 1510785179,
+    "type": "node",
+    "name": "Briefmarken",
+    "latitude": 52.5174808,
+    "longitude": 13.442681,
+    "amenity": "",
+    "shop": "wine",
+    "craft": "",
+    "address": {
+      "street": "Karl-Marx-Allee",
+      "housenumber": "99",
+      "postcode": "10243",
+      "city": "Berlin"
+    },
+    "contact": {
+      "phone": "",
+      "website": "",
+      "email": ""
+    },
+    "opening_hours": "Mo-Sa 19:00-24:00",
+    "description": "",
+    "wine_types": "yes",
+    "all_tags": {
+      "addr:city": "Berlin",
+      "addr:country": "DE",
+      "addr:housenumber": "99",
+      "addr:postcode": "10243",
+      "addr:street": "Karl-Marx-Allee",
+      "addr:suburb": "Friedrichshain",
+      "check_date:opening_hours": "2025-03-17",
+      "contact:email": "info@briefmarkenweine.de",
+      "contact:phone": "+49 30 42025292",
+      "contact:website": "http://www.briefmarkenweine.de/",
+      "drink:wine": "yes",
+      "name": "Briefmarken",
+      "opening_hours": "Mo-Sa 19:00-24:00",
+      "opening_hours:signed": "no",
+      "shop": "wine",
+      "wheelchair": "limited"
+    }
+  },
+  {
+    "id": 1631216806,
+    "type": "node",
+    "name": "Weinladen Maybachufer",
+    "latitude": 52.4948364,
+    "longitude": 13.423556,
+    "amenity": "",
+    "shop": "wine",
+    "craft": "",
+    "address": {
+      "street": "Maybachufer",
+      "housenumber": "10",
+      "postcode": "12047",
+      "city": "Berlin"
+    },
+    "contact": {
+      "phone": "",
+      "website": "",
+      "email": ""
+    },
+    "opening_hours": "",
+    "description": "",
+    "wine_types": "",
+    "all_tags": {
+      "addr:city": "Berlin",
+      "addr:country": "DE",
+      "addr:housenumber": "10",
+      "addr:postcode": "12047",
+      "addr:street": "Maybachufer",
+      "addr:suburb": "Neukölln",
+      "name": "Weinladen Maybachufer",
+      "shop": "wine"
+    }
+  },
+  {
+    "id": 1649134393,
+    "type": "node",
+    "name": "Barrio",
+    "latitude": 52.5233596,
+    "longitude": 13.4041635,
+    "amenity": "",
+    "shop": "wine",
+    "craft": "",
+    "address": {
+      "street": "Dircksenstraße",
+      "housenumber": "50",
+      "postcode": "10178",
+      "city": "Berlin"
+    },
+    "contact": {
+      "phone": "",
+      "website": "",
+      "email": ""
+    },
+    "opening_hours": "Mo-Fr 12:00-20:00; Sa 12:00-19:00",
+    "description": "",
+    "wine_types": "",
+    "all_tags": {
+      "addr:city": "Berlin",
+      "addr:country": "DE",
+      "addr:housenumber": "50",
+      "addr:postcode": "10178",
+      "addr:street": "Dircksenstraße",
+      "addr:suburb": "Mitte",
+      "check_date": "2025-03-30",
+      "check_date:opening_hours": "2025-03-30",
+      "clothes": "children",
+      "level": "0",
+      "name": "Barrio",
+      "opening_hours": "Mo-Fr 12:00-20:00; Sa 12:00-19:00",
+      "payment:credit_cards": "yes",
+      "payment:debit_cards": "yes",
+      "shop": "wine",
+      "wheelchair": "yes"
+    }
+  },
+  {
+    "id": 1672551336,
+    "type": "node",
+    "name": "Weingärtners Genusshandwerk",
+    "latitude": 52.4530731,
+    "longitude": 13.6277932,
+    "amenity": "",
+    "shop": "wine",
+    "craft": "",
+    "address": {
+      "street": "",
+      "housenumber": "",
+      "postcode": "",
+      "city": ""
+    },
+    "contact": {
+      "phone": "",
+      "website": "",
+      "email": ""
+    },
+    "opening_hours": "We-Fr 12:00-18:00; Sa 10:00-13:00",
+    "description": "Wein und Vintage-Möbel und -Deko",
+    "wine_types": "",
+    "all_tags": {
+      "contact:email": "hallo@genusshandwerk.berlin",
+      "contact:mobile": "+49 171 202 79 60",
+      "contact:website": "https://genusshandwerk.berlin/",
+      "description": "Wein und Vintage-Möbel und -Deko",
+      "name": "Weingärtners Genusshandwerk",
+      "opening_hours": "We-Fr 12:00-18:00; Sa 10:00-13:00",
+      "shop": "wine"
+    }
+  },
+  {
+    "id": 1673440296,
+    "type": "node",
+    "name": "heimat.wein",
+    "latitude": 52.5032656,
+    "longitude": 13.4807893,
+    "amenity": "",
+    "shop": "wine",
+    "craft": "",
+    "address": {
+      "street": "Türrschmidtstraße",
+      "housenumber": "36",
+      "postcode": "10317",
+      "city": "Berlin"
+    },
+    "contact": {
+      "phone": "",
+      "website": "",
+      "email": ""
+    },
+    "opening_hours": "We-Fr 12:00-19:00; Sa 12:00-16:00",
+    "description": "",
+    "wine_types": "",
+    "all_tags": {
+      "addr:city": "Berlin",
+      "addr:country": "DE",
+      "addr:housenumber": "36",
+      "addr:postcode": "10317",
+      "addr:street": "Türrschmidtstraße",
+      "addr:suburb": "Rummelsburg",
+      "check_date:opening_hours": "2024-04-03",
+      "contact:email": "post@heimatwein.com",
+      "contact:phone": "+49 30 53144397",
+      "contact:website": "https://www.heimatwein.com/",
+      "name": "heimat.wein",
+      "opening_hours": "We-Fr 12:00-19:00; Sa 12:00-16:00",
+      "shop": "wine",
+      "wheelchair": "no"
+    }
+  },
+  {
+    "id": 1739336610,
+    "type": "node",
+    "name": "Der Rioja-Weinspezialist",
+    "latitude": 52.4772386,
+    "longitude": 13.2889948,
+    "amenity": "",
+    "shop": "wine",
+    "craft": "",
+    "address": {
+      "street": "Reichenhaller Straße",
+      "housenumber": "1",
+      "postcode": "14199",
+      "city": "Berlin"
+    },
+    "contact": {
+      "phone": "",
+      "website": "",
+      "email": ""
+    },
+    "opening_hours": "Mo-Fr 13:00-19:00; Sa 10:00-16:00",
+    "description": "",
+    "wine_types": "retail",
+    "all_tags": {
+      "addr:city": "Berlin",
+      "addr:country": "DE",
+      "addr:housenumber": "1",
+      "addr:postcode": "14199",
+      "addr:street": "Reichenhaller Straße",
+      "addr:suburb": "Schmargendorf",
+      "contact:website": "https://www.rioja-weinspezialist.de/",
+      "drink:wine": "retail",
+      "name": "Der Rioja-Weinspezialist",
+      "opening_hours": "Mo-Fr 13:00-19:00; Sa 10:00-16:00",
+      "shop": "wine"
+    }
+  },
+  {
+    "id": 1773500978,
+    "type": "node",
+    "name": "Weinbörse",
+    "latitude": 52.5543874,
+    "longitude": 13.4464978,
+    "amenity": "",
+    "shop": "wine",
+    "craft": "",
+    "address": {
+      "street": "",
+      "housenumber": "",
+      "postcode": "",
+      "city": ""
+    },
+    "contact": {
+      "phone": "",
+      "website": "",
+      "email": ""
+    },
+    "opening_hours": "",
+    "description": "",
+    "wine_types": "",
+    "all_tags": {
+      "check_date:opening_hours": "2023-05-18",
+      "name": "Weinbörse",
+      "opening_hours:signed": "no",
+      "shop": "wine",
+      "wheelchair": "no"
+    }
+  },
+  {
+    "id": 1863567860,
+    "type": "node",
+    "name": "Jacques' Wein-Depot",
+    "latitude": 52.5310252,
+    "longitude": 13.4335711,
+    "amenity": "",
+    "shop": "wine",
+    "craft": "",
+    "address": {
+      "street": "Bötzowstraße",
+      "housenumber": "24",
+      "postcode": "10407",
+      "city": "Berlin"
+    },
+    "contact": {
+      "phone": "",
+      "website": "",
+      "email": ""
+    },
+    "opening_hours": "Mo-Th 13:00-19:00; Fr 12:00-19:00; Sa 10:00-16:00",
+    "description": "",
+    "wine_types": "",
+    "all_tags": {
+      "addr:city": "Berlin",
+      "addr:housenumber": "24",
+      "addr:postcode": "10407",
+      "addr:street": "Bötzowstraße",
+      "brand": "Jacques' Wein-Depot",
+      "brand:wikidata": "Q1678150",
+      "brand:wikipedia": "de:Jacques’ Wein-Depot",
+      "contact:website": "https://www.holzconnection.de",
+      "name": "Jacques' Wein-Depot",
+      "opening_hours": "Mo-Th 13:00-19:00; Fr 12:00-19:00; Sa 10:00-16:00",
+      "shop": "wine",
+      "wheelchair": "yes"
+    }
+  },
+  {
+    "id": 1942415142,
+    "type": "node",
+    "name": "Kamine & Wein",
+    "latitude": 52.5578993,
+    "longitude": 13.3853061,
+    "amenity": "bar",
+    "shop": "",
+    "craft": "",
+    "address": {
+      "street": "Prinzenallee",
+      "housenumber": "58",
+      "postcode": "13359",
+      "city": "Berlin"
+    },
+    "contact": {
+      "phone": "+49 30 53641972",
+      "website": "http://www.kamineundwein.de/",
+      "email": ""
+    },
+    "opening_hours": "Fr 18:00+",
+    "description": "Zur Zeit keine regelmäßige Gastronomie am Abend!",
+    "wine_types": "yes",
+    "all_tags": {
+      "addr:city": "Berlin",
+      "addr:country": "DE",
+      "addr:housenumber": "58",
+      "addr:postcode": "13359",
+      "addr:street": "Prinzenallee",
+      "addr:suburb": "Gesundbrunnen",
+      "amenity": "bar",
+      "check_date": "2023-07-17",
+      "contact:phone": "+49 30 53641972",
+      "description": "Zur Zeit keine regelmäßige Gastronomie am Abend!",
+      "drink:wine": "yes",
+      "name": "Kamine & Wein",
+      "opening_hours": "Fr 18:00+",
+      "phone": "+49 30 53641972",
+      "website": "http://www.kamineundwein.de/",
+      "wheelchair": "yes",
+      "wheelchair:description": "Haben nur eine Toilette, aber mit viel Platz und Halterungen neben der Toilette"
+    }
+  },
+  {
+    "id": 1964235366,
+    "type": "node",
+    "name": "deutscheundfranzosen",
+    "latitude": 52.5335395,
+    "longitude": 13.4216383,
+    "amenity": "",
+    "shop": "wine",
+    "craft": "",
+    "address": {
+      "street": "",
+      "housenumber": "",
+      "postcode": "",
+      "city": ""
+    },
+    "contact": {
+      "phone": "",
+      "website": "",
+      "email": ""
+    },
+    "opening_hours": "Tu-Fr 15:00-20:00; Sa 12:00-17:00",
+    "description": "Wein und Olivenöl",
+    "wine_types": "",
+    "all_tags": {
+      "comment": "Wein",
+      "description": "Wein und Olivenöl",
+      "name": "deutscheundfranzosen",
+      "opening_hours": "Tu-Fr 15:00-20:00; Sa 12:00-17:00",
+      "shop": "wine",
+      "wheelchair": "no"
+    }
+  },
+  {
+    "id": 2039159693,
+    "type": "node",
+    "name": "3/4 Wein Berlin",
+    "latitude": 52.5396649,
+    "longitude": 13.406293,
+    "amenity": "",
+    "shop": "wine",
+    "craft": "",
+    "address": {
+      "street": "Oderberger Straße",
+      "housenumber": "39",
+      "postcode": "10435",
+      "city": "Berlin"
+    },
+    "contact": {
+      "phone": "",
+      "website": "",
+      "email": ""
+    },
+    "opening_hours": "",
+    "description": "",
+    "wine_types": "",
+    "all_tags": {
+      "addr:city": "Berlin",
+      "addr:country": "DE",
+      "addr:housenumber": "39",
+      "addr:postcode": "10435",
+      "addr:street": "Oderberger Straße",
+      "addr:suburb": "Prenzlauer Berg",
+      "check_date": "2025-04-25",
+      "name": "3/4 Wein Berlin",
+      "shop": "wine",
+      "wheelchair": "yes"
+    }
+  },
+  {
+    "id": 2139861390,
+    "type": "node",
+    "name": "Jacques' Wein-Depot",
+    "latitude": 52.4987981,
+    "longitude": 13.3121716,
+    "amenity": "",
+    "shop": "wine",
+    "craft": "",
+    "address": {
+      "street": "Konstanzer Straße",
+      "housenumber": "",
+      "postcode": "10707",
+      "city": "Berlin"
+    },
+    "contact": {
+      "phone": "",
+      "website": "",
+      "email": ""
+    },
+    "opening_hours": "",
+    "description": "",
+    "wine_types": "retail",
+    "all_tags": {
+      "addr:city": "Berlin",
+      "addr:country": "DE",
+      "addr:postcode": "10707",
+      "addr:street": "Konstanzer Straße",
+      "brand": "Jacques' Wein-Depot",
+      "brand:wikidata": "Q1678150",
+      "brand:wikipedia": "de:Jacques’ Wein-Depot",
+      "check_date": "2024-07-26",
+      "drink:wine": "retail",
+      "name": "Jacques' Wein-Depot",
+      "shop": "wine"
+    }
+  },
+  {
+    "id": 2435886821,
+    "type": "node",
+    "name": "Jacques' Wein-Depot",
+    "latitude": 52.5081317,
+    "longitude": 13.4629703,
+    "amenity": "",
+    "shop": "wine",
+    "craft": "",
+    "address": {
+      "street": "Wühlischstraße",
+      "housenumber": "49",
+      "postcode": "10245",
+      "city": "Berlin"
+    },
+    "contact": {
+      "phone": "",
+      "website": "",
+      "email": ""
+    },
+    "opening_hours": "Mo-Th 15:00-19:00, Fr 13:00-20:00, Sa 10:00-16:00",
+    "description": "",
+    "wine_types": "yes",
+    "all_tags": {
+      "addr:city": "Berlin",
+      "addr:country": "DE",
+      "addr:housenumber": "49",
+      "addr:postcode": "10245",
+      "addr:street": "Wühlischstraße",
+      "addr:suburb": "Friedrichshain",
+      "brand": "Jacques' Wein-Depot",
+      "brand:wikidata": "Q1678150",
+      "brand:wikipedia": "de:Jacques’ Wein-Depot",
+      "check_date:opening_hours": "2025-01-21",
+      "drink:wine": "yes",
+      "name": "Jacques' Wein-Depot",
+      "opening_hours": "Mo-Th 15:00-19:00, Fr 13:00-20:00, Sa 10:00-16:00",
+      "shop": "wine",
+      "wheelchair": "limited"
+    }
+  },
+  {
+    "id": 2466173884,
+    "type": "node",
+    "name": "Vinoteca",
+    "latitude": 52.5055224,
+    "longitude": 13.2999661,
+    "amenity": "",
+    "shop": "wine",
+    "craft": "",
+    "address": {
+      "street": "Windscheidstraße",
+      "housenumber": "22",
+      "postcode": "10627",
+      "city": "Berlin"
+    },
+    "contact": {
+      "phone": "",
+      "website": "",
+      "email": ""
+    },
+    "opening_hours": "We,Th 17:00-22:00; Fr,Sa 16:00-23:00",
+    "description": "",
+    "wine_types": "",
+    "all_tags": {
+      "addr:city": "Berlin",
+      "addr:country": "DE",
+      "addr:housenumber": "22",
+      "addr:postcode": "10627",
+      "addr:street": "Windscheidstraße",
+      "addr:suburb": "Charlottenburg",
+      "contact:phone": "+49 30 23535440",
+      "contact:website": "https://www.vinoteca-berlin.de/",
+      "name": "Vinoteca",
+      "opening_hours": "We,Th 17:00-22:00; Fr,Sa 16:00-23:00",
+      "shop": "wine"
+    }
+  },
+  {
+    "id": 2473561758,
+    "type": "node",
+    "name": "Saveur Champagne",
+    "latitude": 52.500884,
+    "longitude": 13.4302876,
+    "amenity": "",
+    "shop": "wine",
+    "craft": "",
+    "address": {
+      "street": "Lausitzer Platz",
+      "housenumber": "16",
+      "postcode": "10997",
+      "city": "Berlin"
+    },
+    "contact": {
+      "phone": "",
+      "website": "",
+      "email": ""
+    },
+    "opening_hours": "Tu-Fr 14:00-20:00",
+    "description": "",
+    "wine_types": "yes",
+    "all_tags": {
+      "addr:city": "Berlin",
+      "addr:country": "DE",
+      "addr:housenumber": "16",
+      "addr:postcode": "10997",
+      "addr:street": "Lausitzer Platz",
+      "addr:suburb": "Kreuzberg",
+      "contact:phone": "+49 151 27562242",
+      "contact:website": "https://monsieur-collard.de/",
+      "drink:wine": "yes",
+      "name": "Saveur Champagne",
+      "opening_hours": "Tu-Fr 14:00-20:00",
+      "shop": "wine"
+    }
+  },
+  {
+    "id": 2489620802,
+    "type": "node",
+    "name": "Schallplatten und Kleidung",
+    "latitude": 52.4862647,
+    "longitude": 13.4352543,
+    "amenity": "",
+    "shop": "wine",
+    "craft": "",
+    "address": {
+      "street": "Weserstraße",
+      "housenumber": "189",
+      "postcode": "12045",
+      "city": "Berlin"
+    },
+    "contact": {
+      "phone": "",
+      "website": "",
+      "email": ""
+    },
+    "opening_hours": "",
+    "description": "",
+    "wine_types": "",
+    "all_tags": {
+      "addr:city": "Berlin",
+      "addr:country": "DE",
+      "addr:housenumber": "189",
+      "addr:postcode": "12045",
+      "addr:street": "Weserstraße",
+      "addr:suburb": "Neukölln",
+      "check_date": "2025-06-23",
+      "name": "Schallplatten und Kleidung",
+      "shop": "wine"
+    }
+  },
+  {
+    "id": 2524745765,
+    "type": "node",
+    "name": "Vin ToSUN",
+    "latitude": 52.4960873,
+    "longitude": 13.3369971,
+    "amenity": "",
+    "shop": "wine",
+    "craft": "",
+    "address": {
+      "street": "Bamberger Straße",
+      "housenumber": "7",
+      "postcode": "10777",
+      "city": "Berlin"
+    },
+    "contact": {
+      "phone": "",
+      "website": "",
+      "email": ""
+    },
+    "opening_hours": "",
+    "description": "",
+    "wine_types": "",
+    "all_tags": {
+      "addr:city": "Berlin",
+      "addr:country": "DE",
+      "addr:housenumber": "7",
+      "addr:postcode": "10777",
+      "addr:street": "Bamberger Straße",
+      "addr:suburb": "Wilmersdorf",
+      "name": "Vin ToSUN",
+      "shop": "wine"
+    }
+  },
+  {
+    "id": 2812753249,
+    "type": "node",
+    "name": "Weinschule",
+    "latitude": 52.5088278,
+    "longitude": 13.3169816,
+    "amenity": "",
+    "shop": "wine",
+    "craft": "",
+    "address": {
+      "street": "Goethestraße",
+      "housenumber": "71",
+      "postcode": "10625",
+      "city": "Berlin"
+    },
+    "contact": {
+      "phone": "",
+      "website": "https://www.weinseminar.de",
+      "email": ""
+    },
+    "opening_hours": "",
+    "description": "Weinseminare, Sommelier-Lehrgänge etc.",
+    "wine_types": "",
+    "all_tags": {
+      "addr:city": "Berlin",
+      "addr:country": "DE",
+      "addr:housenumber": "71",
+      "addr:postcode": "10625",
+      "addr:street": "Goethestraße",
+      "addr:suburb": "Charlottenburg",
+      "description": "Weinseminare, Sommelier-Lehrgänge etc.",
+      "name": "Weinschule",
+      "shop": "wine",
+      "website": "https://www.weinseminar.de"
+    }
+  },
+  {
+    "id": 2969999433,
+    "type": "node",
+    "name": "Unterm Baum",
+    "latitude": 52.4954314,
+    "longitude": 13.4178333,
+    "amenity": "bar",
+    "shop": "",
+    "craft": "",
+    "address": {
+      "street": "Planufer",
+      "housenumber": "92d",
+      "postcode": "10967",
+      "city": "Berlin"
+    },
+    "contact": {
+      "phone": "",
+      "website": "",
+      "email": ""
+    },
+    "opening_hours": "",
+    "description": "",
+    "wine_types": "yes",
+    "all_tags": {
+      "addr:city": "Berlin",
+      "addr:country": "DE",
+      "addr:housenumber": "92d",
+      "addr:postcode": "10967",
+      "addr:street": "Planufer",
+      "addr:suburb": "Kreuzberg",
+      "amenity": "bar",
+      "drink:wine": "yes",
+      "level": "0",
+      "name": "Unterm Baum",
+      "payment:cash": "no",
+      "smoking": "no"
+    }
+  },
+  {
+    "id": 3007209659,
+    "type": "node",
+    "name": "Weinladen Schmidt",
+    "latitude": 52.6165297,
+    "longitude": 13.3075161,
+    "amenity": "",
+    "shop": "wine",
+    "craft": "",
+    "address": {
+      "street": "Heinsestraße",
+      "housenumber": "30",
+      "postcode": "13467",
+      "city": "Berlin"
+    },
+    "contact": {
+      "phone": "",
+      "website": "",
+      "email": ""
+    },
+    "opening_hours": "Mo-Fr 10:00-19:00; Sa 09:00-16:00",
+    "description": "",
+    "wine_types": "retail",
+    "all_tags": {
+      "addr:city": "Berlin",
+      "addr:country": "DE",
+      "addr:housenumber": "30",
+      "addr:postcode": "13467",
+      "addr:street": "Heinsestraße",
+      "addr:suburb": "Hermsdorf",
+      "check_date:opening_hours": "2025-04-19",
+      "drink:wine": "retail",
+      "name": "Weinladen Schmidt",
+      "opening_hours": "Mo-Fr 10:00-19:00; Sa 09:00-16:00",
+      "shop": "wine",
+      "wheelchair": "yes"
+    }
+  },
+  {
+    "id": 3093567639,
+    "type": "node",
+    "name": "Wein & Vinos",
+    "latitude": 52.4924092,
+    "longitude": 13.3965576,
+    "amenity": "",
+    "shop": "wine",
+    "craft": "",
+    "address": {
+      "street": "Mittenwalder Straße",
+      "housenumber": "15",
+      "postcode": "10961",
+      "city": "Berlin"
+    },
+    "contact": {
+      "phone": "",
+      "website": "https://www.vinos.de/",
+      "email": ""
+    },
+    "opening_hours": "",
+    "description": "",
+    "wine_types": "retail",
+    "all_tags": {
+      "addr:city": "Berlin",
+      "addr:housenumber": "15",
+      "addr:postcode": "10961",
+      "addr:street": "Mittenwalder Straße",
+      "addr:suburb": "Kreuzberg",
+      "check_date": "2022-08-22",
+      "drink:wine": "retail",
+      "name": "Wein & Vinos",
+      "shop": "wine",
+      "website": "https://www.vinos.de/",
+      "wheelchair": "no"
+    }
+  },
+  {
+    "id": 3658137626,
+    "type": "node",
+    "name": "Jacques' Wein-Depot",
+    "latitude": 52.5691482,
+    "longitude": 13.4030748,
+    "amenity": "",
+    "shop": "wine",
+    "craft": "",
+    "address": {
+      "street": "",
+      "housenumber": "",
+      "postcode": "",
+      "city": ""
+    },
+    "contact": {
+      "phone": "+49 30 49 76 82 50",
+      "website": "https://www.jacques.de/depot/304/berlin-pankow/",
+      "email": ""
+    },
+    "opening_hours": "Tu-Th 15:00-19:00; Fr 13:00-20:00; Sa 10:00-16:00",
+    "description": "",
+    "wine_types": "",
+    "all_tags": {
+      "brand": "Jacques' Wein-Depot",
+      "brand:wikidata": "Q1678150",
+      "brand:wikipedia": "de:Jacques’ Wein-Depot",
+      "fax": "+49 30 49 76 82 51",
+      "name": "Jacques' Wein-Depot",
+      "opening_hours": "Tu-Th 15:00-19:00; Fr 13:00-20:00; Sa 10:00-16:00",
+      "phone": "+49 30 49 76 82 50",
+      "shop": "wine",
+      "website": "https://www.jacques.de/depot/304/berlin-pankow/",
+      "wheelchair": "yes"
+    }
+  },
+  {
+    "id": 3689263626,
+    "type": "node",
+    "name": "Caravaggi Naturwein",
+    "latitude": 52.543007,
+    "longitude": 13.4201977,
+    "amenity": "bar",
+    "shop": "",
+    "craft": "",
+    "address": {
+      "street": "Lettestraße",
+      "housenumber": "3",
+      "postcode": "10437",
+      "city": "Berlin"
+    },
+    "contact": {
+      "phone": "",
+      "website": "",
+      "email": ""
+    },
+    "opening_hours": "Tu-Fr 17:00-23:00; Sa,Su 12:00-23:00",
+    "description": "",
+    "wine_types": "yes",
+    "all_tags": {
+      "addr:city": "Berlin",
+      "addr:country": "DE",
+      "addr:housenumber": "3",
+      "addr:postcode": "10437",
+      "addr:street": "Lettestraße",
+      "addr:suburb": "Prenzlauer Berg",
+      "amenity": "bar",
+      "check_date": "2024-06-15",
+      "cuisine": "italian",
+      "drink:wine": "yes",
+      "level": "0",
+      "name": "Caravaggi Naturwein",
+      "opening": "Tu-Fr 17:00-23:00;Sa, Su 12:00-23:00",
+      "opening_hours": "Tu-Fr 17:00-23:00; Sa,Su 12:00-23:00",
+      "organic": "yes",
+      "outdoor_seating": "sidewalk",
+      "toilets:wheelchair": "yes",
+      "wheelchair": "no"
+    }
+  },
+  {
+    "id": 3695148773,
+    "type": "node",
+    "name": "Vinoteca Mastrangelo",
+    "latitude": 52.6198899,
+    "longitude": 13.3038224,
+    "amenity": "",
+    "shop": "wine",
+    "craft": "",
+    "address": {
+      "street": "Falkentaler Steig",
+      "housenumber": "2",
+      "postcode": "13467",
+      "city": "Berlin"
+    },
+    "contact": {
+      "phone": "+49 176 31797611",
+      "website": "https://vino-mastrangelo.de/",
+      "email": ""
+    },
+    "opening_hours": "",
+    "description": "",
+    "wine_types": "",
+    "all_tags": {
+      "addr:city": "Berlin",
+      "addr:country": "DE",
+      "addr:housenumber": "2",
+      "addr:postcode": "13467",
+      "addr:street": "Falkentaler Steig",
+      "addr:suburb": "Hermsdorf",
+      "diet:vegetarian": "yes",
+      "name": "Vinoteca Mastrangelo",
+      "opening_hours:covid19": "Sa,Su 12:00-23:00; Tu-Fr 16:00-23:00",
+      "outdoor_seating": "yes",
+      "phone": "+49 176 31797611",
+      "shop": "wine",
+      "takeaway:covid19": "yes",
+      "website": "https://vino-mastrangelo.de/"
+    }
+  },
+  {
+    "id": 3814669372,
+    "type": "node",
+    "name": "Mövenpick Wein",
+    "latitude": 52.4995943,
+    "longitude": 13.3202174,
+    "amenity": "",
+    "shop": "wine",
+    "craft": "",
+    "address": {
+      "street": "",
+      "housenumber": "",
+      "postcode": "",
+      "city": ""
+    },
+    "contact": {
+      "phone": "",
+      "website": "",
+      "email": ""
+    },
+    "opening_hours": "Tu-Fr 10:00-19:00; Sa 10:00-18:00",
+    "description": "",
+    "wine_types": "",
+    "all_tags": {
+      "check_date:opening_hours": "2024-03-18",
+      "name": "Mövenpick Wein",
+      "opening_hours": "Tu-Fr 10:00-19:00; Sa 10:00-18:00",
+      "shop": "wine",
+      "wheelchair": "yes"
+    }
+  },
+  {
+    "id": 3826452056,
+    "type": "node",
+    "name": "Hans Weinstube",
+    "latitude": 52.4988758,
+    "longitude": 13.3510921,
+    "amenity": "bar",
+    "shop": "",
+    "craft": "",
+    "address": {
+      "street": "Motzstraße",
+      "housenumber": "10",
+      "postcode": "10777",
+      "city": "Berlin"
+    },
+    "contact": {
+      "phone": "+49 160 8145016",
+      "website": "http://hans-weinstube.de/",
+      "email": ""
+    },
+    "opening_hours": "Tu-Fr 16:00-22:00; Sa-Mo off",
+    "description": "",
+    "wine_types": "yes",
+    "all_tags": {
+      "addr:city": "Berlin",
+      "addr:country": "DE",
+      "addr:housenumber": "10",
+      "addr:postcode": "10777",
+      "addr:street": "Motzstraße",
+      "amenity": "bar",
+      "brewery": "no",
+      "drink:wine": "yes",
+      "level": "0",
+      "name": "Hans Weinstube",
+      "opening_hours": "Tu-Fr 16:00-22:00; Sa-Mo off",
+      "operator": "Hans Walter Hess",
+      "outdoor_seating": "yes",
+      "payment:cash": "yes",
+      "payment:debit_cards": "yes",
+      "phone": "+49 160 8145016",
+      "smoking": "outside",
+      "website": "http://hans-weinstube.de/",
+      "wheelchair": "limited"
+    }
+  },
+  {
+    "id": 3861765091,
+    "type": "node",
+    "name": "Viniculture",
+    "latitude": 52.5043156,
+    "longitude": 13.3239406,
+    "amenity": "",
+    "shop": "wine",
+    "craft": "",
+    "address": {
+      "street": "Grolmanstraße",
+      "housenumber": "44/45",
+      "postcode": "10623",
+      "city": "Berlin"
+    },
+    "contact": {
+      "phone": "",
+      "website": "https://www.viniculture.de/",
+      "email": ""
+    },
+    "opening_hours": "",
+    "description": "",
+    "wine_types": "retail",
+    "all_tags": {
+      "addr:city": "Berlin",
+      "addr:country": "DE",
+      "addr:housenumber": "44/45",
+      "addr:postcode": "10623",
+      "addr:street": "Grolmanstraße",
+      "addr:suburb": "Charlottenburg",
+      "check_date": "2025-02-22",
+      "contact:phone": "+49308838174",
+      "contact:website": "http://www.viniculture.de",
+      "drink:wine": "retail",
+      "drive_through": "no",
+      "name": "Viniculture",
+      "shop": "wine",
+      "website": "https://www.viniculture.de/",
+      "wheelchair": "no"
+    }
+  },
+  {
+    "id": 3900932281,
+    "type": "node",
+    "name": "Origine",
+    "latitude": 52.5396016,
+    "longitude": 13.4176737,
+    "amenity": "",
+    "shop": "wine",
+    "craft": "",
+    "address": {
+      "street": "Husemannstraße",
+      "housenumber": "33",
+      "postcode": "10435",
+      "city": "Berlin"
+    },
+    "contact": {
+      "phone": "",
+      "website": "",
+      "email": ""
+    },
+    "opening_hours": "Tu-We 11:00-16:00; Th-Sa 11:00-20:00",
+    "description": "",
+    "wine_types": "",
+    "all_tags": {
+      "addr:city": "Berlin",
+      "addr:country": "DE",
+      "addr:housenumber": "33",
+      "addr:postcode": "10435",
+      "addr:street": "Husemannstraße",
+      "addr:suburb": "Prenzlauer Berg",
+      "name": "Origine",
+      "opening_hours": "Tu-We 11:00-16:00; Th-Sa 11:00-20:00",
+      "shop": "wine",
+      "wheelchair": "limited"
+    }
+  },
+  {
+    "id": 3917330121,
+    "type": "node",
+    "name": "Abbés Weinladen",
+    "latitude": 52.4378234,
+    "longitude": 13.3071038,
+    "amenity": "",
+    "shop": "wine",
+    "craft": "",
+    "address": {
+      "street": "Dürerstraße",
+      "housenumber": "10a",
+      "postcode": "12203",
+      "city": "Berlin"
+    },
+    "contact": {
+      "phone": "",
+      "website": "https://www.abbes-weinladen.de/",
+      "email": ""
+    },
+    "opening_hours": "Tu-Fr 14:00-19:00; Sa 10:00-14:00",
+    "description": "",
+    "wine_types": "yes",
+    "all_tags": {
+      "addr:city": "Berlin",
+      "addr:housenumber": "10a",
+      "addr:postcode": "12203",
+      "addr:street": "Dürerstraße",
+      "drink:wine": "yes",
+      "name": "Abbés Weinladen",
+      "opening_hours": "Tu-Fr 14:00-19:00; Sa 10:00-14:00",
+      "operator": "Martina Abbé",
+      "shop": "wine",
+      "website": "https://www.abbes-weinladen.de/"
+    }
+  },
+  {
+    "id": 4225514220,
+    "type": "node",
+    "name": "Jacques' Wein-Depot",
+    "latitude": 52.5277487,
+    "longitude": 13.3862025,
+    "amenity": "",
+    "shop": "wine",
+    "craft": "",
+    "address": {
+      "street": "Chausseestraße",
+      "housenumber": "128/129",
+      "postcode": "10115",
+      "city": "Berlin"
+    },
+    "contact": {
+      "phone": "",
+      "website": "",
+      "email": ""
+    },
+    "opening_hours": "Mo-Th 15:00-19:00; Fr 12:00-19:00; Sa 12:00-16:00",
+    "description": "",
+    "wine_types": "retail",
+    "all_tags": {
+      "addr:city": "Berlin",
+      "addr:country": "DE",
+      "addr:housenumber": "128/129",
+      "addr:postcode": "10115",
+      "addr:street": "Chausseestraße",
+      "addr:suburb": "Mitte",
+      "brand": "Jacques' Wein-Depot",
+      "brand:wikidata": "Q1678150",
+      "contact:phone": "+49 30 24342594",
+      "contact:website": "https://www.jacques.de/depot/275/berlin-mitte/",
+      "drink:wine": "retail",
+      "name": "Jacques' Wein-Depot",
+      "opening_hours": "Mo-Th 15:00-19:00; Fr 12:00-19:00; Sa 12:00-16:00",
+      "payment:credit_cards": "yes",
+      "payment:debit_cards": "yes",
+      "shop": "wine",
+      "wheelchair": "no"
+    }
+  },
+  {
+    "id": 4261575760,
+    "type": "node",
+    "name": "Der Weinkeller",
+    "latitude": 52.5270255,
+    "longitude": 13.3917138,
+    "amenity": "",
+    "shop": "wine",
+    "craft": "",
+    "address": {
+      "street": "Linienstraße",
+      "housenumber": "147",
+      "postcode": "10115",
+      "city": "Berlin"
+    },
+    "contact": {
+      "phone": "",
+      "website": "",
+      "email": ""
+    },
+    "opening_hours": "",
+    "description": "",
+    "wine_types": "yes",
+    "all_tags": {
+      "addr:city": "Berlin",
+      "addr:country": "DE",
+      "addr:housenumber": "147",
+      "addr:postcode": "10115",
+      "addr:street": "Linienstraße",
+      "addr:suburb": "Mitte",
+      "drink:wine": "yes",
+      "name": "Der Weinkeller",
+      "shop": "wine"
+    }
+  },
+  {
+    "id": 4306025978,
+    "type": "node",
+    "name": "Vinothek Berlin",
+    "latitude": 52.5303116,
+    "longitude": 13.3912896,
+    "amenity": "",
+    "shop": "wine",
+    "craft": "",
+    "address": {
+      "street": "Gartenstraße",
+      "housenumber": "102",
+      "postcode": "10115",
+      "city": "Berlin"
+    },
+    "contact": {
+      "phone": "",
+      "website": "https://www.vinothek-berlin.de/",
+      "email": ""
+    },
+    "opening_hours": "Tu-Sa 12:00-20:00",
+    "description": "",
+    "wine_types": "yes",
+    "all_tags": {
+      "addr:city": "Berlin",
+      "addr:country": "DE",
+      "addr:housenumber": "102",
+      "addr:postcode": "10115",
+      "addr:street": "Gartenstraße",
+      "addr:suburb": "Mitte",
+      "check_date:opening_hours": "2024-09-19",
+      "drink:wine": "yes",
+      "name": "Vinothek Berlin",
+      "opening_hours": "Tu-Sa 12:00-20:00",
+      "shop": "wine",
+      "website": "https://www.vinothek-berlin.de/",
+      "wheelchair": "yes"
+    }
+  },
+  {
+    "id": 4348820994,
+    "type": "node",
+    "name": "Der Weinladen",
+    "latitude": 52.4468394,
+    "longitude": 13.6274136,
+    "amenity": "",
+    "shop": "wine",
+    "craft": "",
+    "address": {
+      "street": "",
+      "housenumber": "",
+      "postcode": "",
+      "city": ""
+    },
+    "contact": {
+      "phone": "+49305664605",
+      "website": "",
+      "email": ""
+    },
+    "opening_hours": "Mo 15:00-19:00; Tu-Fr 11:00-19:00; Sa 10:00-14:00",
+    "description": "",
+    "wine_types": "yes",
+    "all_tags": {
+      "drink:wine": "yes",
+      "name": "Der Weinladen",
+      "opening_hours": "Mo 15:00-19:00; Tu-Fr 11:00-19:00; Sa 10:00-14:00",
+      "payment:credit_cards": "yes",
+      "payment:debit_cards": "yes",
+      "phone": "+49305664605",
+      "shop": "wine",
+      "wheelchair": "no"
+    }
+  },
+  {
+    "id": 4396230901,
+    "type": "node",
+    "name": "rebenkind",
+    "latitude": 52.5298768,
+    "longitude": 13.381074,
+    "amenity": "",
+    "shop": "wine",
+    "craft": "",
+    "address": {
+      "street": "Invalidenstraße",
+      "housenumber": "104",
+      "postcode": "10115",
+      "city": "Berlin"
+    },
+    "contact": {
+      "phone": "",
+      "website": "",
+      "email": ""
+    },
+    "opening_hours": "Tu 11:00-19:00; We-Fr 11:00-20:00; Sa 11:00-18:00",
+    "description": "",
+    "wine_types": "",
+    "all_tags": {
+      "addr:city": "Berlin",
+      "addr:country": "DE",
+      "addr:housenumber": "104",
+      "addr:postcode": "10115",
+      "addr:street": "Invalidenstraße",
+      "addr:suburb": "Mitte",
+      "name": "rebenkind",
+      "opening_hours": "Tu 11:00-19:00; We-Fr 11:00-20:00; Sa 11:00-18:00",
+      "payment:credit_cards": "yes",
+      "payment:debit_cards": "yes",
+      "shop": "wine",
+      "wheelchair": "no"
+    }
+  },
+  {
+    "id": 4601682166,
+    "type": "node",
+    "name": "weinmichel",
+    "latitude": 52.4880644,
+    "longitude": 13.3399172,
+    "amenity": "",
+    "shop": "wine",
+    "craft": "",
+    "address": {
+      "street": "",
+      "housenumber": "",
+      "postcode": "",
+      "city": ""
+    },
+    "contact": {
+      "phone": "",
+      "website": "",
+      "email": ""
+    },
+    "opening_hours": "Mo-Fr 11:00-19:00; Sa 10:00-18:00",
+    "description": "",
+    "wine_types": "yes",
+    "all_tags": {
+      "check_date:opening_hours": "2023-04-23",
+      "drink:wine": "yes",
+      "name": "weinmichel",
+      "opening_hours": "Mo-Fr 11:00-19:00; Sa 10:00-18:00",
+      "shop": "wine",
+      "wheelchair": "no"
+    }
+  },
+  {
+    "id": 4639783996,
+    "type": "node",
+    "name": "Domaines Weinhandel",
+    "latitude": 52.4450245,
+    "longitude": 13.5770194,
+    "amenity": "",
+    "shop": "wine",
+    "craft": "",
+    "address": {
+      "street": "",
+      "housenumber": "",
+      "postcode": "",
+      "city": ""
+    },
+    "contact": {
+      "phone": "+49 30 65211858",
+      "website": "https://domaines-berlin.de/weinhandlung/",
+      "email": ""
+    },
+    "opening_hours": "Mo-Th 12:00-18:30; Fr 12:00-19:00; Sa 11:00-14:00; PH off",
+    "description": "",
+    "wine_types": "yes",
+    "all_tags": {
+      "drink:wine": "yes",
+      "name": "Domaines Weinhandel",
+      "opening_hours": "Mo-Th 12:00-18:30; Fr 12:00-19:00; Sa 11:00-14:00; PH off",
+      "phone": "+49 30 65211858",
+      "shop": "wine",
+      "website": "https://domaines-berlin.de/weinhandlung/",
+      "wheelchair": "no"
+    }
+  },
+  {
+    "id": 4813700560,
+    "type": "node",
+    "name": "Kopenhagener Weinhandlung",
+    "latitude": 52.5486808,
+    "longitude": 13.4109046,
+    "amenity": "",
+    "shop": "wine",
+    "craft": "",
+    "address": {
+      "street": "Kopenhagener Straße",
+      "housenumber": "72",
+      "postcode": "",
+      "city": ""
+    },
+    "contact": {
+      "phone": "+49 30 44008220",
+      "website": "http://www.nixwiewein.de/",
+      "email": "post@nixwiewein.de"
+    },
+    "opening_hours": "Mo-Fr 10:00-19:00; Sa 10:00-17:00",
+    "description": "",
+    "wine_types": "yes",
+    "all_tags": {
+      "addr:housenumber": "72",
+      "addr:street": "Kopenhagener Straße",
+      "check_date:opening_hours": "2022-06-18",
+      "drink:wine": "yes",
+      "email": "post@nixwiewein.de",
+      "name": "Kopenhagener Weinhandlung",
+      "opening_hours": "Mo-Fr 10:00-19:00; Sa 10:00-17:00",
+      "phone": "+49 30 44008220",
+      "shop": "wine",
+      "website": "http://www.nixwiewein.de/",
+      "wheelchair": "limited"
+    }
+  },
+  {
+    "id": 4883751967,
+    "type": "node",
+    "name": "Wein & Gut",
+    "latitude": 52.5167441,
+    "longitude": 13.4680104,
+    "amenity": "",
+    "shop": "wine",
+    "craft": "",
+    "address": {
+      "street": "",
+      "housenumber": "",
+      "postcode": "",
+      "city": ""
+    },
+    "contact": {
+      "phone": "",
+      "website": "",
+      "email": ""
+    },
+    "opening_hours": "Mo-We 15:00-20:00; Th,Fr 15:00-22:00; Sa 11:00-22:00",
+    "description": "Öffnungszeiten können bei gutem Wetter variieren. (früher öffnen, später schließen)",
+    "wine_types": "yes",
+    "all_tags": {
+      "description": "Öffnungszeiten können bei gutem Wetter variieren. (früher öffnen, später schließen)",
+      "drink:wine": "yes",
+      "name": "Wein & Gut",
+      "opening_hours": "Mo-We 15:00-20:00; Th,Fr 15:00-22:00; Sa 11:00-22:00",
+      "shop": "wine",
+      "wheelchair": "no"
+    }
+  },
+  {
+    "id": 4908859321,
+    "type": "node",
+    "name": "Jacques' Wein-Depot",
+    "latitude": 52.4464959,
+    "longitude": 13.625177,
+    "amenity": "",
+    "shop": "wine",
+    "craft": "",
+    "address": {
+      "street": "Müggelseedamm",
+      "housenumber": "167",
+      "postcode": "12587",
+      "city": "Berlin"
+    },
+    "contact": {
+      "phone": "+493064091480",
+      "website": "",
+      "email": ""
+    },
+    "opening_hours": "Mo-Th 15:00-19:00; Fr 13:00-19:00; Sa 10:00-16:00",
+    "description": "",
+    "wine_types": "",
+    "all_tags": {
+      "addr:city": "Berlin",
+      "addr:country": "DE",
+      "addr:housenumber": "167",
+      "addr:postcode": "12587",
+      "addr:street": "Müggelseedamm",
+      "addr:suburb": "Friedrichshagen",
+      "brand": "Jacques' Wein-Depot",
+      "brand:wikidata": "Q1678150",
+      "brand:wikipedia": "de:Jacques’ Wein-Depot",
+      "check_date": "2024-08-29",
+      "contact:website": "https://www.jacques.de/depot/287/berlin-friedrichshagen/",
+      "name": "Jacques' Wein-Depot",
+      "opening_hours": "Mo-Th 15:00-19:00; Fr 13:00-19:00; Sa 10:00-16:00",
+      "phone": "+493064091480",
+      "shop": "wine"
+    }
+  },
+  {
+    "id": 5032300662,
+    "type": "node",
+    "name": "Wein Bar Chateauneuf",
+    "latitude": 52.4422401,
+    "longitude": 13.2941435,
+    "amenity": "",
+    "shop": "wine",
+    "craft": "",
+    "address": {
+      "street": "Curtiusstraße",
+      "housenumber": "12",
+      "postcode": "12205",
+      "city": "Berlin"
+    },
+    "contact": {
+      "phone": "",
+      "website": "http://www.chateauneuf-berlin.de/",
+      "email": ""
+    },
+    "opening_hours": "We-Sa 17:00-23:00",
+    "description": "",
+    "wine_types": "",
+    "all_tags": {
+      "addr:city": "Berlin",
+      "addr:housenumber": "12",
+      "addr:postcode": "12205",
+      "addr:street": "Curtiusstraße",
+      "check_date:opening_hours": "2025-02-15",
+      "name": "Wein Bar Chateauneuf",
+      "opening_hours": "We-Sa 17:00-23:00",
+      "shop": "wine",
+      "website": "http://www.chateauneuf-berlin.de/"
+    }
+  },
+  {
+    "id": 5224049498,
+    "type": "node",
+    "name": "Weinhaus Köpenick",
+    "latitude": 52.4446746,
+    "longitude": 13.5750783,
+    "amenity": "",
+    "shop": "wine",
+    "craft": "",
+    "address": {
+      "street": "",
+      "housenumber": "",
+      "postcode": "",
+      "city": ""
+    },
+    "contact": {
+      "phone": "+49 30 53063202",
+      "website": "http://www.weinhaus-köpenick.de/",
+      "email": ""
+    },
+    "opening_hours": "Mo-Fr 10:00-18:00; Sa 10:00-14:00; PH off",
+    "description": "",
+    "wine_types": "",
+    "all_tags": {
+      "check_date:opening_hours": "2020-12-07",
+      "name": "Weinhaus Köpenick",
+      "opening_hours": "Mo-Fr 10:00-18:00; Sa 10:00-14:00; PH off",
+      "phone": "+49 30 53063202",
+      "shop": "wine",
+      "website": "http://www.weinhaus-köpenick.de/"
+    }
+  },
+  {
+    "id": 5337294219,
+    "type": "node",
+    "name": "Sonnnenreich-Weine am Arnimplatz",
+    "latitude": 52.5515406,
+    "longitude": 13.4106982,
+    "amenity": "",
+    "shop": "wine",
+    "craft": "",
+    "address": {
+      "street": "Seelower Straße",
+      "housenumber": "6",
+      "postcode": "",
+      "city": ""
+    },
+    "contact": {
+      "phone": "+493040003044",
+      "website": "http://www.sonnenreich-weine.de/",
+      "email": "info@sonnenreich-weine.de"
+    },
+    "opening_hours": "Tu-Fr 12:00-20:00; Sa 12:00-18:00",
+    "description": "Weine am Arminplatz",
+    "wine_types": "",
+    "all_tags": {
+      "addr:housenumber": "6",
+      "addr:street": "Seelower Straße",
+      "check_date": "2025-04-21",
+      "description": "Weine am Arminplatz",
+      "email": "info@sonnenreich-weine.de",
+      "name": "Sonnnenreich-Weine am Arnimplatz",
+      "name:de": "Sonnnenreich-Weine am Arnimplatz",
+      "opening_hours": "Tu-Fr 12:00-20:00; Sa 12:00-18:00",
+      "payment:mastercard": "yes",
+      "payment:visa": "yes",
+      "phone": "+493040003044",
+      "shop": "wine",
+      "website": "http://www.sonnenreich-weine.de/"
+    }
+  },
+  {
+    "id": 5354951051,
+    "type": "node",
+    "name": "La Premiata Ditta",
+    "latitude": 52.5490341,
+    "longitude": 13.4096682,
+    "amenity": "",
+    "shop": "wine",
+    "craft": "",
+    "address": {
+      "street": "",
+      "housenumber": "",
+      "postcode": "",
+      "city": ""
+    },
+    "contact": {
+      "phone": "+49 30 25776436",
+      "website": "http://www.lapremiataditta.com",
+      "email": "giovanni.lapremiata@gmail.com"
+    },
+    "opening_hours": "Mo-Fr 11:00-23:00; Sa 13:00-23:00; Su 13:00-22:00",
+    "description": "",
+    "wine_types": "",
+    "all_tags": {
+      "email": "giovanni.lapremiata@gmail.com",
+      "name": "La Premiata Ditta",
+      "opening_hours": "Mo-Fr 11:00-23:00; Sa 13:00-23:00; Su 13:00-22:00",
+      "phone": "+49 30 25776436",
+      "shop": "wine",
+      "website": "http://www.lapremiataditta.com"
+    }
+  },
+  {
+    "id": 5387578623,
+    "type": "node",
+    "name": "Wein & Glas",
+    "latitude": 52.492358,
+    "longitude": 13.3328274,
+    "amenity": "",
+    "shop": "wine",
+    "craft": "",
+    "address": {
+      "street": "Prinzregentenstraße",
+      "housenumber": "2",
+      "postcode": "10717",
+      "city": ""
+    },
+    "contact": {
+      "phone": "+49302351520",
+      "website": "https://www.weinundglas.com/",
+      "email": ""
+    },
+    "opening_hours": "Mo-Fr 10:00-18:30; Sa 10:00-16:00",
+    "description": "",
+    "wine_types": "",
+    "all_tags": {
+      "addr:housenumber": "2",
+      "addr:postcode": "10717",
+      "addr:street": "Prinzregentenstraße",
+      "name": "Wein & Glas",
+      "opening_hours": "Mo-Fr 10:00-18:30; Sa 10:00-16:00",
+      "phone": "+49302351520",
+      "shop": "wine",
+      "website": "https://www.weinundglas.com/"
+    }
+  },
+  {
+    "id": 5761176262,
+    "type": "node",
+    "name": "Paasburg’s WeinAusLeidenschaft",
+    "latitude": 52.4727311,
+    "longitude": 13.3206638,
+    "amenity": "",
+    "shop": "wine",
+    "craft": "",
+    "address": {
+      "street": "Südwestkorso",
+      "housenumber": "17",
+      "postcode": "12161",
+      "city": "Berlin"
+    },
+    "contact": {
+      "phone": "",
+      "website": "",
+      "email": ""
+    },
+    "opening_hours": "Mo-Fr 11:00-19:00; Sa 11:00-15:00",
+    "description": "",
+    "wine_types": "",
+    "all_tags": {
+      "addr:city": "Berlin",
+      "addr:housenumber": "17",
+      "addr:postcode": "12161",
+      "addr:street": "Südwestkorso",
+      "check_date:opening_hours": "2025-03-16",
+      "name": "Paasburg’s WeinAusLeidenschaft",
+      "opening_hours": "Mo-Fr 11:00-19:00; Sa 11:00-15:00",
+      "shop": "wine"
+    }
+  },
+  {
+    "id": 5801381294,
+    "type": "node",
+    "name": "Bebua",
+    "latitude": 52.5001599,
+    "longitude": 13.3218194,
+    "amenity": "bar",
+    "shop": "wine",
+    "craft": "",
+    "address": {
+      "street": "",
+      "housenumber": "",
+      "postcode": "",
+      "city": ""
+    },
+    "contact": {
+      "phone": "",
+      "website": "https://bebua.de/",
+      "email": ""
+    },
+    "opening_hours": "closed",
+    "description": "",
+    "wine_types": "yes",
+    "all_tags": {
+      "amenity": "bar",
+      "drink:wine": "yes",
+      "name": "Bebua",
+      "opening_hours": "closed",
+      "shop": "wine",
+      "website": "https://bebua.de/"
+    }
+  },
+  {
+    "id": 5865736902,
+    "type": "node",
+    "name": "Kleiner Weinstock",
+    "latitude": 52.4868618,
+    "longitude": 13.3899786,
+    "amenity": "",
+    "shop": "wine",
+    "craft": "",
+    "address": {
+      "street": "Fidicinstraße",
+      "housenumber": "8a",
+      "postcode": "10965",
+      "city": "Berlin"
+    },
+    "contact": {
+      "phone": "",
+      "website": "",
+      "email": ""
+    },
+    "opening_hours": "Mo-Fr 15:00-22:30; Sa 11:00-20:30",
+    "description": "",
+    "wine_types": "",
+    "all_tags": {
+      "addr:city": "Berlin",
+      "addr:country": "DE",
+      "addr:housenumber": "8a",
+      "addr:postcode": "10965",
+      "addr:street": "Fidicinstraße",
+      "addr:suburb": "Kreuzberg",
+      "contact:phone": "+49 30 69517716",
+      "contact:website": "https://www.kleiner-weinstock.de/",
+      "name": "Kleiner Weinstock",
+      "opening_hours": "Mo-Fr 15:00-22:30; Sa 11:00-20:30",
+      "payment:cash": "yes",
+      "shop": "wine"
+    }
+  },
+  {
+    "id": 6088534685,
+    "type": "node",
+    "name": "Motif Wein",
+    "latitude": 52.4863013,
+    "longitude": 13.4351525,
+    "amenity": "",
+    "shop": "wine",
+    "craft": "",
+    "address": {
+      "street": "Weserstraße",
+      "housenumber": "189",
+      "postcode": "12045",
+      "city": "Berlin"
+    },
+    "contact": {
+      "phone": "",
+      "website": "",
+      "email": ""
+    },
+    "opening_hours": "",
+    "description": "",
+    "wine_types": "",
+    "all_tags": {
+      "addr:city": "Berlin",
+      "addr:country": "DE",
+      "addr:housenumber": "189",
+      "addr:postcode": "12045",
+      "addr:street": "Weserstraße",
+      "air_conditioning": "no",
+      "changing_table": "no",
+      "check_date": "2024-05-25",
+      "contact:facebook": "https://www.facebook.com/motifwein/",
+      "name": "Motif Wein",
+      "payment:cash": "yes",
+      "payment:credit_cards": "yes",
+      "payment:debit_cards": "yes",
+      "shop": "wine",
+      "source": "survey",
+      "toilets": "yes",
+      "toilets:wheelchair": "no",
+      "wheelchair": "no"
+    }
+  },
+  {
+    "id": 6165775287,
+    "type": "node",
+    "name": "Rocket Wine Berlin",
+    "latitude": 52.5250981,
+    "longitude": 13.4024547,
+    "amenity": "",
+    "shop": "wine",
+    "craft": "",
+    "address": {
+      "street": "",
+      "housenumber": "",
+      "postcode": "10178",
+      "city": ""
+    },
+    "contact": {
+      "phone": "",
+      "website": "",
+      "email": ""
+    },
+    "opening_hours": "Mo-Th 14:00-21:00; Fr,Sa 12:00-21:00",
+    "description": "",
+    "wine_types": "",
+    "all_tags": {
+      "addr:postcode": "10178",
+      "name": "Rocket Wine Berlin",
+      "opening_hours": "Mo-Th 14:00-21:00; Fr,Sa 12:00-21:00",
+      "shop": "wine",
+      "wheelchair": "no"
+    }
+  },
+  {
+    "id": 6292209890,
+    "type": "node",
+    "name": "Vinotopia",
+    "latitude": 52.4912163,
+    "longitude": 13.4166204,
+    "amenity": "",
+    "shop": "wine",
+    "craft": "",
+    "address": {
+      "street": "Graefestraße",
+      "housenumber": "65A",
+      "postcode": "10967",
+      "city": "Berlin"
+    },
+    "contact": {
+      "phone": "",
+      "website": "https://vinotopia.sumupstore.com",
+      "email": ""
+    },
+    "opening_hours": "",
+    "description": "",
+    "wine_types": "",
+    "all_tags": {
+      "addr:city": "Berlin",
+      "addr:country": "DE",
+      "addr:housenumber": "65A",
+      "addr:postcode": "10967",
+      "addr:street": "Graefestraße",
+      "addr:suburb": "Kreuzberg",
+      "name": "Vinotopia",
+      "shop": "wine",
+      "website": "https://vinotopia.sumupstore.com"
+    }
+  },
+  {
+    "id": 6520925490,
+    "type": "node",
+    "name": "Divnum",
+    "latitude": 52.4543869,
+    "longitude": 13.3242007,
+    "amenity": "",
+    "shop": "wine",
+    "craft": "",
+    "address": {
+      "street": "Schützenstraße",
+      "housenumber": "50",
+      "postcode": "12165",
+      "city": "Berlin"
+    },
+    "contact": {
+      "phone": "+49 30 44341870",
+      "website": "",
+      "email": ""
+    },
+    "opening_hours": "",
+    "description": "",
+    "wine_types": "",
+    "all_tags": {
+      "addr:city": "Berlin",
+      "addr:country": "DE",
+      "addr:housenumber": "50",
+      "addr:postcode": "12165",
+      "addr:street": "Schützenstraße",
+      "addr:suburb": "Steglitz",
+      "contact:website": "https://divinum.de/",
+      "name": "Divnum",
+      "phone": "+49 30 44341870",
+      "ref:vatin": "DE245566583",
+      "shop": "wine"
+    }
+  },
+  {
+    "id": 7052065485,
+    "type": "node",
+    "name": "Weinkeller",
+    "latitude": 52.4943706,
+    "longitude": 13.3987826,
+    "amenity": "",
+    "shop": "wine",
+    "craft": "",
+    "address": {
+      "street": "Blücherstraße",
+      "housenumber": "22",
+      "postcode": "",
+      "city": ""
+    },
+    "contact": {
+      "phone": "",
+      "website": "http://www.weinkeller-berlin.de/weinhandlung.html",
+      "email": ""
+    },
+    "opening_hours": "",
+    "description": "",
+    "wine_types": "",
+    "all_tags": {
+      "addr:housenumber": "22",
+      "addr:street": "Blücherstraße",
+      "name": "Weinkeller",
+      "shop": "wine",
+      "website": "http://www.weinkeller-berlin.de/weinhandlung.html"
+    }
+  },
+  {
+    "id": 7069855805,
+    "type": "node",
+    "name": "Weinmarie",
+    "latitude": 52.5315909,
+    "longitude": 13.4342946,
+    "amenity": "",
+    "shop": "wine",
+    "craft": "",
+    "address": {
+      "street": "Bötzowstraße",
+      "housenumber": "28",
+      "postcode": "10407",
+      "city": "Berlin"
+    },
+    "contact": {
+      "phone": "",
+      "website": "",
+      "email": ""
+    },
+    "opening_hours": "Tu-Fr 13:00-20:00; Sa 11:00-18:00",
+    "description": "",
+    "wine_types": "",
+    "all_tags": {
+      "addr:city": "Berlin",
+      "addr:housenumber": "28",
+      "addr:postcode": "10407",
+      "addr:street": "Bötzowstraße",
+      "name": "Weinmarie",
+      "name:ja": "ヴァインマリー",
+      "opening_hours": "Tu-Fr 13:00-20:00; Sa 11:00-18:00",
+      "shop": "wine",
+      "wheelchair": "limited"
+    }
+  },
+  {
+    "id": 7235646198,
+    "type": "node",
+    "name": "Weingalerie",
+    "latitude": 52.5079028,
+    "longitude": 13.2968266,
+    "amenity": "",
+    "shop": "wine",
+    "craft": "",
+    "address": {
+      "street": "Pestalozzistraße",
+      "housenumber": "55",
+      "postcode": "10627",
+      "city": "Berlin"
+    },
+    "contact": {
+      "phone": "",
+      "website": "",
+      "email": ""
+    },
+    "opening_hours": "Mo-Fr 12:00-20:00; Sa 10:00-16:00",
+    "description": "",
+    "wine_types": "",
+    "all_tags": {
+      "addr:city": "Berlin",
+      "addr:country": "DE",
+      "addr:housenumber": "55",
+      "addr:postcode": "10627",
+      "addr:street": "Pestalozzistraße",
+      "addr:suburb": "Charlottenburg",
+      "check_date:opening_hours": "2024-03-11",
+      "contact:email": "weingalerie@portwine.de",
+      "contact:phone": "+49 30 3237448",
+      "contact:website": "https://portwine.de/",
+      "name": "Weingalerie",
+      "opening_hours": "Mo-Fr 12:00-20:00; Sa 10:00-16:00",
+      "operator": "Karsten Kubin & R. Lindenblatt GbR",
+      "shop": "wine"
+    }
+  },
+  {
+    "id": 7238306940,
+    "type": "node",
+    "name": "Weing'schäft",
+    "latitude": 52.4892642,
+    "longitude": 13.391798,
+    "amenity": "",
+    "shop": "wine",
+    "craft": "",
+    "address": {
+      "street": "Bergmannstraße",
+      "housenumber": "16",
+      "postcode": "10961",
+      "city": "Berlin"
+    },
+    "contact": {
+      "phone": "",
+      "website": "",
+      "email": ""
+    },
+    "opening_hours": "Mo-Th 12:00-20:00; Sa 11:00-20:00; Fr 11:00-20:00",
+    "description": "",
+    "wine_types": "",
+    "all_tags": {
+      "addr:city": "Berlin",
+      "addr:country": "DE",
+      "addr:housenumber": "16",
+      "addr:postcode": "10961",
+      "addr:street": "Bergmannstraße",
+      "addr:suburb": "Kreuzberg",
+      "contact:website": "http://www.weingschaeft.de/",
+      "name": "Weing'schäft",
+      "opening_hours": "Mo-Th 12:00-20:00; Sa 11:00-20:00; Fr 11:00-20:00",
+      "shop": "wine"
+    }
+  },
+  {
+    "id": 7275393157,
+    "type": "node",
+    "name": "Weinwinkel",
+    "latitude": 52.5408506,
+    "longitude": 13.419532,
+    "amenity": "",
+    "shop": "wine",
+    "craft": "",
+    "address": {
+      "street": "Dunckerstraße",
+      "housenumber": "2a",
+      "postcode": "10437",
+      "city": "Berlin"
+    },
+    "contact": {
+      "phone": "",
+      "website": "",
+      "email": ""
+    },
+    "opening_hours": "Mo-Fr 12:00-20:00; Sa 10:00-19:00",
+    "description": "",
+    "wine_types": "yes",
+    "all_tags": {
+      "addr:city": "Berlin",
+      "addr:country": "DE",
+      "addr:housenumber": "2a",
+      "addr:postcode": "10437",
+      "addr:street": "Dunckerstraße",
+      "addr:suburb": "Prenzlauer Berg",
+      "check_date": "2024-08-22",
+      "contact:phone": "+49 30 34620410",
+      "contact:website": "https://weinwinkel.info/",
+      "drink:wine": "yes",
+      "name": "Weinwinkel",
+      "opening_hours": "Mo-Fr 12:00-20:00; Sa 10:00-19:00",
+      "shop": "wine",
+      "wheelchair": "no"
+    }
+  },
+  {
+    "id": 7289624563,
+    "type": "node",
+    "name": "Lorem & Ipsum",
+    "latitude": 52.540343,
+    "longitude": 13.421957,
+    "amenity": "",
+    "shop": "wine",
+    "craft": "",
+    "address": {
+      "street": "Senefelderstraße",
+      "housenumber": "32",
+      "postcode": "10437",
+      "city": "Berlin"
+    },
+    "contact": {
+      "phone": "",
+      "website": "",
+      "email": ""
+    },
+    "opening_hours": "Tu-Fr 14:00-20:00; Sa 12:00-18:00",
+    "description": "",
+    "wine_types": "",
+    "all_tags": {
+      "addr:city": "Berlin",
+      "addr:country": "DE",
+      "addr:housenumber": "32",
+      "addr:postcode": "10437",
+      "addr:street": "Senefelderstraße",
+      "addr:suburb": "Prenzlauer Berg",
+      "contact:phone": "+49 30 45968763",
+      "contact:website": "https://www.loremundipsum.com",
+      "name": "Lorem & Ipsum",
+      "opening_hours": "Tu-Fr 14:00-20:00; Sa 12:00-18:00",
+      "shop": "wine"
+    }
+  },
+  {
+    "id": 7289661922,
+    "type": "node",
+    "name": "8greenbottles",
+    "latitude": 52.5401054,
+    "longitude": 13.4218073,
+    "amenity": "",
+    "shop": "wine",
+    "craft": "",
+    "address": {
+      "street": "Senefelderstraße",
+      "housenumber": "34",
+      "postcode": "10437",
+      "city": "Berlin"
+    },
+    "contact": {
+      "phone": "",
+      "website": "",
+      "email": ""
+    },
+    "opening_hours": "Tu-Fr 15:00-20:00; Sa 12:00-20:00",
+    "description": "Naturweine",
+    "wine_types": "",
+    "all_tags": {
+      "addr:city": "Berlin",
+      "addr:country": "DE",
+      "addr:housenumber": "34",
+      "addr:postcode": "10437",
+      "addr:street": "Senefelderstraße",
+      "addr:suburb": "Prenzlauer Berg",
+      "check_date": "2022-10-12",
+      "contact:website": "https://8greenbottles.de/",
+      "description": "Naturweine",
+      "drink:natural_wine": "yes",
+      "level": "0",
+      "name": "8greenbottles",
+      "opening_hours": "Tu-Fr 15:00-20:00; Sa 12:00-20:00",
+      "organic": "yes",
+      "shop": "wine",
+      "wheelchair": "limited"
+    }
+  },
+  {
+    "id": 7308735930,
+    "type": "node",
+    "name": "Wein-Peter",
+    "latitude": 52.5412533,
+    "longitude": 13.4244656,
+    "amenity": "",
+    "shop": "wine",
+    "craft": "",
+    "address": {
+      "street": "Raumerstraße",
+      "housenumber": "26",
+      "postcode": "10437",
+      "city": "Berlin"
+    },
+    "contact": {
+      "phone": "",
+      "website": "",
+      "email": ""
+    },
+    "opening_hours": "Mo-Fr 14:00-19:00; Sa 11:00-16:00",
+    "description": "",
+    "wine_types": "",
+    "all_tags": {
+      "addr:city": "Berlin",
+      "addr:country": "DE",
+      "addr:housenumber": "26",
+      "addr:postcode": "10437",
+      "addr:street": "Raumerstraße",
+      "addr:suburb": "Prenzlauer Berg",
+      "check_date": "2025-03-08",
+      "check_date:opening_hours": "2022-09-24",
+      "contact:phone": "+49 30 44674977",
+      "contact:website": "http://peters-weinladen.de/",
+      "name": "Wein-Peter",
+      "opening_hours": "Mo-Fr 14:00-19:00; Sa 11:00-16:00",
+      "shop": "wine",
+      "wheelchair": "yes"
+    }
+  },
+  {
+    "id": 7310137555,
+    "type": "node",
+    "name": "Tsinapari",
+    "latitude": 52.5402788,
+    "longitude": 13.4244696,
+    "amenity": "",
+    "shop": "wine",
+    "craft": "",
+    "address": {
+      "street": "Prenzlauer Allee",
+      "housenumber": "191",
+      "postcode": "10405",
+      "city": "Berlin"
+    },
+    "contact": {
+      "phone": "",
+      "website": "",
+      "email": ""
+    },
+    "opening_hours": "Mo-Fr 14:00-19:00; Sa 11:00-16:00",
+    "description": "Weinhaus und Kunstgalerie",
+    "wine_types": "bottled",
+    "all_tags": {
+      "addr:city": "Berlin",
+      "addr:country": "DE",
+      "addr:housenumber": "191",
+      "addr:postcode": "10405",
+      "addr:street": "Prenzlauer Allee",
+      "addr:suburb": "Prenzlauer Berg",
+      "check_date": "2024-10-11",
+      "check_date:opening_hours": "2024-10-11",
+      "contact:phone": "+49 30 66868136",
+      "contact:website": "https://www.tsinapari.de/",
+      "description": "Weinhaus und Kunstgalerie",
+      "drink:wine": "bottled",
+      "name": "Tsinapari",
+      "opening_hours": "Mo-Fr 14:00-19:00; Sa 11:00-16:00",
+      "shop": "wine",
+      "wheelchair": "limited"
+    }
+  },
+  {
+    "id": 7638273422,
+    "type": "node",
+    "name": "Sekt und Wein",
+    "latitude": 52.4802257,
+    "longitude": 13.3300964,
+    "amenity": "",
+    "shop": "wine",
+    "craft": "",
+    "address": {
+      "street": "Tübinger Straße",
+      "housenumber": "6",
+      "postcode": "10715",
+      "city": "Berlin"
+    },
+    "contact": {
+      "phone": "",
+      "website": "",
+      "email": ""
+    },
+    "opening_hours": "",
+    "description": "",
+    "wine_types": "",
+    "all_tags": {
+      "addr:city": "Berlin",
+      "addr:country": "DE",
+      "addr:housenumber": "6",
+      "addr:postcode": "10715",
+      "addr:street": "Tübinger Straße",
+      "addr:suburb": "Wilmersdorf",
+      "name": "Sekt und Wein",
+      "shop": "wine"
+    }
+  },
+  {
+    "id": 8505085110,
+    "type": "node",
+    "name": "Kleines Weingut",
+    "latitude": 52.4692218,
+    "longitude": 13.4374025,
+    "amenity": "",
+    "shop": "wine",
+    "craft": "",
+    "address": {
+      "street": "Emser Straße",
+      "housenumber": "129",
+      "postcode": "12051",
+      "city": "Berlin"
+    },
+    "contact": {
+      "phone": "",
+      "website": "",
+      "email": ""
+    },
+    "opening_hours": "Mo-Sa 14:00-22:00",
+    "description": "",
+    "wine_types": "",
+    "all_tags": {
+      "addr:city": "Berlin",
+      "addr:housenumber": "129",
+      "addr:postcode": "12051",
+      "addr:street": "Emser Straße",
+      "check_date:opening_hours": "2023-05-05",
+      "name": "Kleines Weingut",
+      "opening_hours": "Mo-Sa 14:00-22:00",
+      "payment:cash": "yes",
+      "payment:credit_cards": "yes",
+      "payment:debit_cards": "yes",
+      "shop": "wine",
+      "wheelchair": "limited"
+    }
+  },
+  {
+    "id": 8505819130,
+    "type": "node",
+    "name": "Vinos",
+    "latitude": 52.6333084,
+    "longitude": 13.2919333,
+    "amenity": "",
+    "shop": "wine",
+    "craft": "",
+    "address": {
+      "street": "Zeltinger Platz",
+      "housenumber": "16",
+      "postcode": "13465",
+      "city": "Berlin"
+    },
+    "contact": {
+      "phone": "",
+      "website": "",
+      "email": ""
+    },
+    "opening_hours": "Mo-Th 10:00-18:30, Fr 10:00-19:00, Sa 10:00-14:30",
+    "description": "",
+    "wine_types": "",
+    "all_tags": {
+      "addr:city": "Berlin",
+      "addr:country": "DE",
+      "addr:housenumber": "16",
+      "addr:postcode": "13465",
+      "addr:street": "Zeltinger Platz",
+      "addr:suburb": "Frohnau",
+      "check_date:opening_hours": "2024-01-25",
+      "contact:email": "frohnau@vinos.de",
+      "contact:phone": "+4930 74743376",
+      "contact:website": "https://www.vinos.de/filiale-berlin-frohnau/",
+      "name": "Vinos",
+      "opening_hours": "Mo-Th 10:00-18:30, Fr 10:00-19:00, Sa 10:00-14:30",
+      "shop": "wine",
+      "wheelchair": "yes"
+    }
+  },
+  {
+    "id": 8626109380,
+    "type": "node",
+    "name": "Jacques' Wein-Depot",
+    "latitude": 52.5113994,
+    "longitude": 13.2913051,
+    "amenity": "",
+    "shop": "wine",
+    "craft": "",
+    "address": {
+      "street": "",
+      "housenumber": "",
+      "postcode": "",
+      "city": ""
+    },
+    "contact": {
+      "phone": "",
+      "website": "",
+      "email": ""
+    },
+    "opening_hours": "Tu-Fr 12:00-19:00; Sa 10:00-16:00",
+    "description": "",
+    "wine_types": "",
+    "all_tags": {
+      "brand": "Jacques' Wein-Depot",
+      "brand:wikidata": "Q1678150",
+      "brand:wikipedia": "de:Jacques’ Wein-Depot",
+      "name": "Jacques' Wein-Depot",
+      "opening_hours": "Tu-Fr 12:00-19:00; Sa 10:00-16:00",
+      "shop": "wine",
+      "wheelchair": "limited"
+    }
+  },
+  {
+    "id": 8726177800,
+    "type": "node",
+    "name": "Chelti Weinhandel",
+    "latitude": 52.4764968,
+    "longitude": 13.3316874,
+    "amenity": "",
+    "shop": "wine",
+    "craft": "",
+    "address": {
+      "street": "Isoldestraße",
+      "housenumber": "4",
+      "postcode": "12159",
+      "city": "Berlin"
+    },
+    "contact": {
+      "phone": "+49 30 98420430",
+      "website": "https://www.chelti.de/",
+      "email": ""
+    },
+    "opening_hours": "Mo-Th 14:00-19:00; Fr,Sa 14:00-20:00",
+    "description": "",
+    "wine_types": "",
+    "all_tags": {
+      "addr:city": "Berlin",
+      "addr:country": "DE",
+      "addr:housenumber": "4",
+      "addr:postcode": "12159",
+      "addr:street": "Isoldestraße",
+      "addr:suburb": "Friedenau",
+      "name": "Chelti Weinhandel",
+      "opening_hours": "Mo-Th 14:00-19:00; Fr,Sa 14:00-20:00",
+      "operator": "Chelti GmbH",
+      "phone": "+49 30 98420430",
+      "shop": "wine",
+      "website": "https://www.chelti.de/"
+    }
+  },
+  {
+    "id": 9421237675,
+    "type": "node",
+    "name": "Jacques' Wein-Depot",
+    "latitude": 52.4881913,
+    "longitude": 13.3495969,
+    "amenity": "",
+    "shop": "wine",
+    "craft": "",
+    "address": {
+      "street": "Apostel-Paulus-Straße",
+      "housenumber": "31",
+      "postcode": "10823",
+      "city": "Berlin"
+    },
+    "contact": {
+      "phone": "",
+      "website": "",
+      "email": ""
+    },
+    "opening_hours": "Mo-We 13:00-19:00; Th,Fr 12:00-19:00; Sa 10:00-16:00",
+    "description": "",
+    "wine_types": "",
+    "all_tags": {
+      "addr:city": "Berlin",
+      "addr:country": "DE",
+      "addr:housenumber": "31",
+      "addr:postcode": "10823",
+      "addr:street": "Apostel-Paulus-Straße",
+      "brand": "Jacques' Wein-Depot",
+      "brand:wikidata": "Q1678150",
+      "brand:wikipedia": "de:Jacques’ Wein-Depot",
+      "contact:phone": "+49 30 41718139",
+      "contact:website": "https://www.jacques.de/weindepot/D377/Berlin-Schoneberg",
+      "name": "Jacques' Wein-Depot",
+      "opening_hours": "Mo-We 13:00-19:00; Th,Fr 12:00-19:00; Sa 10:00-16:00",
+      "payment:apple_pay": "yes",
+      "payment:cash": "yes",
+      "payment:credit_cards": "yes",
+      "payment:debit_cards": "yes",
+      "payment:google_pay": "yes",
+      "payment:mastercard": "yes",
+      "payment:visa": "yes",
+      "shop": "wine",
+      "wheelchair": "yes"
+    }
+  },
+  {
+    "id": 9468952230,
+    "type": "node",
+    "name": "Rindchen's Weinkontor Berlin Charlottenburg",
+    "latitude": 52.5182311,
+    "longitude": 13.2826086,
+    "amenity": "",
+    "shop": "wine",
+    "craft": "",
+    "address": {
+      "street": "Lerschpfad",
+      "housenumber": "4",
+      "postcode": "14059",
+      "city": "Berlin"
+    },
+    "contact": {
+      "phone": "+49 30 30203605",
+      "website": "https://www.rindchen.de/kontore/kontor-berlin-charlottenburg",
+      "email": "info@rindchen-berlin.de"
+    },
+    "opening_hours": "Tu-Fr 11:00-20:00; Sa 10:00-16:00",
+    "description": "",
+    "wine_types": "",
+    "all_tags": {
+      "addr:city": "Berlin",
+      "addr:housenumber": "4",
+      "addr:postcode": "14059",
+      "addr:street": "Lerschpfad",
+      "brand": "Rindchen's Weinkontor",
+      "brand:wikidata": "Q110713478",
+      "check_date:opening_hours": "2024-08-19",
+      "email": "info@rindchen-berlin.de",
+      "name": "Rindchen's Weinkontor Berlin Charlottenburg",
+      "opening_hours": "Tu-Fr 11:00-20:00; Sa 10:00-16:00",
+      "operator": "Ulrich Traeger",
+      "phone": "+49 30 30203605",
+      "shop": "wine",
+      "website": "https://www.rindchen.de/kontore/kontor-berlin-charlottenburg"
+    }
+  },
+  {
+    "id": 9631156724,
+    "type": "node",
+    "name": "Das schwarze Glas",
+    "latitude": 52.4711272,
+    "longitude": 13.4303727,
+    "amenity": "",
+    "shop": "",
+    "craft": "winery",
+    "address": {
+      "street": "Jonasstraße",
+      "housenumber": "33",
+      "postcode": "12053",
+      "city": "Berlin"
+    },
+    "contact": {
+      "phone": "",
+      "website": "",
+      "email": ""
+    },
+    "opening_hours": "We-Fr 15:00-20:00, Sa 12:00-19:00",
+    "description": "",
+    "wine_types": "",
+    "all_tags": {
+      "addr:city": "Berlin",
+      "addr:country": "DE",
+      "addr:housenumber": "33",
+      "addr:postcode": "12053",
+      "addr:street": "Jonasstraße",
+      "addr:suburb": "Neukölln",
+      "contact:mobile": "+49 175 1734179",
+      "contact:phone": "+49 30 54715000",
+      "contact:website": "https://das-schwarze-glas.de",
+      "craft": "winery",
+      "name": "Das schwarze Glas",
+      "opening_hours": "We-Fr 15:00-20:00, Sa 12:00-19:00",
+      "operator": "Bubenzer & Schauenburg GbR"
+    }
+  },
+  {
+    "id": 9646692780,
+    "type": "node",
+    "name": "Bianco",
+    "latitude": 52.5148927,
+    "longitude": 13.3135084,
+    "amenity": "",
+    "shop": "wine",
+    "craft": "",
+    "address": {
+      "street": "Otto-Suhr-Allee",
+      "housenumber": "45",
+      "postcode": "10585",
+      "city": "Berlin"
+    },
+    "contact": {
+      "phone": "",
+      "website": "",
+      "email": ""
+    },
+    "opening_hours": "Mo-Fr 08:30-17:00; Sa 09:30-13:00",
+    "description": "",
+    "wine_types": "",
+    "all_tags": {
+      "addr:city": "Berlin",
+      "addr:housenumber": "45",
+      "addr:postcode": "10585",
+      "addr:street": "Otto-Suhr-Allee",
+      "check_date": "2024-03-14",
+      "check_date:opening_hours": "2024-03-14",
+      "name": "Bianco",
+      "opening_hours": "Mo-Fr 08:30-17:00; Sa 09:30-13:00",
+      "shop": "wine",
+      "source": "survey"
+    }
+  },
+  {
+    "id": 9653348476,
+    "type": "node",
+    "name": "Treat",
+    "latitude": 52.4737643,
+    "longitude": 13.423664,
+    "amenity": "",
+    "shop": "",
+    "craft": "winery",
+    "address": {
+      "street": "Okerstraße",
+      "housenumber": "35",
+      "postcode": "12049",
+      "city": "Berlin"
+    },
+    "contact": {
+      "phone": "",
+      "website": "",
+      "email": ""
+    },
+    "opening_hours": "Mo, We 16:00-20:00; Th, Fr 15:00-20:00; Sa 12:00-20:00",
+    "description": "",
+    "wine_types": "",
+    "all_tags": {
+      "addr:city": "Berlin",
+      "addr:country": "DE",
+      "addr:housenumber": "35",
+      "addr:postcode": "12049",
+      "addr:street": "Okerstraße",
+      "addr:suburb": "Neukölln",
+      "contact:website": "https://treat.wine",
+      "craft": "winery",
+      "name": "Treat",
+      "opening_hours": "Mo, We 16:00-20:00; Th, Fr 15:00-20:00; Sa 12:00-20:00"
+    }
+  },
+  {
+    "id": 9661594907,
+    "type": "node",
+    "name": "Der Rioja-Weinspezialist",
+    "latitude": 52.4887832,
+    "longitude": 13.3538211,
+    "amenity": "",
+    "shop": "wine",
+    "craft": "",
+    "address": {
+      "street": "Akazienstraße",
+      "housenumber": "13",
+      "postcode": "10823",
+      "city": "Berlin"
+    },
+    "contact": {
+      "phone": "",
+      "website": "https://www.rioja-weinspezialist.de/",
+      "email": ""
+    },
+    "opening_hours": "Mo-Fr 11:00-20:00; Sa 11:00-18:00",
+    "description": "",
+    "wine_types": "",
+    "all_tags": {
+      "addr:city": "Berlin",
+      "addr:country": "DE",
+      "addr:housenumber": "13",
+      "addr:postcode": "10823",
+      "addr:street": "Akazienstraße",
+      "addr:suburb": "Schöneberg",
+      "name": "Der Rioja-Weinspezialist",
+      "opening_hours": "Mo-Fr 11:00-20:00; Sa 11:00-18:00",
+      "shop": "wine",
+      "website": "https://www.rioja-weinspezialist.de/",
+      "wheelchair": "no"
+    }
+  },
+  {
+    "id": 9662447517,
+    "type": "node",
+    "name": "Weinhandlung Von Eisen",
+    "latitude": 52.4902028,
+    "longitude": 13.4257693,
+    "amenity": "",
+    "shop": "wine",
+    "craft": "",
+    "address": {
+      "street": "Lenaustraße",
+      "housenumber": "23",
+      "postcode": "12047",
+      "city": ""
+    },
+    "contact": {
+      "phone": "",
+      "website": "http://www.wein-von-eisen.de",
+      "email": ""
+    },
+    "opening_hours": "Tu-Fr 14:00-20:00; Sa 12:00-20:00",
+    "description": "",
+    "wine_types": "",
+    "all_tags": {
+      "addr:housenumber": "23",
+      "addr:postcode": "12047",
+      "addr:street": "Lenaustraße",
+      "name": "Weinhandlung Von Eisen",
+      "opening_hours": "Tu-Fr 14:00-20:00; Sa 12:00-20:00",
+      "shop": "wine",
+      "website": "http://www.wein-von-eisen.de"
+    }
+  },
+  {
+    "id": 9702850591,
+    "type": "node",
+    "name": "not only riesling",
+    "latitude": 52.4880287,
+    "longitude": 13.4135468,
+    "amenity": "",
+    "shop": "wine",
+    "craft": "",
+    "address": {
+      "street": "Hasenheide",
+      "housenumber": "78",
+      "postcode": "10967",
+      "city": "Berlin"
+    },
+    "contact": {
+      "phone": "+49 30 61209303",
+      "website": "",
+      "email": ""
+    },
+    "opening_hours": "Mo-Sa 14:00-22:00",
+    "description": "",
+    "wine_types": "",
+    "all_tags": {
+      "addr:city": "Berlin",
+      "addr:country": "DE",
+      "addr:housenumber": "78",
+      "addr:postcode": "10967",
+      "addr:street": "Hasenheide",
+      "addr:suburb": "Neukölln",
+      "contact:instagram": "https://www.instagram.com/notonlyriesling_berlin/",
+      "contact:website": "https://www.notonlyriesling.de/",
+      "name": "not only riesling",
+      "opening_hours": "Mo-Sa 14:00-22:00",
+      "operator": "Weinhandlung Fürstenwärther Hof GmbH",
+      "phone": "+49 30 61209303",
+      "shop": "wine",
+      "short_name": "NOR",
+      "start_date": "2022"
+    }
+  },
+  {
+    "id": 9794512247,
+    "type": "node",
+    "name": "Weinoffice Berlin",
+    "latitude": 52.4653061,
+    "longitude": 13.3114536,
+    "amenity": "",
+    "shop": "wine",
+    "craft": "",
+    "address": {
+      "street": "Forststraße",
+      "housenumber": "23",
+      "postcode": "12163",
+      "city": "Berlin"
+    },
+    "contact": {
+      "phone": "",
+      "website": "",
+      "email": ""
+    },
+    "opening_hours": "Sa 15:00-18:00 \"oft\"; \"nach Vereinbarung\"",
+    "description": "",
+    "wine_types": "",
+    "all_tags": {
+      "addr:city": "Berlin",
+      "addr:country": "DE",
+      "addr:housenumber": "23",
+      "addr:postcode": "12163",
+      "addr:street": "Forststraße",
+      "addr:suburb": "Steglitz",
+      "check_date": "2023-07-01",
+      "contact:website": "https://www.weinofficeberlin.de/",
+      "name": "Weinoffice Berlin",
+      "opening_hours": "Sa 15:00-18:00 \"oft\"; \"nach Vereinbarung\"",
+      "shop": "wine"
+    }
+  },
+  {
+    "id": 9970177322,
+    "type": "node",
+    "name": "Planet Wein",
+    "latitude": 52.5119624,
+    "longitude": 13.3917356,
+    "amenity": "",
+    "shop": "wine",
+    "craft": "",
+    "address": {
+      "street": "Mohrenstraße",
+      "housenumber": "30",
+      "postcode": "",
+      "city": ""
+    },
+    "contact": {
+      "phone": "+49 30 20454118",
+      "website": "https://www.planet-weinhandel.de/",
+      "email": ""
+    },
+    "opening_hours": "Mo-Sa 12:00-20:00; Su off",
+    "description": "",
+    "wine_types": "",
+    "all_tags": {
+      "addr:housenumber": "30",
+      "addr:street": "Mohrenstraße",
+      "check_date": "2025-02-23",
+      "check_date:opening_hours": "2025-02-23",
+      "internet_access": "no",
+      "name": "Planet Wein",
+      "name:ja": "プラネット・ヴァイン",
+      "opening_hours": "Mo-Sa 12:00-20:00; Su off",
+      "payment:american_express": "yes",
+      "payment:credit_cards": "yes",
+      "payment:debit_cards": "yes",
+      "payment:diners_club": "yes",
+      "payment:maestro": "yes",
+      "payment:mastercard": "yes",
+      "payment:visa": "yes",
+      "phone": "+49 30 20454118",
+      "shop": "wine",
+      "stroller": "yes",
+      "website": "https://www.planet-weinhandel.de/"
+    }
+  },
+  {
+    "id": 9982169717,
+    "type": "node",
+    "name": "Weinraumwohnung",
+    "latitude": 52.5363863,
+    "longitude": 13.4249088,
+    "amenity": "",
+    "shop": "wine",
+    "craft": "",
+    "address": {
+      "street": "Christburger Straße",
+      "housenumber": "6",
+      "postcode": "10405",
+      "city": ""
+    },
+    "contact": {
+      "phone": "+49 172 36 72 169",
+      "website": "",
+      "email": "weingump@gmx.de"
+    },
+    "opening_hours": "\"Offen wenn Tür offen...\"",
+    "description": "",
+    "wine_types": "",
+    "all_tags": {
+      "addr:housenumber": "6",
+      "addr:postcode": "10405",
+      "addr:street": "Christburger Straße",
+      "email": "weingump@gmx.de",
+      "name": "Weinraumwohnung",
+      "opening_hours": "\"Offen wenn Tür offen...\"",
+      "phone": "+49 172 36 72 169",
+      "shop": "wine"
+    }
+  },
+  {
+    "id": 9992809118,
+    "type": "node",
+    "name": "Baumgart & Braun",
+    "latitude": 52.5357519,
+    "longitude": 13.4209336,
+    "amenity": "",
+    "shop": "wine",
+    "craft": "",
+    "address": {
+      "street": "Wörther Straße",
+      "housenumber": "21",
+      "postcode": "10405",
+      "city": ""
+    },
+    "contact": {
+      "phone": "",
+      "website": "http://www.baumgartundbraun.de",
+      "email": ""
+    },
+    "opening_hours": "Mo-Fr 13:00-20:00; Sa 12:00-18:00",
+    "description": "",
+    "wine_types": "",
+    "all_tags": {
+      "addr:housenumber": "21",
+      "addr:postcode": "10405",
+      "addr:street": "Wörther Straße",
+      "check_date": "2022-09-26",
+      "name": "Baumgart & Braun",
+      "opening_hours": "Mo-Fr 13:00-20:00; Sa 12:00-18:00",
+      "payment:mastercard": "yes",
+      "payment:visa": "yes",
+      "shop": "wine",
+      "website": "http://www.baumgartundbraun.de",
+      "wheelchair": "limited"
+    }
+  },
+  {
+    "id": 10003860049,
+    "type": "node",
+    "name": "Amélia",
+    "latitude": 52.5130467,
+    "longitude": 13.2902082,
+    "amenity": "",
+    "shop": "wine",
+    "craft": "",
+    "address": {
+      "street": "",
+      "housenumber": "",
+      "postcode": "",
+      "city": ""
+    },
+    "contact": {
+      "phone": "",
+      "website": "",
+      "email": ""
+    },
+    "opening_hours": "Tu-Fr 16:00-20:00; Sa 12:00-20:00",
+    "description": "",
+    "wine_types": "",
+    "all_tags": {
+      "check_date": "2022-09-06",
+      "name": "Amélia",
+      "opening_hours": "Tu-Fr 16:00-20:00; Sa 12:00-20:00",
+      "shop": "wine"
+    }
+  },
+  {
+    "id": 10004061667,
+    "type": "node",
+    "name": "Find your Wine Match",
+    "latitude": 52.5381707,
+    "longitude": 13.4181815,
+    "amenity": "",
+    "shop": "wine",
+    "craft": "",
+    "address": {
+      "street": "Sredzkistraße",
+      "housenumber": "36",
+      "postcode": "10435",
+      "city": "Berlin"
+    },
+    "contact": {
+      "phone": "",
+      "website": "",
+      "email": ""
+    },
+    "opening_hours": "Tu-Fr 15:00-21:00; Sa 12:00-22:00",
+    "description": "",
+    "wine_types": "",
+    "all_tags": {
+      "addr:city": "Berlin",
+      "addr:country": "DE",
+      "addr:housenumber": "36",
+      "addr:postcode": "10435",
+      "addr:street": "Sredzkistraße",
+      "addr:suburb": "Prenzlauer Berg",
+      "contact:website": "https://findyourwinematch.com/",
+      "name": "Find your Wine Match",
+      "opening_hours": "Tu-Fr 15:00-21:00; Sa 12:00-22:00",
+      "shop": "wine",
+      "wheelchair": "limited"
+    }
+  },
+  {
+    "id": 10064345623,
+    "type": "node",
+    "name": "LVQ - Le Vin Quatre",
+    "latitude": 52.5426858,
+    "longitude": 13.4166312,
+    "amenity": "",
+    "shop": "wine",
+    "craft": "",
+    "address": {
+      "street": "Pappelallee",
+      "housenumber": "24",
+      "postcode": "10437",
+      "city": "Berlin"
+    },
+    "contact": {
+      "phone": "",
+      "website": "",
+      "email": ""
+    },
+    "opening_hours": "",
+    "description": "",
+    "wine_types": "",
+    "all_tags": {
+      "addr:city": "Berlin",
+      "addr:housenumber": "24",
+      "addr:postcode": "10437",
+      "addr:street": "Pappelallee",
+      "addr:suburb": "Prenzlauer Berg",
+      "check_date": "2025-03-08",
+      "name": "LVQ - Le Vin Quatre",
+      "shop": "wine",
+      "wheelchair": "limited"
+    }
+  },
+  {
+    "id": 10100729882,
+    "type": "node",
+    "name": "The Mindful Drinking Club - Alkoholfrei",
+    "latitude": 52.533931,
+    "longitude": 13.4215298,
+    "amenity": "",
+    "shop": "wine",
+    "craft": "",
+    "address": {
+      "street": "Prenzlauer Allee",
+      "housenumber": "31",
+      "postcode": "10405",
+      "city": "Berlin"
+    },
+    "contact": {
+      "phone": "",
+      "website": "",
+      "email": ""
+    },
+    "opening_hours": "Fr,Sa 12:00-19:00",
+    "description": "",
+    "wine_types": "",
+    "all_tags": {
+      "addr:city": "Berlin",
+      "addr:housenumber": "31",
+      "addr:postcode": "10405",
+      "addr:street": "Prenzlauer Allee",
+      "addr:suburb": "Prenzlauer Berg",
+      "level": "0",
+      "name": "The Mindful Drinking Club - Alkoholfrei",
+      "opening_hours": "Fr,Sa 12:00-19:00",
+      "shop": "wine",
+      "wheelchair": "limited"
+    }
+  },
+  {
+    "id": 10137429917,
+    "type": "node",
+    "name": "Vinho Iberico",
+    "latitude": 52.4185149,
+    "longitude": 13.1516885,
+    "amenity": "",
+    "shop": "wine",
+    "craft": "",
+    "address": {
+      "street": "",
+      "housenumber": "",
+      "postcode": "",
+      "city": ""
+    },
+    "contact": {
+      "phone": "+49 30 25817265",
+      "website": "https://vinho-iberico.de/",
+      "email": ""
+    },
+    "opening_hours": "Mo-Fr 12:00-19:00; Sa 10:00-15:00",
+    "description": "",
+    "wine_types": "",
+    "all_tags": {
+      "level": "0",
+      "name": "Vinho Iberico",
+      "opening_hours": "Mo-Fr 12:00-19:00; Sa 10:00-15:00",
+      "phone": "+49 30 25817265",
+      "shop": "wine",
+      "website": "https://vinho-iberico.de/"
+    }
+  },
+  {
+    "id": 10603419730,
+    "type": "node",
+    "name": "Weinkiste",
+    "latitude": 52.5532428,
+    "longitude": 13.4489281,
+    "amenity": "",
+    "shop": "wine",
+    "craft": "",
+    "address": {
+      "street": "",
+      "housenumber": "",
+      "postcode": "",
+      "city": ""
+    },
+    "contact": {
+      "phone": "",
+      "website": "",
+      "email": ""
+    },
+    "opening_hours": "Tu-Th 16:00-20:00; Fr 13:00-20:00; Sa 10:00-14:00",
+    "description": "",
+    "wine_types": "",
+    "all_tags": {
+      "name": "Weinkiste",
+      "opening_hours": "Tu-Th 16:00-20:00; Fr 13:00-20:00; Sa 10:00-14:00",
+      "shop": "wine",
+      "wheelchair": "yes"
+    }
+  },
+  {
+    "id": 10617306947,
+    "type": "node",
+    "name": "Weinladen Schmidt",
+    "latitude": 52.5345893,
+    "longitude": 13.4164822,
+    "amenity": "",
+    "shop": "wine",
+    "craft": "",
+    "address": {
+      "street": "",
+      "housenumber": "",
+      "postcode": "",
+      "city": ""
+    },
+    "contact": {
+      "phone": "",
+      "website": "",
+      "email": ""
+    },
+    "opening_hours": "",
+    "description": "",
+    "wine_types": "",
+    "all_tags": {
+      "name": "Weinladen Schmidt",
+      "shop": "wine",
+      "wheelchair": "yes"
+    }
+  },
+  {
+    "id": 10718562447,
+    "type": "node",
+    "name": "Weinhandel Terra Vinaria",
+    "latitude": 52.5473258,
+    "longitude": 13.4532671,
+    "amenity": "",
+    "shop": "wine",
+    "craft": "",
+    "address": {
+      "street": "Mahlerstraße",
+      "housenumber": "14",
+      "postcode": "13088",
+      "city": "Berlin"
+    },
+    "contact": {
+      "phone": "+49-30-9240 8812",
+      "website": "https://www.terravinaria.de/",
+      "email": "info@terravinaria.de"
+    },
+    "opening_hours": "Mo-Fr 14:00-19:00; Sa 11:00-16:00",
+    "description": "",
+    "wine_types": "",
+    "all_tags": {
+      "addr:city": "Berlin",
+      "addr:housenumber": "14",
+      "addr:postcode": "13088",
+      "addr:street": "Mahlerstraße",
+      "check_date:opening_hours": "2025-07-03",
+      "email": "info@terravinaria.de",
+      "name": "Weinhandel Terra Vinaria",
+      "opening_hours": "Mo-Fr 14:00-19:00; Sa 11:00-16:00",
+      "operator": "Stephan Krause",
+      "phone": "+49-30-9240 8812",
+      "ref:vatin": "DE219490532",
+      "shop": "wine",
+      "website": "https://www.terravinaria.de/",
+      "wheelchair": "yes"
+    }
+  },
+  {
+    "id": 10763541507,
+    "type": "node",
+    "name": "Weinschmiede",
+    "latitude": 52.5248969,
+    "longitude": 13.339263,
+    "amenity": "",
+    "shop": "wine",
+    "craft": "",
+    "address": {
+      "street": "",
+      "housenumber": "",
+      "postcode": "",
+      "city": ""
+    },
+    "contact": {
+      "phone": "",
+      "website": "",
+      "email": ""
+    },
+    "opening_hours": "Mo-Th 12:00-20:00; Fr 10:00-20:00; Sa 10:00-18:00",
+    "description": "",
+    "wine_types": "",
+    "all_tags": {
+      "check_date": "2025-04-09",
+      "check_date:opening_hours": "2025-04-09",
+      "name": "Weinschmiede",
+      "opening_hours": "Mo-Th 12:00-20:00; Fr 10:00-20:00; Sa 10:00-18:00",
+      "shop": "wine",
+      "wheelchair": "no"
+    }
+  },
+  {
+    "id": 11333664770,
+    "type": "node",
+    "name": "Amarandel",
+    "latitude": 52.5179668,
+    "longitude": 13.4067573,
+    "amenity": "",
+    "shop": "wine",
+    "craft": "",
+    "address": {
+      "street": "Rathausstraße",
+      "housenumber": "19",
+      "postcode": "10178",
+      "city": ""
+    },
+    "contact": {
+      "phone": "+49 (0)30 12029381",
+      "website": "https://www.amarandel.de/",
+      "email": "info@amarandel.de"
+    },
+    "opening_hours": "Tu-Sa 12:00-19:00",
+    "description": "",
+    "wine_types": "",
+    "all_tags": {
+      "addr:housenumber": "19",
+      "addr:postcode": "10178",
+      "addr:street": "Rathausstraße",
+      "check_date": "2025-04-23",
+      "email": "info@amarandel.de",
+      "name": "Amarandel",
+      "name:de": "Amarandel - Met, Räucherwerk und Esoterik",
+      "name:en": "Amarandel - Mead, Incense and Esoterics",
+      "opening_hours": "Tu-Sa 12:00-19:00",
+      "operator": "Sandra Weber & Kai Mühlberg GbR",
+      "phone": "+49 (0)30 12029381",
+      "shop": "wine",
+      "website": "https://www.amarandel.de/"
+    }
+  },
+  {
+    "id": 11795793786,
+    "type": "node",
+    "name": "K eins",
+    "latitude": 52.5488591,
+    "longitude": 13.4129028,
+    "amenity": "",
+    "shop": "wine",
+    "craft": "",
+    "address": {
+      "street": "Kopenhagener Straße",
+      "housenumber": "1",
+      "postcode": "",
+      "city": ""
+    },
+    "contact": {
+      "phone": "",
+      "website": "",
+      "email": ""
+    },
+    "opening_hours": "",
+    "description": "",
+    "wine_types": "",
+    "all_tags": {
+      "addr:housenumber": "1",
+      "addr:street": "Kopenhagener Straße",
+      "check_date": "2024-12-14",
+      "check_date:opening_hours": "2024-12-14",
+      "name": "K eins",
+      "opening_hours:signed": "no",
+      "shop": "wine"
+    }
+  },
+  {
+    "id": 11935176740,
+    "type": "node",
+    "name": "DG Weine",
+    "latitude": 52.5412839,
+    "longitude": 13.2191432,
+    "amenity": "",
+    "shop": "wine",
+    "craft": "",
+    "address": {
+      "street": "Zitadellenweg",
+      "housenumber": "60",
+      "postcode": "13599",
+      "city": "Berlin"
+    },
+    "contact": {
+      "phone": "+49 30 233 837 94",
+      "website": "https://www.dg-weine.com/",
+      "email": ""
+    },
+    "opening_hours": "",
+    "description": "",
+    "wine_types": "",
+    "all_tags": {
+      "addr:city": "Berlin",
+      "addr:housenumber": "60",
+      "addr:postcode": "13599",
+      "addr:street": "Zitadellenweg",
+      "name": "DG Weine",
+      "phone": "+49 30 233 837 94",
+      "shop": "wine",
+      "website": "https://www.dg-weine.com/"
+    }
+  },
+  {
+    "id": 11944893686,
+    "type": "node",
+    "name": "Winehane",
+    "latitude": 52.5187366,
+    "longitude": 13.3427348,
+    "amenity": "",
+    "shop": "wine",
+    "craft": "",
+    "address": {
+      "street": "Bartningallee",
+      "housenumber": "5",
+      "postcode": "",
+      "city": ""
+    },
+    "contact": {
+      "phone": "+49 163 8606969",
+      "website": "https://weinhane.de",
+      "email": "mail@weinhane.de"
+    },
+    "opening_hours": "Tu-Th 12:00-18:00; Fr 12:00-20:00; Sa 10:00-14:00; PH off",
+    "description": "",
+    "wine_types": "",
+    "all_tags": {
+      "addr:housenumber": "5",
+      "addr:street": "Bartningallee",
+      "check_date": "2024-05-30",
+      "email": "mail@weinhane.de",
+      "internet_access": "wlan",
+      "internet_access:fee": "customers",
+      "level": "0",
+      "name": "Winehane",
+      "opening_hours": "Tu-Th 12:00-18:00; Fr 12:00-20:00; Sa 10:00-14:00; PH off",
+      "payment:credit_cards": "yes",
+      "payment:debit_cards": "yes",
+      "phone": "+49 163 8606969",
+      "shop": "wine",
+      "website": "https://weinhane.de",
+      "wheelchair": "yes"
+    }
+  },
+  {
+    "id": 12137122788,
+    "type": "node",
+    "name": "Jacques' Wein-Depot",
+    "latitude": 52.5120252,
+    "longitude": 13.2105342,
+    "amenity": "",
+    "shop": "wine",
+    "craft": "",
+    "address": {
+      "street": "",
+      "housenumber": "",
+      "postcode": "",
+      "city": ""
+    },
+    "contact": {
+      "phone": "",
+      "website": "",
+      "email": ""
+    },
+    "opening_hours": "Mo-Th 14:00-19:00; Fr 12:00-19:00; Sa 10:00-15:00",
+    "description": "",
+    "wine_types": "",
+    "all_tags": {
+      "brand": "Jacques' Wein-Depot",
+      "brand:wikidata": "Q1678150",
+      "name": "Jacques' Wein-Depot",
+      "opening_hours": "Mo-Th 14:00-19:00; Fr 12:00-19:00; Sa 10:00-15:00",
+      "shop": "wine"
+    }
+  },
+  {
+    "id": 12147393629,
+    "type": "node",
+    "name": "O Lagar",
+    "latitude": 52.49184,
+    "longitude": 13.326919,
+    "amenity": "",
+    "shop": "wine",
+    "craft": "",
+    "address": {
+      "street": "",
+      "housenumber": "",
+      "postcode": "",
+      "city": ""
+    },
+    "contact": {
+      "phone": "",
+      "website": "",
+      "email": ""
+    },
+    "opening_hours": "Mo-Fr 12:00-19:00; Sa 11:00-17:00",
+    "description": "",
+    "wine_types": "",
+    "all_tags": {
+      "name": "O Lagar",
+      "opening_hours": "Mo-Fr 12:00-19:00; Sa 11:00-17:00",
+      "shop": "wine"
+    }
+  },
+  {
+    "id": 12158159237,
+    "type": "node",
+    "name": "Vinos Y Tapas",
+    "latitude": 52.4386319,
+    "longitude": 13.3019345,
+    "amenity": "",
+    "shop": "wine",
+    "craft": "",
+    "address": {
+      "street": "",
+      "housenumber": "",
+      "postcode": "",
+      "city": ""
+    },
+    "contact": {
+      "phone": "+49 30 8338459",
+      "website": "",
+      "email": ""
+    },
+    "opening_hours": "Mo-Fr 14:00-18:00",
+    "description": "Spanische Weine und Spezialitäten, Weingroß- und Einzelhandel",
+    "wine_types": "",
+    "all_tags": {
+      "check_date": "2024-06-18",
+      "description": "Spanische Weine und Spezialitäten, Weingroß- und Einzelhandel",
+      "name": "Vinos Y Tapas",
+      "opening_hours": "Mo-Fr 14:00-18:00",
+      "phone": "+49 30 8338459",
+      "shop": "wine"
+    }
+  },
+  {
+    "id": 12180097271,
+    "type": "node",
+    "name": "Chez Jerome",
+    "latitude": 52.5381045,
+    "longitude": 13.4215886,
+    "amenity": "",
+    "shop": "wine",
+    "craft": "",
+    "address": {
+      "street": "",
+      "housenumber": "",
+      "postcode": "",
+      "city": ""
+    },
+    "contact": {
+      "phone": "",
+      "website": "",
+      "email": ""
+    },
+    "opening_hours": "Mo-Fr 14:00-20:00",
+    "description": "",
+    "wine_types": "",
+    "all_tags": {
+      "name": "Chez Jerome",
+      "opening_hours": "Mo-Fr 14:00-20:00",
+      "shop": "wine",
+      "wheelchair": "no"
+    }
+  },
+  {
+    "id": 12285040983,
+    "type": "node",
+    "name": "Jaques'",
+    "latitude": 52.4895774,
+    "longitude": 13.3893552,
+    "amenity": "",
+    "shop": "wine",
+    "craft": "",
+    "address": {
+      "street": "Bergmannstraße",
+      "housenumber": "8",
+      "postcode": "",
+      "city": ""
+    },
+    "contact": {
+      "phone": "",
+      "website": "",
+      "email": ""
+    },
+    "opening_hours": "",
+    "description": "",
+    "wine_types": "",
+    "all_tags": {
+      "addr:housenumber": "8",
+      "addr:street": "Bergmannstraße",
+      "check_date": "2024-10-24",
+      "name": "Jaques'",
+      "shop": "wine"
+    }
+  },
+  {
+    "id": 12340590141,
+    "type": "node",
+    "name": "Britzer Weinkultur",
+    "latitude": 52.4451001,
+    "longitude": 13.4219628,
+    "amenity": "",
+    "shop": "",
+    "craft": "winery",
+    "address": {
+      "street": "Koppelweg",
+      "housenumber": "70",
+      "postcode": "12347",
+      "city": "Berlin"
+    },
+    "contact": {
+      "phone": "",
+      "website": "",
+      "email": ""
+    },
+    "opening_hours": "",
+    "description": "",
+    "wine_types": "",
+    "all_tags": {
+      "addr:city": "Berlin",
+      "addr:country": "DE",
+      "addr:housenumber": "70",
+      "addr:postcode": "12347",
+      "addr:street": "Koppelweg",
+      "addr:suburb": "Britz",
+      "contact:website": "https://www.berliner-weinkultur.de/",
+      "craft": "winery",
+      "name": "Britzer Weinkultur"
+    }
+  },
+  {
+    "id": 12404775875,
+    "type": "node",
+    "name": "ernst cave",
+    "latitude": 52.5449712,
+    "longitude": 13.3683059,
+    "amenity": "",
+    "shop": "wine",
+    "craft": "",
+    "address": {
+      "street": "Gerichtstraße",
+      "housenumber": "31",
+      "postcode": "",
+      "city": ""
+    },
+    "contact": {
+      "phone": "+49 171 6515635",
+      "website": "https://ernstcave.com/",
+      "email": "info@ernstcave.com"
+    },
+    "opening_hours": "Mo 19:00-22:00; Sa 18:00-22:00; Su 16:00-21:00",
+    "description": "",
+    "wine_types": "",
+    "all_tags": {
+      "addr:housenumber": "31",
+      "addr:street": "Gerichtstraße",
+      "check_date": "2025-01-23",
+      "contact:instagram": "https://www.instagram.com/ernst.cave",
+      "delivery": "yes",
+      "email": "info@ernstcave.com",
+      "level": "0",
+      "name": "ernst cave",
+      "opening_hours": "Mo 19:00-22:00; Sa 18:00-22:00; Su 16:00-21:00",
+      "operator": "Cave Ernst Julius GmbH",
+      "phone": "+49 171 6515635",
+      "shop": "wine",
+      "website": "https://ernstcave.com/",
+      "wheelchair": "no"
+    }
+  },
+  {
+    "id": 12688304974,
+    "type": "node",
+    "name": "Vinothek Leierkaste",
+    "latitude": 52.5168212,
+    "longitude": 13.4061613,
+    "amenity": "",
+    "shop": "wine",
+    "craft": "",
+    "address": {
+      "street": "Poststraße",
+      "housenumber": "7",
+      "postcode": "",
+      "city": ""
+    },
+    "contact": {
+      "phone": "",
+      "website": "",
+      "email": ""
+    },
+    "opening_hours": "",
+    "description": "",
+    "wine_types": "",
+    "all_tags": {
+      "addr:floor": "0",
+      "addr:housenumber": "7",
+      "addr:street": "Poststraße",
+      "check_date": "2025-03-21",
+      "level": "0",
+      "name": "Vinothek Leierkaste",
+      "shop": "wine",
+      "source": "survey"
+    }
+  },
+  {
+    "id": 12794220179,
+    "type": "node",
+    "name": "Mosto",
+    "latitude": 52.4927535,
+    "longitude": 13.4282612,
+    "amenity": "",
+    "shop": "wine",
+    "craft": "",
+    "address": {
+      "street": "",
+      "housenumber": "",
+      "postcode": "",
+      "city": ""
+    },
+    "contact": {
+      "phone": "",
+      "website": "",
+      "email": ""
+    },
+    "opening_hours": "",
+    "description": "",
+    "wine_types": "",
+    "all_tags": {
+      "name": "Mosto",
+      "shop": "wine"
+    }
+  },
+  {
+    "id": 12977556867,
+    "type": "node",
+    "name": "Jaxin Wein & Spirituosen GmbH",
+    "latitude": 52.5108269,
+    "longitude": 13.2911032,
+    "amenity": "",
+    "shop": "wine",
+    "craft": "",
+    "address": {
+      "street": "",
+      "housenumber": "",
+      "postcode": "",
+      "city": ""
+    },
+    "contact": {
+      "phone": "",
+      "website": "",
+      "email": ""
+    },
+    "opening_hours": "",
+    "description": "",
+    "wine_types": "",
+    "all_tags": {
+      "name": "Jaxin Wein & Spirituosen GmbH",
+      "shop": "wine"
+    }
+  },
+  {
+    "id": 13002012486,
+    "type": "node",
+    "name": "Der kleine Weinladen",
+    "latitude": 52.562518,
+    "longitude": 13.4132793,
+    "amenity": "",
+    "shop": "wine",
+    "craft": "",
+    "address": {
+      "street": "",
+      "housenumber": "",
+      "postcode": "",
+      "city": ""
+    },
+    "contact": {
+      "phone": "",
+      "website": "",
+      "email": ""
+    },
+    "opening_hours": "",
+    "description": "",
+    "wine_types": "",
+    "all_tags": {
+      "name": "Der kleine Weinladen",
+      "shop": "wine"
+    }
+  }
+]
