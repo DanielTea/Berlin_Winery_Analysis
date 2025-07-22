@@ -12,6 +12,7 @@ from PIL import Image
 import io
 import requests
 import json
+from scipy import ndimage
 
 # Set style for better-looking plots
 plt.style.use('default')
@@ -27,7 +28,7 @@ def create_improved_winery_heatmap():
     
     # Load the winery data
     print("Loading winery data...")
-    df = pd.read_csv('berlin_wineries.csv')
+    df = pd.read_csv('../data/berlin_wineries.csv')
     
     # Remove rows with missing coordinates
     df_clean = df.dropna(subset=['latitude', 'longitude'])
@@ -202,7 +203,7 @@ def create_improved_winery_heatmap():
     plt.tight_layout(pad=2.0)
     
     # Save as high-quality PNG
-    output_filename = 'berlin_wineries_heatmap_improved.png'
+    output_filename = '../outputs/berlin_wineries_heatmap_improved.png'
     plt.savefig(output_filename, dpi=300, bbox_inches='tight', 
                 facecolor='white', edgecolor='none', pad_inches=0.2)
     
@@ -233,15 +234,5 @@ def create_improved_winery_heatmap():
     return output_filename
 
 if __name__ == "__main__":
-    # Install scipy if not available
-    try:
-        from scipy import ndimage
-    except ImportError:
-        import subprocess
-        import sys
-        print("Installing scipy...")
-        subprocess.check_call([sys.executable, "-m", "pip", "install", "--break-system-packages", "scipy"])
-        from scipy import ndimage
-    
     output_file = create_improved_winery_heatmap()
     print(f"Successfully created improved heatmap: {output_file}")

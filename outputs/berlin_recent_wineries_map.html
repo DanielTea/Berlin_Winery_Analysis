@@ -1,0 +1,2375 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_3703d94702735421f219077fe10084f0 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+    <script src="https://cdn.jsdelivr.net/gh/python-visualization/folium@main/folium/templates/leaflet_heat.min.js"></script>
+</head>
+<body>
+    
+    
+    <h3 align="center" style="font-size:20px"><b>Berlin Recent Wineries Map (Last 2 Years)</b></h3>
+    <p align="center" style="font-size:14px">Districts with Emerging Winery Supply</p>
+    
+    
+    <div style="position: fixed; 
+                bottom: 50px; left: 50px; width: 180px; height: 120px; 
+                background-color: white; border:2px solid grey; z-index:9999; 
+                font-size:14px; padding: 10px">
+    <p><b>District Activity Level</b></p>
+    <p><i class="fa fa-circle" style="color:#d73027"></i> High (5+ recent)</p>
+    <p><i class="fa fa-circle" style="color:#fc8d59"></i> Medium (3-4 recent)</p>
+    <p><i class="fa fa-circle" style="color:#fee08b"></i> Some (1-2 recent)</p>
+    <p><i class="fa fa-circle" style="color:#e0e0e0"></i> Low activity</p>
+    </div>
+    
+    
+            <div class="folium-map" id="map_3703d94702735421f219077fe10084f0" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_3703d94702735421f219077fe10084f0 = L.map(
+                "map_3703d94702735421f219077fe10084f0",
+                {
+                    center: [52.520008, 13.404954],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 11,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_a48bd6ee84d66dfa81f32adbca281f80 = L.tileLayer(
+                "https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 20,
+  "maxNativeZoom": 20,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors \u0026copy; \u003ca href=\"https://carto.com/attributions\"\u003eCARTO\u003c/a\u003e",
+  "subdomains": "abcd",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_a48bd6ee84d66dfa81f32adbca281f80.addTo(map_3703d94702735421f219077fe10084f0);
+        
+    
+            var circle_marker_776824ddf6a65b4debe54266d8265b48 = L.circleMarker(
+                [52.525, 13.385],
+                {"bubblingMouseEvents": true, "color": "white", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#d73027", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10.0, "stroke": true, "weight": 2}
+            ).addTo(map_3703d94702735421f219077fe10084f0);
+        
+    
+        var popup_7b83cbba1eff9ec1d9982f9c30863f34 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_4a432d0404abf2782991e932ea04e78f = $(`<div id="html_4a432d0404abf2782991e932ea04e78f" style="width: 100.0%; height: 100.0%;">             <b>Mitte</b><br>             Recent wineries: 5<br>             Total wineries: 21<br>             Recent activity: 23.8%<br>             Avg recency score: 3.79             </div>`)[0];
+                popup_7b83cbba1eff9ec1d9982f9c30863f34.setContent(html_4a432d0404abf2782991e932ea04e78f);
+            
+        
+
+        circle_marker_776824ddf6a65b4debe54266d8265b48.bindPopup(popup_7b83cbba1eff9ec1d9982f9c30863f34)
+        ;
+
+        
+    
+    
+            circle_marker_776824ddf6a65b4debe54266d8265b48.bindTooltip(
+                `<div>
+                     Mitte: 5 recent wineries
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_c0d51bd61ddc130804fd30df4a032af3 = L.circleMarker(
+                [52.54, 13.425],
+                {"bubblingMouseEvents": true, "color": "white", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fc8d59", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8.0, "stroke": true, "weight": 2}
+            ).addTo(map_3703d94702735421f219077fe10084f0);
+        
+    
+        var popup_544b293bd79311162ec0de5ba7f0f046 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_498008f0e633dd28f1ccc16e4c5d29ba = $(`<div id="html_498008f0e633dd28f1ccc16e4c5d29ba" style="width: 100.0%; height: 100.0%;">             <b>Prenzlauer Berg</b><br>             Recent wineries: 4<br>             Total wineries: 15<br>             Recent activity: 26.7%<br>             Avg recency score: 3.76             </div>`)[0];
+                popup_544b293bd79311162ec0de5ba7f0f046.setContent(html_498008f0e633dd28f1ccc16e4c5d29ba);
+            
+        
+
+        circle_marker_c0d51bd61ddc130804fd30df4a032af3.bindPopup(popup_544b293bd79311162ec0de5ba7f0f046)
+        ;
+
+        
+    
+    
+            circle_marker_c0d51bd61ddc130804fd30df4a032af3.bindTooltip(
+                `<div>
+                     Prenzlauer Berg: 4 recent wineries
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_32d7ac14bf921e4ddb3b733cfb951c2c = L.circleMarker(
+                [52.51, 13.315],
+                {"bubblingMouseEvents": true, "color": "white", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#d73027", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 14.0, "stroke": true, "weight": 2}
+            ).addTo(map_3703d94702735421f219077fe10084f0);
+        
+    
+        var popup_ea2b3a74fea391ee7defea7f702dc0f3 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_f766675ba9d65c1e4b2abe303ffc87ac = $(`<div id="html_f766675ba9d65c1e4b2abe303ffc87ac" style="width: 100.0%; height: 100.0%;">             <b>Charlottenburg</b><br>             Recent wineries: 7<br>             Total wineries: 20<br>             Recent activity: 35.0%<br>             Avg recency score: 3.92             </div>`)[0];
+                popup_ea2b3a74fea391ee7defea7f702dc0f3.setContent(html_f766675ba9d65c1e4b2abe303ffc87ac);
+            
+        
+
+        circle_marker_32d7ac14bf921e4ddb3b733cfb951c2c.bindPopup(popup_ea2b3a74fea391ee7defea7f702dc0f3)
+        ;
+
+        
+    
+    
+            circle_marker_32d7ac14bf921e4ddb3b733cfb951c2c.bindTooltip(
+                `<div>
+                     Charlottenburg: 7 recent wineries
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_d09499aaafb8c6bb00db8f2439b23406 = L.circleMarker(
+                [52.505, 13.4],
+                {"bubblingMouseEvents": true, "color": "white", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fc8d59", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6.0, "stroke": true, "weight": 2}
+            ).addTo(map_3703d94702735421f219077fe10084f0);
+        
+    
+        var popup_8f3632cd93c7fb879cc0ef07da3b8f43 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_5146b1b7d4b52e3f39ac13d64e3e4281 = $(`<div id="html_5146b1b7d4b52e3f39ac13d64e3e4281" style="width: 100.0%; height: 100.0%;">             <b>Kreuzberg</b><br>             Recent wineries: 3<br>             Total wineries: 5<br>             Recent activity: 60.0%<br>             Avg recency score: 6.33             </div>`)[0];
+                popup_8f3632cd93c7fb879cc0ef07da3b8f43.setContent(html_5146b1b7d4b52e3f39ac13d64e3e4281);
+            
+        
+
+        circle_marker_d09499aaafb8c6bb00db8f2439b23406.bindPopup(popup_8f3632cd93c7fb879cc0ef07da3b8f43)
+        ;
+
+        
+    
+    
+            circle_marker_d09499aaafb8c6bb00db8f2439b23406.bindTooltip(
+                `<div>
+                     Kreuzberg: 3 recent wineries
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_56615b01d6e580ed0e4fede9267ea35b = L.circleMarker(
+                [52.475, 13.435],
+                {"bubblingMouseEvents": true, "color": "white", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fc8d59", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8.0, "stroke": true, "weight": 2}
+            ).addTo(map_3703d94702735421f219077fe10084f0);
+        
+    
+        var popup_de1f04995c8bec0581cab2683ba7173e = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_472139d9d587c169da53507fa39ec4ee = $(`<div id="html_472139d9d587c169da53507fa39ec4ee" style="width: 100.0%; height: 100.0%;">             <b>Neukölln</b><br>             Recent wineries: 4<br>             Total wineries: 10<br>             Recent activity: 40.0%<br>             Avg recency score: 3.86             </div>`)[0];
+                popup_de1f04995c8bec0581cab2683ba7173e.setContent(html_472139d9d587c169da53507fa39ec4ee);
+            
+        
+
+        circle_marker_56615b01d6e580ed0e4fede9267ea35b.bindPopup(popup_de1f04995c8bec0581cab2683ba7173e)
+        ;
+
+        
+    
+    
+            circle_marker_56615b01d6e580ed0e4fede9267ea35b.bindTooltip(
+                `<div>
+                     Neukölln: 4 recent wineries
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_7ab9c83d6f5a8f187340d1a8e34cc33c = L.circleMarker(
+                [52.515, 13.45],
+                {"bubblingMouseEvents": true, "color": "white", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#d73027", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10.0, "stroke": true, "weight": 2}
+            ).addTo(map_3703d94702735421f219077fe10084f0);
+        
+    
+        var popup_13d8c8945194cf9f270702133e948a8b = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_2f51ec256f1c31b73d7d75fcecb41c4f = $(`<div id="html_2f51ec256f1c31b73d7d75fcecb41c4f" style="width: 100.0%; height: 100.0%;">             <b>Friedrichshain</b><br>             Recent wineries: 5<br>             Total wineries: 6<br>             Recent activity: 83.3%<br>             Avg recency score: 5.7             </div>`)[0];
+                popup_13d8c8945194cf9f270702133e948a8b.setContent(html_2f51ec256f1c31b73d7d75fcecb41c4f);
+            
+        
+
+        circle_marker_7ab9c83d6f5a8f187340d1a8e34cc33c.bindPopup(popup_13d8c8945194cf9f270702133e948a8b)
+        ;
+
+        
+    
+    
+            circle_marker_7ab9c83d6f5a8f187340d1a8e34cc33c.bindTooltip(
+                `<div>
+                     Friedrichshain: 5 recent wineries
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_550178eee5aa6527baa03f59aee20200 = L.circleMarker(
+                [52.48, 13.355],
+                {"bubblingMouseEvents": true, "color": "white", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fee08b", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5.0, "stroke": true, "weight": 2}
+            ).addTo(map_3703d94702735421f219077fe10084f0);
+        
+    
+        var popup_6fcf4106d7dc5a916e9dae78b2270184 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_bbf1914b781158918d7798748ed8c4bb = $(`<div id="html_bbf1914b781158918d7798748ed8c4bb" style="width: 100.0%; height: 100.0%;">             <b>Schöneberg</b><br>             Recent wineries: 2<br>             Total wineries: 6<br>             Recent activity: 33.3%<br>             Avg recency score: 4.49             </div>`)[0];
+                popup_6fcf4106d7dc5a916e9dae78b2270184.setContent(html_bbf1914b781158918d7798748ed8c4bb);
+            
+        
+
+        circle_marker_550178eee5aa6527baa03f59aee20200.bindPopup(popup_6fcf4106d7dc5a916e9dae78b2270184)
+        ;
+
+        
+    
+    
+            circle_marker_550178eee5aa6527baa03f59aee20200.bindTooltip(
+                `<div>
+                     Schöneberg: 2 recent wineries
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_cd9cd9e473e3ffdc8217a2d799f2fc88 = L.circleMarker(
+                [52.47, 13.4],
+                {"bubblingMouseEvents": true, "color": "white", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#e0e0e0", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5.0, "stroke": true, "weight": 2}
+            ).addTo(map_3703d94702735421f219077fe10084f0);
+        
+    
+        var popup_724b2f7825ed5ad0d3377d4ba76e4844 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_bb08e0b1d0d9aaa9e406f18217aa2714 = $(`<div id="html_bb08e0b1d0d9aaa9e406f18217aa2714" style="width: 100.0%; height: 100.0%;">             <b>Tempelhof</b><br>             Recent wineries: 0<br>             Total wineries: 3<br>             Recent activity: 0.0%<br>             Avg recency score: 3.52             </div>`)[0];
+                popup_724b2f7825ed5ad0d3377d4ba76e4844.setContent(html_bb08e0b1d0d9aaa9e406f18217aa2714);
+            
+        
+
+        circle_marker_cd9cd9e473e3ffdc8217a2d799f2fc88.bindPopup(popup_724b2f7825ed5ad0d3377d4ba76e4844)
+        ;
+
+        
+    
+    
+            circle_marker_cd9cd9e473e3ffdc8217a2d799f2fc88.bindTooltip(
+                `<div>
+                     Tempelhof: 0 recent wineries
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_c3f89590a576c9a9b3464c766471e5d9 = L.circleMarker(
+                [52.46, 13.335],
+                {"bubblingMouseEvents": true, "color": "white", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fee08b", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5.0, "stroke": true, "weight": 2}
+            ).addTo(map_3703d94702735421f219077fe10084f0);
+        
+    
+        var popup_de2320f9b523373ae4af168c26758def = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_f022593d660f75308e4abd714f75baa3 = $(`<div id="html_f022593d660f75308e4abd714f75baa3" style="width: 100.0%; height: 100.0%;">             <b>Steglitz</b><br>             Recent wineries: 2<br>             Total wineries: 5<br>             Recent activity: 40.0%<br>             Avg recency score: 3.89             </div>`)[0];
+                popup_de2320f9b523373ae4af168c26758def.setContent(html_f022593d660f75308e4abd714f75baa3);
+            
+        
+
+        circle_marker_c3f89590a576c9a9b3464c766471e5d9.bindPopup(popup_de2320f9b523373ae4af168c26758def)
+        ;
+
+        
+    
+    
+            circle_marker_c3f89590a576c9a9b3464c766471e5d9.bindTooltip(
+                `<div>
+                     Steglitz: 2 recent wineries
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_5e3988fc4a3f2cac51b9c5c0f19e692f = L.marker(
+                [52.5026652, 13.4392338],
+                {
+}
+            ).addTo(map_3703d94702735421f219077fe10084f0);
+        
+    
+            var icon_37048f40d01bf10b4ec8756c00a59571 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "wine-bottle",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_d0747c5368af86abff9d28ccda0e2b2f = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_21bf31cc537d4f9208caa52c73774746 = $(`<div id="html_21bf31cc537d4f9208caa52c73774746" style="width: 100.0%; height: 100.0%;">         <b>Köpenicker Weinladen</b><br>         District: Friedrichshain<br>         Category: likely_recent<br>         Recency score: 5.773824883145467<br>         Opening date: 2023-11-14<br></div>`)[0];
+                popup_d0747c5368af86abff9d28ccda0e2b2f.setContent(html_21bf31cc537d4f9208caa52c73774746);
+            
+        
+
+        marker_5e3988fc4a3f2cac51b9c5c0f19e692f.bindPopup(popup_d0747c5368af86abff9d28ccda0e2b2f)
+        ;
+
+        
+    
+    
+            marker_5e3988fc4a3f2cac51b9c5c0f19e692f.bindTooltip(
+                `<div>
+                     Köpenicker Weinladen
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_5e3988fc4a3f2cac51b9c5c0f19e692f.setIcon(icon_37048f40d01bf10b4ec8756c00a59571);
+            
+    
+            var marker_8c0eb2b49efbcb8141b8f4f5dc3a6530 = L.marker(
+                [52.4863287, 13.2970244],
+                {
+}
+            ).addTo(map_3703d94702735421f219077fe10084f0);
+        
+    
+            var icon_2fcd8a18e3a7a16ba9f9574393859ec7 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "star",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_e13d7f921ce76bc99c269eb915c3d9a9 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_aae4b890f7d54455b838c4b8c1728cb9 = $(`<div id="html_aae4b890f7d54455b838c4b8c1728cb9" style="width: 100.0%; height: 100.0%;">         <b>Jacques' Wein-Depot</b><br>         District: Other<br>         Category: very_recent<br>         Recency score: 8.28<br>         Opening date: 2025-04-11<br></div>`)[0];
+                popup_e13d7f921ce76bc99c269eb915c3d9a9.setContent(html_aae4b890f7d54455b838c4b8c1728cb9);
+            
+        
+
+        marker_8c0eb2b49efbcb8141b8f4f5dc3a6530.bindPopup(popup_e13d7f921ce76bc99c269eb915c3d9a9)
+        ;
+
+        
+    
+    
+            marker_8c0eb2b49efbcb8141b8f4f5dc3a6530.bindTooltip(
+                `<div>
+                     Jacques' Wein-Depot
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_8c0eb2b49efbcb8141b8f4f5dc3a6530.setIcon(icon_2fcd8a18e3a7a16ba9f9574393859ec7);
+            
+    
+            var marker_ce28c7b0280dc153781f92a0611af1d0 = L.marker(
+                [52.4167066, 13.3995313],
+                {
+}
+            ).addTo(map_3703d94702735421f219077fe10084f0);
+        
+    
+            var icon_46af2fef54883d4ec25b03debb9d931d = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "wine-bottle",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_16ba1e567e98ca72a5392611431d1b0e = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_e6d4c07c02bf3b7be68b4823997aee85 = $(`<div id="html_e6d4c07c02bf3b7be68b4823997aee85" style="width: 100.0%; height: 100.0%;">         <b>Jacques' Wein-Depot</b><br>         District: Other<br>         Category: recent<br>         Recency score: 5.62<br>         Opening date: 2024-04-26<br></div>`)[0];
+                popup_16ba1e567e98ca72a5392611431d1b0e.setContent(html_e6d4c07c02bf3b7be68b4823997aee85);
+            
+        
+
+        marker_ce28c7b0280dc153781f92a0611af1d0.bindPopup(popup_16ba1e567e98ca72a5392611431d1b0e)
+        ;
+
+        
+    
+    
+            marker_ce28c7b0280dc153781f92a0611af1d0.bindTooltip(
+                `<div>
+                     Jacques' Wein-Depot
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_ce28c7b0280dc153781f92a0611af1d0.setIcon(icon_46af2fef54883d4ec25b03debb9d931d);
+            
+    
+            var marker_285f7c30df951cd87cba9feb09bd1a6d = L.marker(
+                [52.4923161, 13.3304617],
+                {
+}
+            ).addTo(map_3703d94702735421f219077fe10084f0);
+        
+    
+            var icon_98a101eca5e6d4837ae44778b2bca284 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "wine-bottle",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_ec1b36e33677d3c863237309106083dc = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_457af873b5b50c4f45046adb57353c2c = $(`<div id="html_457af873b5b50c4f45046adb57353c2c" style="width: 100.0%; height: 100.0%;">         <b>Jacques' Wein-Depot</b><br>         District: Charlottenburg<br>         Category: recent<br>         Recency score: 5.28<br>         Opening date: 2023-08-14<br></div>`)[0];
+                popup_ec1b36e33677d3c863237309106083dc.setContent(html_457af873b5b50c4f45046adb57353c2c);
+            
+        
+
+        marker_285f7c30df951cd87cba9feb09bd1a6d.bindPopup(popup_ec1b36e33677d3c863237309106083dc)
+        ;
+
+        
+    
+    
+            marker_285f7c30df951cd87cba9feb09bd1a6d.bindTooltip(
+                `<div>
+                     Jacques' Wein-Depot
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_285f7c30df951cd87cba9feb09bd1a6d.setIcon(icon_98a101eca5e6d4837ae44778b2bca284);
+            
+    
+            var marker_31b098b5cff951f1980ebd93e433a5c3 = L.marker(
+                [52.4677462, 13.3285927],
+                {
+}
+            ).addTo(map_3703d94702735421f219077fe10084f0);
+        
+    
+            var icon_fd1892d6710b6bcd79328e1ea88321ee = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "wine-bottle",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_fc1735f6f475aef53e69375092559033 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_101fe25742189f6452d7cbadcd43bc24 = $(`<div id="html_101fe25742189f6452d7cbadcd43bc24" style="width: 100.0%; height: 100.0%;">         <b>Jacques' Wein-Depot</b><br>         District: Steglitz<br>         Category: recent<br>         Recency score: 5.3<br>         Opening date: 2024-01-13<br></div>`)[0];
+                popup_fc1735f6f475aef53e69375092559033.setContent(html_101fe25742189f6452d7cbadcd43bc24);
+            
+        
+
+        marker_31b098b5cff951f1980ebd93e433a5c3.bindPopup(popup_fc1735f6f475aef53e69375092559033)
+        ;
+
+        
+    
+    
+            marker_31b098b5cff951f1980ebd93e433a5c3.bindTooltip(
+                `<div>
+                     Jacques' Wein-Depot
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_31b098b5cff951f1980ebd93e433a5c3.setIcon(icon_fd1892d6710b6bcd79328e1ea88321ee);
+            
+    
+            var marker_bedce5c1a281f46e5a7ac2076313f34f = L.marker(
+                [52.4433063, 13.3159808],
+                {
+}
+            ).addTo(map_3703d94702735421f219077fe10084f0);
+        
+    
+            var icon_6edefa44f5c74c940f209675b355f2ae = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "wine-bottle",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_790ad8f0f2574583cf29a505f81b7d36 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_7f7238f177c724504cf6a6fe4704f6ec = $(`<div id="html_7f7238f177c724504cf6a6fe4704f6ec" style="width: 100.0%; height: 100.0%;">         <b>Jacques' Wein-Depot</b><br>         District: Steglitz<br>         Category: recent<br>         Recency score: 6.03<br>         Opening date: 2024-02-04<br></div>`)[0];
+                popup_790ad8f0f2574583cf29a505f81b7d36.setContent(html_7f7238f177c724504cf6a6fe4704f6ec);
+            
+        
+
+        marker_bedce5c1a281f46e5a7ac2076313f34f.bindPopup(popup_790ad8f0f2574583cf29a505f81b7d36)
+        ;
+
+        
+    
+    
+            marker_bedce5c1a281f46e5a7ac2076313f34f.bindTooltip(
+                `<div>
+                     Jacques' Wein-Depot
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_bedce5c1a281f46e5a7ac2076313f34f.setIcon(icon_6edefa44f5c74c940f209675b355f2ae);
+            
+    
+            var marker_f1c714d1390d14e23d1f7a74438c4800 = L.marker(
+                [52.5351558, 13.4164095],
+                {
+}
+            ).addTo(map_3703d94702735421f219077fe10084f0);
+        
+    
+            var icon_84702448a9f4ba9c797b4fe9dc5b9207 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "wine-bottle",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_c974dc1034b33544b8407197e4cde4f6 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_d72a49e4c36c2e43d8d38e2cf2ad1ad1 = $(`<div id="html_d72a49e4c36c2e43d8d38e2cf2ad1ad1" style="width: 100.0%; height: 100.0%;">         <b>Jacques' Wein-Depot</b><br>         District: Mitte<br>         Category: recent<br>         Recency score: 6.62<br>         Opening date: 2024-06-02<br></div>`)[0];
+                popup_c974dc1034b33544b8407197e4cde4f6.setContent(html_d72a49e4c36c2e43d8d38e2cf2ad1ad1);
+            
+        
+
+        marker_f1c714d1390d14e23d1f7a74438c4800.bindPopup(popup_c974dc1034b33544b8407197e4cde4f6)
+        ;
+
+        
+    
+    
+            marker_f1c714d1390d14e23d1f7a74438c4800.bindTooltip(
+                `<div>
+                     Jacques' Wein-Depot
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_f1c714d1390d14e23d1f7a74438c4800.setIcon(icon_84702448a9f4ba9c797b4fe9dc5b9207);
+            
+    
+            var marker_fd150d836b4e26318468701fd203000f = L.marker(
+                [52.4988336, 13.44238],
+                {
+}
+            ).addTo(map_3703d94702735421f219077fe10084f0);
+        
+    
+            var icon_38066f2f8d40f9e4879f031832c74f77 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "wine-bottle",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_0b01ea90adaac7acd551d76cf0019359 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_5ecec02edea543e0011286d874ebb903 = $(`<div id="html_5ecec02edea543e0011286d874ebb903" style="width: 100.0%; height: 100.0%;">         <b>Noer</b><br>         District: Neukölln<br>         Category: likely_recent<br>         Recency score: 5.049763486783569<br>         Opening date: 2024-02-27<br></div>`)[0];
+                popup_0b01ea90adaac7acd551d76cf0019359.setContent(html_5ecec02edea543e0011286d874ebb903);
+            
+        
+
+        marker_fd150d836b4e26318468701fd203000f.bindPopup(popup_0b01ea90adaac7acd551d76cf0019359)
+        ;
+
+        
+    
+    
+            marker_fd150d836b4e26318468701fd203000f.bindTooltip(
+                `<div>
+                     Noer
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_fd150d836b4e26318468701fd203000f.setIcon(icon_38066f2f8d40f9e4879f031832c74f77);
+            
+    
+            var marker_15ff5356251745c7d419a64c56221af6 = L.marker(
+                [52.5174808, 13.442681],
+                {
+}
+            ).addTo(map_3703d94702735421f219077fe10084f0);
+        
+    
+            var icon_a5fba4985fcdabd1d76900db4ba00d77 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "wine-bottle",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_680204d581d5a0af872e7aedd8abdfd8 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_7632664bd693ef52a4e621091290fe35 = $(`<div id="html_7632664bd693ef52a4e621091290fe35" style="width: 100.0%; height: 100.0%;">         <b>Briefmarken</b><br>         District: Friedrichshain<br>         Category: likely_recent<br>         Recency score: 6.624343921482698<br>         Opening date: 2023-09-29<br></div>`)[0];
+                popup_680204d581d5a0af872e7aedd8abdfd8.setContent(html_7632664bd693ef52a4e621091290fe35);
+            
+        
+
+        marker_15ff5356251745c7d419a64c56221af6.bindPopup(popup_680204d581d5a0af872e7aedd8abdfd8)
+        ;
+
+        
+    
+    
+            marker_15ff5356251745c7d419a64c56221af6.bindTooltip(
+                `<div>
+                     Briefmarken
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_15ff5356251745c7d419a64c56221af6.setIcon(icon_a5fba4985fcdabd1d76900db4ba00d77);
+            
+    
+            var marker_a23079679ef0072de3fc0b9d11aeef76 = L.marker(
+                [52.4948364, 13.423556],
+                {
+}
+            ).addTo(map_3703d94702735421f219077fe10084f0);
+        
+    
+            var icon_3bf72afb3eec70d74fb9fd8d9f0f8d96 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "wine-bottle",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_f0e728e6f2dbc40696f04b533450ace3 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_5e3d5a5dd7c1dd9e141bfa7b46253568 = $(`<div id="html_5e3d5a5dd7c1dd9e141bfa7b46253568" style="width: 100.0%; height: 100.0%;">         <b>Weinladen Maybachufer</b><br>         District: Neukölln<br>         Category: likely_recent<br>         Recency score: 6.045997961875188<br>         Opening date: 2024-01-06<br></div>`)[0];
+                popup_f0e728e6f2dbc40696f04b533450ace3.setContent(html_5e3d5a5dd7c1dd9e141bfa7b46253568);
+            
+        
+
+        marker_a23079679ef0072de3fc0b9d11aeef76.bindPopup(popup_f0e728e6f2dbc40696f04b533450ace3)
+        ;
+
+        
+    
+    
+            marker_a23079679ef0072de3fc0b9d11aeef76.bindTooltip(
+                `<div>
+                     Weinladen Maybachufer
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_a23079679ef0072de3fc0b9d11aeef76.setIcon(icon_3bf72afb3eec70d74fb9fd8d9f0f8d96);
+            
+    
+            var marker_54fdda1a4a43822df860fbdf3b333c1e = L.marker(
+                [52.5233596, 13.4041635],
+                {
+}
+            ).addTo(map_3703d94702735421f219077fe10084f0);
+        
+    
+            var icon_096f14d02c6709e55b023c508bf84a57 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "wine-bottle",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_a80014e188bd1c014ae22405a7fe8b09 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_979ddae482fcac3dc410684667f4d188 = $(`<div id="html_979ddae482fcac3dc410684667f4d188" style="width: 100.0%; height: 100.0%;">         <b>Barrio</b><br>         District: Mitte<br>         Category: recent<br>         Recency score: 5.7<br>         Opening date: 2024-03-10<br></div>`)[0];
+                popup_a80014e188bd1c014ae22405a7fe8b09.setContent(html_979ddae482fcac3dc410684667f4d188);
+            
+        
+
+        marker_54fdda1a4a43822df860fbdf3b333c1e.bindPopup(popup_a80014e188bd1c014ae22405a7fe8b09)
+        ;
+
+        
+    
+    
+            marker_54fdda1a4a43822df860fbdf3b333c1e.bindTooltip(
+                `<div>
+                     Barrio
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_54fdda1a4a43822df860fbdf3b333c1e.setIcon(icon_096f14d02c6709e55b023c508bf84a57);
+            
+    
+            var marker_7a8d4a202c1aeab2c20002379e4524ee = L.marker(
+                [52.4772386, 13.2889948],
+                {
+}
+            ).addTo(map_3703d94702735421f219077fe10084f0);
+        
+    
+            var icon_a5d036f378ff26f25c6c035ea273cf8e = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "wine-bottle",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_ec00a487badc46e4a2ee2dd155f9b48c = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_c9f1e5b9d05b5e8a914735776ad6c823 = $(`<div id="html_c9f1e5b9d05b5e8a914735776ad6c823" style="width: 100.0%; height: 100.0%;">         <b>Der Rioja-Weinspezialist</b><br>         District: Other<br>         Category: recent<br>         Recency score: 5.42<br>         Opening date: 2024-05-31<br></div>`)[0];
+                popup_ec00a487badc46e4a2ee2dd155f9b48c.setContent(html_c9f1e5b9d05b5e8a914735776ad6c823);
+            
+        
+
+        marker_7a8d4a202c1aeab2c20002379e4524ee.bindPopup(popup_ec00a487badc46e4a2ee2dd155f9b48c)
+        ;
+
+        
+    
+    
+            marker_7a8d4a202c1aeab2c20002379e4524ee.bindTooltip(
+                `<div>
+                     Der Rioja-Weinspezialist
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_7a8d4a202c1aeab2c20002379e4524ee.setIcon(icon_a5d036f378ff26f25c6c035ea273cf8e);
+            
+    
+            var marker_9bb7f61d88179c727b203e29a0131497 = L.marker(
+                [52.5335395, 13.4216383],
+                {
+}
+            ).addTo(map_3703d94702735421f219077fe10084f0);
+        
+    
+            var icon_30193da8fdcb04255f49b12e38304bae = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "wine-bottle",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_99f244c3d87eea9da1f4ba1ef397c576 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_2f70bd08590e5698598c968390d9792d = $(`<div id="html_2f70bd08590e5698598c968390d9792d" style="width: 100.0%; height: 100.0%;">         <b>deutscheundfranzosen</b><br>         District: Prenzlauer Berg<br>         Category: recent<br>         Recency score: 5.37<br>         Opening date: 2023-11-02<br></div>`)[0];
+                popup_99f244c3d87eea9da1f4ba1ef397c576.setContent(html_2f70bd08590e5698598c968390d9792d);
+            
+        
+
+        marker_9bb7f61d88179c727b203e29a0131497.bindPopup(popup_99f244c3d87eea9da1f4ba1ef397c576)
+        ;
+
+        
+    
+    
+            marker_9bb7f61d88179c727b203e29a0131497.bindTooltip(
+                `<div>
+                     deutscheundfranzosen
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_9bb7f61d88179c727b203e29a0131497.setIcon(icon_30193da8fdcb04255f49b12e38304bae);
+            
+    
+            var marker_3a9b5ee6bf8ea39d7242fa44c1bbbe67 = L.marker(
+                [52.5081317, 13.4629703],
+                {
+}
+            ).addTo(map_3703d94702735421f219077fe10084f0);
+        
+    
+            var icon_6a1e118f33f715c01f9a7d75c73f8bbe = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "wine-bottle",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_e4375b3f45a845137c2c8eddb78bcfbc = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_eb1b92c4364cf18bc2f92cc6ac9dfb79 = $(`<div id="html_eb1b92c4364cf18bc2f92cc6ac9dfb79" style="width: 100.0%; height: 100.0%;">         <b>Jacques' Wein-Depot</b><br>         District: Friedrichshain<br>         Category: recent<br>         Recency score: 6.31<br>         Opening date: 2024-04-08<br></div>`)[0];
+                popup_e4375b3f45a845137c2c8eddb78bcfbc.setContent(html_eb1b92c4364cf18bc2f92cc6ac9dfb79);
+            
+        
+
+        marker_3a9b5ee6bf8ea39d7242fa44c1bbbe67.bindPopup(popup_e4375b3f45a845137c2c8eddb78bcfbc)
+        ;
+
+        
+    
+    
+            marker_3a9b5ee6bf8ea39d7242fa44c1bbbe67.bindTooltip(
+                `<div>
+                     Jacques' Wein-Depot
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_3a9b5ee6bf8ea39d7242fa44c1bbbe67.setIcon(icon_6a1e118f33f715c01f9a7d75c73f8bbe);
+            
+    
+            var marker_b8af52c60a16148638fc77293d3d98fb = L.marker(
+                [52.500884, 13.4302876],
+                {
+}
+            ).addTo(map_3703d94702735421f219077fe10084f0);
+        
+    
+            var icon_f78c4ed6963007b164f3730d625867c7 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "wine-bottle",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_dc2e3cafee2254114615281844e4e219 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_c3586ead11e34185aa22fb65addfe21a = $(`<div id="html_c3586ead11e34185aa22fb65addfe21a" style="width: 100.0%; height: 100.0%;">         <b>Saveur Champagne</b><br>         District: Friedrichshain<br>         Category: likely_recent<br>         Recency score: 5.524864781287809<br>         Opening date: 2024-04-02<br></div>`)[0];
+                popup_dc2e3cafee2254114615281844e4e219.setContent(html_c3586ead11e34185aa22fb65addfe21a);
+            
+        
+
+        marker_b8af52c60a16148638fc77293d3d98fb.bindPopup(popup_dc2e3cafee2254114615281844e4e219)
+        ;
+
+        
+    
+    
+            marker_b8af52c60a16148638fc77293d3d98fb.bindTooltip(
+                `<div>
+                     Saveur Champagne
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_b8af52c60a16148638fc77293d3d98fb.setIcon(icon_f78c4ed6963007b164f3730d625867c7);
+            
+    
+            var marker_33bc99f8ab58e0b67d566c079198c606 = L.marker(
+                [52.4954314, 13.4178333],
+                {
+}
+            ).addTo(map_3703d94702735421f219077fe10084f0);
+        
+    
+            var icon_002647e63ce5bee6a0ed45f1d5d7067c = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "wine-bottle",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_87aa266f9ef53afa936c2c50950d1024 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_56b69aed16abd4998c5f7bcfa955ded2 = $(`<div id="html_56b69aed16abd4998c5f7bcfa955ded2" style="width: 100.0%; height: 100.0%;">         <b>Unterm Baum</b><br>         District: Kreuzberg<br>         Category: likely_recent<br>         Recency score: 7.69164727385998<br>         Opening date: 2024-06-16<br></div>`)[0];
+                popup_87aa266f9ef53afa936c2c50950d1024.setContent(html_56b69aed16abd4998c5f7bcfa955ded2);
+            
+        
+
+        marker_33bc99f8ab58e0b67d566c079198c606.bindPopup(popup_87aa266f9ef53afa936c2c50950d1024)
+        ;
+
+        
+    
+    
+            marker_33bc99f8ab58e0b67d566c079198c606.bindTooltip(
+                `<div>
+                     Unterm Baum
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_33bc99f8ab58e0b67d566c079198c606.setIcon(icon_002647e63ce5bee6a0ed45f1d5d7067c);
+            
+    
+            var marker_3c9976515b57ae6a2b1c4cca059a818b = L.marker(
+                [52.4924092, 13.3965576],
+                {
+}
+            ).addTo(map_3703d94702735421f219077fe10084f0);
+        
+    
+            var icon_1e338c2676ecbe7c500ca6d878dac234 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "wine-bottle",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_dff4d538fef2c1804123123a59f617ff = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_a5391f3cd9030e69d3f18d5d872f2bbd = $(`<div id="html_a5391f3cd9030e69d3f18d5d872f2bbd" style="width: 100.0%; height: 100.0%;">         <b>Wein & Vinos</b><br>         District: Kreuzberg<br>         Category: likely_recent<br>         Recency score: 7.988761099273773<br>         Opening date: 2023-11-12<br></div>`)[0];
+                popup_dff4d538fef2c1804123123a59f617ff.setContent(html_a5391f3cd9030e69d3f18d5d872f2bbd);
+            
+        
+
+        marker_3c9976515b57ae6a2b1c4cca059a818b.bindPopup(popup_dff4d538fef2c1804123123a59f617ff)
+        ;
+
+        
+    
+    
+            marker_3c9976515b57ae6a2b1c4cca059a818b.bindTooltip(
+                `<div>
+                     Wein & Vinos
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_3c9976515b57ae6a2b1c4cca059a818b.setIcon(icon_1e338c2676ecbe7c500ca6d878dac234);
+            
+    
+            var marker_df0f90892dfd86bc9f8bcd383de189a8 = L.marker(
+                [52.5691482, 13.4030748],
+                {
+}
+            ).addTo(map_3703d94702735421f219077fe10084f0);
+        
+    
+            var icon_ae5761635a3b5becaf9677436fb91d2d = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "star",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_2ef7a06f704175b0b141f88422ff398f = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_e5665aaba4cbea53b65dc00d8c08ec57 = $(`<div id="html_e5665aaba4cbea53b65dc00d8c08ec57" style="width: 100.0%; height: 100.0%;">         <b>Jacques' Wein-Depot</b><br>         District: Other<br>         Category: very_recent<br>         Recency score: 7.78<br>         Opening date: 2024-12-20<br></div>`)[0];
+                popup_2ef7a06f704175b0b141f88422ff398f.setContent(html_e5665aaba4cbea53b65dc00d8c08ec57);
+            
+        
+
+        marker_df0f90892dfd86bc9f8bcd383de189a8.bindPopup(popup_2ef7a06f704175b0b141f88422ff398f)
+        ;
+
+        
+    
+    
+            marker_df0f90892dfd86bc9f8bcd383de189a8.bindTooltip(
+                `<div>
+                     Jacques' Wein-Depot
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_df0f90892dfd86bc9f8bcd383de189a8.setIcon(icon_ae5761635a3b5becaf9677436fb91d2d);
+            
+    
+            var marker_a1376618c1db0349b3bbf4e3d4d1c6e5 = L.marker(
+                [52.5043156, 13.3239406],
+                {
+}
+            ).addTo(map_3703d94702735421f219077fe10084f0);
+        
+    
+            var icon_e34791df99606076b7553e26d3b6c356 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "wine-bottle",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_f2eec0d48e9f285b4b0daf2437fc5c90 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_f4e83bec74519dcb4f689dafa54540b0 = $(`<div id="html_f4e83bec74519dcb4f689dafa54540b0" style="width: 100.0%; height: 100.0%;">         <b>Viniculture</b><br>         District: Charlottenburg<br>         Category: recent<br>         Recency score: 6.51<br>         Opening date: 2023-12-19<br></div>`)[0];
+                popup_f2eec0d48e9f285b4b0daf2437fc5c90.setContent(html_f4e83bec74519dcb4f689dafa54540b0);
+            
+        
+
+        marker_a1376618c1db0349b3bbf4e3d4d1c6e5.bindPopup(popup_f2eec0d48e9f285b4b0daf2437fc5c90)
+        ;
+
+        
+    
+    
+            marker_a1376618c1db0349b3bbf4e3d4d1c6e5.bindTooltip(
+                `<div>
+                     Viniculture
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_a1376618c1db0349b3bbf4e3d4d1c6e5.setIcon(icon_e34791df99606076b7553e26d3b6c356);
+            
+    
+            var marker_f1055b50d4846922a07a6969a1eb7b05 = L.marker(
+                [52.4880644, 13.3399172],
+                {
+}
+            ).addTo(map_3703d94702735421f219077fe10084f0);
+        
+    
+            var icon_d08ed879c4840e5b3546ab7aeffaa5e0 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "wine-bottle",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_757cd94bdb8e44c8d27c509e116c345f = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_cdc1e08e1d34fa04b02e32fa8ff3a951 = $(`<div id="html_cdc1e08e1d34fa04b02e32fa8ff3a951" style="width: 100.0%; height: 100.0%;">         <b>weinmichel</b><br>         District: Schöneberg<br>         Category: recent<br>         Recency score: 5.55<br>         Opening date: 2023-10-08<br></div>`)[0];
+                popup_757cd94bdb8e44c8d27c509e116c345f.setContent(html_cdc1e08e1d34fa04b02e32fa8ff3a951);
+            
+        
+
+        marker_f1055b50d4846922a07a6969a1eb7b05.bindPopup(popup_757cd94bdb8e44c8d27c509e116c345f)
+        ;
+
+        
+    
+    
+            marker_f1055b50d4846922a07a6969a1eb7b05.bindTooltip(
+                `<div>
+                     weinmichel
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_f1055b50d4846922a07a6969a1eb7b05.setIcon(icon_d08ed879c4840e5b3546ab7aeffaa5e0);
+            
+    
+            var marker_6784e6723800ebaec8d723bae8bd47bf = L.marker(
+                [52.5486808, 13.4109046],
+                {
+}
+            ).addTo(map_3703d94702735421f219077fe10084f0);
+        
+    
+            var icon_fc484711bf4d16cc16c0d3304cfdeed5 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "wine-bottle",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_895159d1fe0bfe3de81e44b925514c22 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_3f25a5c3d9471d97c176d04e314af672 = $(`<div id="html_3f25a5c3d9471d97c176d04e314af672" style="width: 100.0%; height: 100.0%;">         <b>Kopenhagener Weinhandlung</b><br>         District: Mitte<br>         Category: recent<br>         Recency score: 5.05<br>         Opening date: 2024-06-12<br></div>`)[0];
+                popup_895159d1fe0bfe3de81e44b925514c22.setContent(html_3f25a5c3d9471d97c176d04e314af672);
+            
+        
+
+        marker_6784e6723800ebaec8d723bae8bd47bf.bindPopup(popup_895159d1fe0bfe3de81e44b925514c22)
+        ;
+
+        
+    
+    
+            marker_6784e6723800ebaec8d723bae8bd47bf.bindTooltip(
+                `<div>
+                     Kopenhagener Weinhandlung
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_6784e6723800ebaec8d723bae8bd47bf.setIcon(icon_fc484711bf4d16cc16c0d3304cfdeed5);
+            
+    
+            var marker_78a1eed36a5c40c65fc0dfdde533a902 = L.marker(
+                [52.5167441, 13.4680104],
+                {
+}
+            ).addTo(map_3703d94702735421f219077fe10084f0);
+        
+    
+            var icon_76f48978a883aab7d3a16f575ba2e1b7 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "wine-bottle",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_e671273438cf6b86949db9548d3d1143 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_a62c12a63e92db83f0da32b4354dbbfa = $(`<div id="html_a62c12a63e92db83f0da32b4354dbbfa" style="width: 100.0%; height: 100.0%;">         <b>Wein & Gut</b><br>         District: Friedrichshain<br>         Category: likely_recent<br>         Recency score: 6.023199053150775<br>         Opening date: 2024-02-23<br></div>`)[0];
+                popup_e671273438cf6b86949db9548d3d1143.setContent(html_a62c12a63e92db83f0da32b4354dbbfa);
+            
+        
+
+        marker_78a1eed36a5c40c65fc0dfdde533a902.bindPopup(popup_e671273438cf6b86949db9548d3d1143)
+        ;
+
+        
+    
+    
+            marker_78a1eed36a5c40c65fc0dfdde533a902.bindTooltip(
+                `<div>
+                     Wein & Gut
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_78a1eed36a5c40c65fc0dfdde533a902.setIcon(icon_76f48978a883aab7d3a16f575ba2e1b7);
+            
+    
+            var marker_a0b60c48af116f6df0c9e50101c82c41 = L.marker(
+                [52.4446746, 13.5750783],
+                {
+}
+            ).addTo(map_3703d94702735421f219077fe10084f0);
+        
+    
+            var icon_9ee602e31286ac62225d08a95bb5df34 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "wine-bottle",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_84409f185a0c8e7d7a17ce01889aad92 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_655e075fc8cce4fb6da2ea6816eac8de = $(`<div id="html_655e075fc8cce4fb6da2ea6816eac8de" style="width: 100.0%; height: 100.0%;">         <b>Weinhaus Köpenick</b><br>         District: Other<br>         Category: recent<br>         Recency score: 6.2<br>         Opening date: 2023-10-04<br></div>`)[0];
+                popup_84409f185a0c8e7d7a17ce01889aad92.setContent(html_655e075fc8cce4fb6da2ea6816eac8de);
+            
+        
+
+        marker_a0b60c48af116f6df0c9e50101c82c41.bindPopup(popup_84409f185a0c8e7d7a17ce01889aad92)
+        ;
+
+        
+    
+    
+            marker_a0b60c48af116f6df0c9e50101c82c41.bindTooltip(
+                `<div>
+                     Weinhaus Köpenick
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_a0b60c48af116f6df0c9e50101c82c41.setIcon(icon_9ee602e31286ac62225d08a95bb5df34);
+            
+    
+            var marker_7c573f029805c5469251cac293a7d229 = L.marker(
+                [52.5490341, 13.4096682],
+                {
+}
+            ).addTo(map_3703d94702735421f219077fe10084f0);
+        
+    
+            var icon_121c24af6ca116bffb7741110030a598 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "wine-bottle",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_044a42b229c9ced8a9f60794e4361b4b = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_de1733160c0565358714a73f9d8a1296 = $(`<div id="html_de1733160c0565358714a73f9d8a1296" style="width: 100.0%; height: 100.0%;">         <b>La Premiata Ditta</b><br>         District: Mitte<br>         Category: recent<br>         Recency score: 5.22<br>         Opening date: 2024-06-18<br></div>`)[0];
+                popup_044a42b229c9ced8a9f60794e4361b4b.setContent(html_de1733160c0565358714a73f9d8a1296);
+            
+        
+
+        marker_7c573f029805c5469251cac293a7d229.bindPopup(popup_044a42b229c9ced8a9f60794e4361b4b)
+        ;
+
+        
+    
+    
+            marker_7c573f029805c5469251cac293a7d229.bindTooltip(
+                `<div>
+                     La Premiata Ditta
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_7c573f029805c5469251cac293a7d229.setIcon(icon_121c24af6ca116bffb7741110030a598);
+            
+    
+            var marker_77bebfbfc12c247aea66bc53cdfe1b34 = L.marker(
+                [52.492358, 13.3328274],
+                {
+}
+            ).addTo(map_3703d94702735421f219077fe10084f0);
+        
+    
+            var icon_a60e000cfe86e5a56d516a19d39112ba = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "wine-bottle",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_8c0de0dc59768977fc54f360b69301f3 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_7a298ebc0e5139b45d0a50c7c61a94d1 = $(`<div id="html_7a298ebc0e5139b45d0a50c7c61a94d1" style="width: 100.0%; height: 100.0%;">         <b>Wein & Glas</b><br>         District: Charlottenburg<br>         Category: recent<br>         Recency score: 6.03<br>         Opening date: 2023-12-09<br></div>`)[0];
+                popup_8c0de0dc59768977fc54f360b69301f3.setContent(html_7a298ebc0e5139b45d0a50c7c61a94d1);
+            
+        
+
+        marker_77bebfbfc12c247aea66bc53cdfe1b34.bindPopup(popup_8c0de0dc59768977fc54f360b69301f3)
+        ;
+
+        
+    
+    
+            marker_77bebfbfc12c247aea66bc53cdfe1b34.bindTooltip(
+                `<div>
+                     Wein & Glas
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_77bebfbfc12c247aea66bc53cdfe1b34.setIcon(icon_a60e000cfe86e5a56d516a19d39112ba);
+            
+    
+            var marker_c7259885e01e957fd1f843b82f25722a = L.marker(
+                [52.4863013, 13.4351525],
+                {
+}
+            ).addTo(map_3703d94702735421f219077fe10084f0);
+        
+    
+            var icon_f7a058e6bbdec566f51f93af6d53ada1 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "wine-bottle",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_4387502346b343686bf6b42428ae368c = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_6a315f589048706a2e4f06f56e661a8c = $(`<div id="html_6a315f589048706a2e4f06f56e661a8c" style="width: 100.0%; height: 100.0%;">         <b>Motif Wein</b><br>         District: Neukölln<br>         Category: recent<br>         Recency score: 5.31<br>         Opening date: 2023-11-11<br></div>`)[0];
+                popup_4387502346b343686bf6b42428ae368c.setContent(html_6a315f589048706a2e4f06f56e661a8c);
+            
+        
+
+        marker_c7259885e01e957fd1f843b82f25722a.bindPopup(popup_4387502346b343686bf6b42428ae368c)
+        ;
+
+        
+    
+    
+            marker_c7259885e01e957fd1f843b82f25722a.bindTooltip(
+                `<div>
+                     Motif Wein
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_c7259885e01e957fd1f843b82f25722a.setIcon(icon_f7a058e6bbdec566f51f93af6d53ada1);
+            
+    
+            var marker_5d13dbad15838070d4fca3cc6f30a513 = L.marker(
+                [52.4943706, 13.3987826],
+                {
+}
+            ).addTo(map_3703d94702735421f219077fe10084f0);
+        
+    
+            var icon_1b0ac290a982014bf397ea2b150575d1 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "wine-bottle",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_454fcbcf623deeb7a3a2223a0fc0ff1f = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_faeb3c772cae31c4b09be7e28508aeb1 = $(`<div id="html_faeb3c772cae31c4b09be7e28508aeb1" style="width: 100.0%; height: 100.0%;">         <b>Weinkeller</b><br>         District: Kreuzberg<br>         Category: likely_recent<br>         Recency score: 7.647909029568019<br>         Opening date: 2024-07-14<br></div>`)[0];
+                popup_454fcbcf623deeb7a3a2223a0fc0ff1f.setContent(html_faeb3c772cae31c4b09be7e28508aeb1);
+            
+        
+
+        marker_5d13dbad15838070d4fca3cc6f30a513.bindPopup(popup_454fcbcf623deeb7a3a2223a0fc0ff1f)
+        ;
+
+        
+    
+    
+            marker_5d13dbad15838070d4fca3cc6f30a513.bindTooltip(
+                `<div>
+                     Weinkeller
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_5d13dbad15838070d4fca3cc6f30a513.setIcon(icon_1b0ac290a982014bf397ea2b150575d1);
+            
+    
+            var marker_63e449f8783031eeeaf725aa5965daa7 = L.marker(
+                [52.5079028, 13.2968266],
+                {
+}
+            ).addTo(map_3703d94702735421f219077fe10084f0);
+        
+    
+            var icon_287dcb2ec6e6102ca6b69ec5cb2ee113 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "wine-bottle",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_0e43b6f4694cc41e83f793c8f957905f = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_f8796cf2c00d70ccbb8f9699bb1a6e2d = $(`<div id="html_f8796cf2c00d70ccbb8f9699bb1a6e2d" style="width: 100.0%; height: 100.0%;">         <b>Weingalerie</b><br>         District: Charlottenburg<br>         Category: recent<br>         Recency score: 5.44<br>         Opening date: 2024-04-18<br></div>`)[0];
+                popup_0e43b6f4694cc41e83f793c8f957905f.setContent(html_f8796cf2c00d70ccbb8f9699bb1a6e2d);
+            
+        
+
+        marker_63e449f8783031eeeaf725aa5965daa7.bindPopup(popup_0e43b6f4694cc41e83f793c8f957905f)
+        ;
+
+        
+    
+    
+            marker_63e449f8783031eeeaf725aa5965daa7.bindTooltip(
+                `<div>
+                     Weingalerie
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_63e449f8783031eeeaf725aa5965daa7.setIcon(icon_287dcb2ec6e6102ca6b69ec5cb2ee113);
+            
+    
+            var marker_04aba01060b364d498729d6887d77479 = L.marker(
+                [52.5401054, 13.4218073],
+                {
+}
+            ).addTo(map_3703d94702735421f219077fe10084f0);
+        
+    
+            var icon_dd1618f69cdbe65a799b5de96439e969 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "wine-bottle",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_da7358026d5b7d0f9bd05253f835f77a = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_881f013dd779dd4cf013731298b1e171 = $(`<div id="html_881f013dd779dd4cf013731298b1e171" style="width: 100.0%; height: 100.0%;">         <b>8greenbottles</b><br>         District: Prenzlauer Berg<br>         Category: recent<br>         Recency score: 6.43<br>         Opening date: 2024-06-24<br></div>`)[0];
+                popup_da7358026d5b7d0f9bd05253f835f77a.setContent(html_881f013dd779dd4cf013731298b1e171);
+            
+        
+
+        marker_04aba01060b364d498729d6887d77479.bindPopup(popup_da7358026d5b7d0f9bd05253f835f77a)
+        ;
+
+        
+    
+    
+            marker_04aba01060b364d498729d6887d77479.bindTooltip(
+                `<div>
+                     8greenbottles
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_04aba01060b364d498729d6887d77479.setIcon(icon_dd1618f69cdbe65a799b5de96439e969);
+            
+    
+            var marker_c90a167b73b3b6cb361029c1dda82713 = L.marker(
+                [52.5113994, 13.2913051],
+                {
+}
+            ).addTo(map_3703d94702735421f219077fe10084f0);
+        
+    
+            var icon_b76f622b096505eaf53e7a1f9dd7d7b0 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "wine-bottle",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_c740bbbca2c33f33c9a5f791fb83cd1e = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_b01eee2f8c938507e9cbfa3a8a26947b = $(`<div id="html_b01eee2f8c938507e9cbfa3a8a26947b" style="width: 100.0%; height: 100.0%;">         <b>Jacques' Wein-Depot</b><br>         District: Charlottenburg<br>         Category: recent<br>         Recency score: 6.77<br>         Opening date: 2023-10-11<br></div>`)[0];
+                popup_c740bbbca2c33f33c9a5f791fb83cd1e.setContent(html_b01eee2f8c938507e9cbfa3a8a26947b);
+            
+        
+
+        marker_c90a167b73b3b6cb361029c1dda82713.bindPopup(popup_c740bbbca2c33f33c9a5f791fb83cd1e)
+        ;
+
+        
+    
+    
+            marker_c90a167b73b3b6cb361029c1dda82713.bindTooltip(
+                `<div>
+                     Jacques' Wein-Depot
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_c90a167b73b3b6cb361029c1dda82713.setIcon(icon_b76f622b096505eaf53e7a1f9dd7d7b0);
+            
+    
+            var marker_cce762f215c9070661c30b6fd17c16b9 = L.marker(
+                [52.4881913, 13.3495969],
+                {
+}
+            ).addTo(map_3703d94702735421f219077fe10084f0);
+        
+    
+            var icon_fc7d889f2b7524dcdeac272055d53369 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "star",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_f57b4ac32b52164182d658c35e77cca9 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_d202a0981fb574dc0620fc4a5ce4902a = $(`<div id="html_d202a0981fb574dc0620fc4a5ce4902a" style="width: 100.0%; height: 100.0%;">         <b>Jacques' Wein-Depot</b><br>         District: Schöneberg<br>         Category: very_recent<br>         Recency score: 7.13<br>         Opening date: 2024-08-09<br></div>`)[0];
+                popup_f57b4ac32b52164182d658c35e77cca9.setContent(html_d202a0981fb574dc0620fc4a5ce4902a);
+            
+        
+
+        marker_cce762f215c9070661c30b6fd17c16b9.bindPopup(popup_f57b4ac32b52164182d658c35e77cca9)
+        ;
+
+        
+    
+    
+            marker_cce762f215c9070661c30b6fd17c16b9.bindTooltip(
+                `<div>
+                     Jacques' Wein-Depot
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_cce762f215c9070661c30b6fd17c16b9.setIcon(icon_fc7d889f2b7524dcdeac272055d53369);
+            
+    
+            var marker_633a1c6075272534e618a6cd9b7f6af4 = L.marker(
+                [52.5148927, 13.3135084],
+                {
+}
+            ).addTo(map_3703d94702735421f219077fe10084f0);
+        
+    
+            var icon_38eda07a94ba4da8343fb0f932aa4bda = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "wine-bottle",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_eb3a42823dd7e117045c2ebc29fab661 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_14cca9cd54f6e7af83194e8588605d48 = $(`<div id="html_14cca9cd54f6e7af83194e8588605d48" style="width: 100.0%; height: 100.0%;">         <b>Bianco</b><br>         District: Charlottenburg<br>         Category: recent<br>         Recency score: 5.27<br>         Opening date: 2024-03-24<br></div>`)[0];
+                popup_eb3a42823dd7e117045c2ebc29fab661.setContent(html_14cca9cd54f6e7af83194e8588605d48);
+            
+        
+
+        marker_633a1c6075272534e618a6cd9b7f6af4.bindPopup(popup_eb3a42823dd7e117045c2ebc29fab661)
+        ;
+
+        
+    
+    
+            marker_633a1c6075272534e618a6cd9b7f6af4.bindTooltip(
+                `<div>
+                     Bianco
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_633a1c6075272534e618a6cd9b7f6af4.setIcon(icon_38eda07a94ba4da8343fb0f932aa4bda);
+            
+    
+            var marker_2a42a0cc8bea3dd454aef3d20e1b4da0 = L.marker(
+                [52.533931, 13.4215298],
+                {
+}
+            ).addTo(map_3703d94702735421f219077fe10084f0);
+        
+    
+            var icon_982c95567e6a64790c1d3793c210f904 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "wine-bottle",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_f1d8ffb4d0a42af2d9421236c0bb06e0 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_035a97a2cce92bf41c70bd05ef288ab3 = $(`<div id="html_035a97a2cce92bf41c70bd05ef288ab3" style="width: 100.0%; height: 100.0%;">         <b>The Mindful Drinking Club - Alkoholfrei</b><br>         District: Prenzlauer Berg<br>         Category: recent<br>         Recency score: 5.83<br>         Opening date: 2024-04-01<br></div>`)[0];
+                popup_f1d8ffb4d0a42af2d9421236c0bb06e0.setContent(html_035a97a2cce92bf41c70bd05ef288ab3);
+            
+        
+
+        marker_2a42a0cc8bea3dd454aef3d20e1b4da0.bindPopup(popup_f1d8ffb4d0a42af2d9421236c0bb06e0)
+        ;
+
+        
+    
+    
+            marker_2a42a0cc8bea3dd454aef3d20e1b4da0.bindTooltip(
+                `<div>
+                     The Mindful Drinking Club - Alkoholfrei
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_2a42a0cc8bea3dd454aef3d20e1b4da0.setIcon(icon_982c95567e6a64790c1d3793c210f904);
+            
+    
+            var marker_dc5b9cdf9a4c683edfa3c4b89153cbe2 = L.marker(
+                [52.5473258, 13.4532671],
+                {
+}
+            ).addTo(map_3703d94702735421f219077fe10084f0);
+        
+    
+            var icon_01cd74c454b7fdfbdf67d5a3a0b4a45a = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "wine-bottle",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_ce883691999ee620a5046474742c9ecc = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_56f05c23553d901b39edb3652adcdc0a = $(`<div id="html_56f05c23553d901b39edb3652adcdc0a" style="width: 100.0%; height: 100.0%;">         <b>Weinhandel Terra Vinaria</b><br>         District: Other<br>         Category: recent<br>         Recency score: 5.23<br>         Opening date: 2024-04-01<br></div>`)[0];
+                popup_ce883691999ee620a5046474742c9ecc.setContent(html_56f05c23553d901b39edb3652adcdc0a);
+            
+        
+
+        marker_dc5b9cdf9a4c683edfa3c4b89153cbe2.bindPopup(popup_ce883691999ee620a5046474742c9ecc)
+        ;
+
+        
+    
+    
+            marker_dc5b9cdf9a4c683edfa3c4b89153cbe2.bindTooltip(
+                `<div>
+                     Weinhandel Terra Vinaria
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_dc5b9cdf9a4c683edfa3c4b89153cbe2.setIcon(icon_01cd74c454b7fdfbdf67d5a3a0b4a45a);
+            
+    
+            var marker_ee9e590ccb69dbf54150ecc03dd63ee5 = L.marker(
+                [52.5120252, 13.2105342],
+                {
+}
+            ).addTo(map_3703d94702735421f219077fe10084f0);
+        
+    
+            var icon_7079023462bb94d6ff20ac4d3febf34d = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "wine-bottle",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_e222c6d682e8c690639824fcea20cfa3 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_eba5f9562127eb02c98de67340258516 = $(`<div id="html_eba5f9562127eb02c98de67340258516" style="width: 100.0%; height: 100.0%;">         <b>Jacques' Wein-Depot</b><br>         District: Other<br>         Category: recent<br>         Recency score: 6.51<br>         Opening date: 2023-12-18<br></div>`)[0];
+                popup_e222c6d682e8c690639824fcea20cfa3.setContent(html_eba5f9562127eb02c98de67340258516);
+            
+        
+
+        marker_ee9e590ccb69dbf54150ecc03dd63ee5.bindPopup(popup_e222c6d682e8c690639824fcea20cfa3)
+        ;
+
+        
+    
+    
+            marker_ee9e590ccb69dbf54150ecc03dd63ee5.bindTooltip(
+                `<div>
+                     Jacques' Wein-Depot
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_ee9e590ccb69dbf54150ecc03dd63ee5.setIcon(icon_7079023462bb94d6ff20ac4d3febf34d);
+            
+    
+            var marker_75c8556934a178f0ee3f1020d0d2ca06 = L.marker(
+                [52.49184, 13.326919],
+                {
+}
+            ).addTo(map_3703d94702735421f219077fe10084f0);
+        
+    
+            var icon_63183051f9b09e41f9aa2c17f4998540 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "wine-bottle",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_46fa5787d2de729f05ba634df12ec9ef = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_1aab7b653f4af324be9ebffbbf3c6c71 = $(`<div id="html_1aab7b653f4af324be9ebffbbf3c6c71" style="width: 100.0%; height: 100.0%;">         <b>O Lagar</b><br>         District: Charlottenburg<br>         Category: recent<br>         Recency score: 6.96<br>         Opening date: 2024-02-14<br></div>`)[0];
+                popup_46fa5787d2de729f05ba634df12ec9ef.setContent(html_1aab7b653f4af324be9ebffbbf3c6c71);
+            
+        
+
+        marker_75c8556934a178f0ee3f1020d0d2ca06.bindPopup(popup_46fa5787d2de729f05ba634df12ec9ef)
+        ;
+
+        
+    
+    
+            marker_75c8556934a178f0ee3f1020d0d2ca06.bindTooltip(
+                `<div>
+                     O Lagar
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_75c8556934a178f0ee3f1020d0d2ca06.setIcon(icon_63183051f9b09e41f9aa2c17f4998540);
+            
+    
+            var marker_9b2093f792e5a14b7207532e70be7251 = L.marker(
+                [52.4386319, 13.3019345],
+                {
+}
+            ).addTo(map_3703d94702735421f219077fe10084f0);
+        
+    
+            var icon_27408878ae0bdb6f32ae4de362ddfd46 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "star",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_878f054d691729846c92021ad024247a = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_ba3ca3d02d4d41b0e12650bfb406c1bc = $(`<div id="html_ba3ca3d02d4d41b0e12650bfb406c1bc" style="width: 100.0%; height: 100.0%;">         <b>Vinos Y Tapas</b><br>         District: Other<br>         Category: very_recent<br>         Recency score: 7.24<br>         Opening date: 2025-01-01<br></div>`)[0];
+                popup_878f054d691729846c92021ad024247a.setContent(html_ba3ca3d02d4d41b0e12650bfb406c1bc);
+            
+        
+
+        marker_9b2093f792e5a14b7207532e70be7251.bindPopup(popup_878f054d691729846c92021ad024247a)
+        ;
+
+        
+    
+    
+            marker_9b2093f792e5a14b7207532e70be7251.bindTooltip(
+                `<div>
+                     Vinos Y Tapas
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_9b2093f792e5a14b7207532e70be7251.setIcon(icon_27408878ae0bdb6f32ae4de362ddfd46);
+            
+    
+            var marker_f440c2dd58e94847e8bd4aa5253dcfd1 = L.marker(
+                [52.5381045, 13.4215886],
+                {
+}
+            ).addTo(map_3703d94702735421f219077fe10084f0);
+        
+    
+            var icon_59c9f3329567e14f501af0c7980b9bd9 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "wine-bottle",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_96856508fe4c46e12121c988d4dd0258 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_25e262ed038a42cb5ef73a65e1e2b2ec = $(`<div id="html_25e262ed038a42cb5ef73a65e1e2b2ec" style="width: 100.0%; height: 100.0%;">         <b>Chez Jerome</b><br>         District: Prenzlauer Berg<br>         Category: recent<br>         Recency score: 5.85<br>         Opening date: 2024-01-21<br></div>`)[0];
+                popup_96856508fe4c46e12121c988d4dd0258.setContent(html_25e262ed038a42cb5ef73a65e1e2b2ec);
+            
+        
+
+        marker_f440c2dd58e94847e8bd4aa5253dcfd1.bindPopup(popup_96856508fe4c46e12121c988d4dd0258)
+        ;
+
+        
+    
+    
+            marker_f440c2dd58e94847e8bd4aa5253dcfd1.bindTooltip(
+                `<div>
+                     Chez Jerome
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_f440c2dd58e94847e8bd4aa5253dcfd1.setIcon(icon_59c9f3329567e14f501af0c7980b9bd9);
+            
+    
+            var marker_c2a08cba67f25433ea27568092fc8557 = L.marker(
+                [52.5449712, 13.3683059],
+                {
+}
+            ).addTo(map_3703d94702735421f219077fe10084f0);
+        
+    
+            var icon_3910e071608c10d4d225e00f0673e196 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "wine-bottle",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_5c10428d9f90a09410c6bb28933c5255 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_707031fc738bf02f5892377be6e15b20 = $(`<div id="html_707031fc738bf02f5892377be6e15b20" style="width: 100.0%; height: 100.0%;">         <b>ernst cave</b><br>         District: Mitte<br>         Category: recent<br>         Recency score: 5.1<br>         Opening date: 2024-01-07<br></div>`)[0];
+                popup_5c10428d9f90a09410c6bb28933c5255.setContent(html_707031fc738bf02f5892377be6e15b20);
+            
+        
+
+        marker_c2a08cba67f25433ea27568092fc8557.bindPopup(popup_5c10428d9f90a09410c6bb28933c5255)
+        ;
+
+        
+    
+    
+            marker_c2a08cba67f25433ea27568092fc8557.bindTooltip(
+                `<div>
+                     ernst cave
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_c2a08cba67f25433ea27568092fc8557.setIcon(icon_3910e071608c10d4d225e00f0673e196);
+            
+    
+            var marker_a796cb1052e2fa6b3193d5ea458d37e3 = L.marker(
+                [52.4927535, 13.4282612],
+                {
+}
+            ).addTo(map_3703d94702735421f219077fe10084f0);
+        
+    
+            var icon_0f873b7a0dee69014f2b21bc6351e8ce = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "wine-bottle",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_92cba9c6bb5aa3198f403c01bf50b4b1 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_0b8392c7b02e358e1648f702185c9749 = $(`<div id="html_0b8392c7b02e358e1648f702185c9749" style="width: 100.0%; height: 100.0%;">         <b>Mosto</b><br>         District: Neukölln<br>         Category: likely_recent<br>         Recency score: 5.523099287014975<br>         Opening date: 2024-03-17<br></div>`)[0];
+                popup_92cba9c6bb5aa3198f403c01bf50b4b1.setContent(html_0b8392c7b02e358e1648f702185c9749);
+            
+        
+
+        marker_a796cb1052e2fa6b3193d5ea458d37e3.bindPopup(popup_92cba9c6bb5aa3198f403c01bf50b4b1)
+        ;
+
+        
+    
+    
+            marker_a796cb1052e2fa6b3193d5ea458d37e3.bindTooltip(
+                `<div>
+                     Mosto
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_a796cb1052e2fa6b3193d5ea458d37e3.setIcon(icon_0f873b7a0dee69014f2b21bc6351e8ce);
+            
+    
+            var heat_map_2c375b6bc79293b931f23b3fafd3c016 = L.heatLayer(
+                [[52.5026652, 13.4392338, 5.773824883145467], [52.4863287, 13.2970244, 8.28], [52.4167066, 13.3995313, 5.62], [52.4923161, 13.3304617, 5.28], [52.4677462, 13.3285927, 5.3], [52.4433063, 13.3159808, 6.03], [52.5351558, 13.4164095, 6.62], [52.4988336, 13.44238, 5.049763486783569], [52.5174808, 13.442681, 6.624343921482698], [52.4948364, 13.423556, 6.045997961875188], [52.5233596, 13.4041635, 5.7], [52.4772386, 13.2889948, 5.42], [52.5335395, 13.4216383, 5.37], [52.5081317, 13.4629703, 6.31], [52.500884, 13.4302876, 5.524864781287809], [52.4954314, 13.4178333, 7.69164727385998], [52.4924092, 13.3965576, 7.988761099273773], [52.5691482, 13.4030748, 7.78], [52.5043156, 13.3239406, 6.51], [52.4880644, 13.3399172, 5.55], [52.5486808, 13.4109046, 5.05], [52.5167441, 13.4680104, 6.023199053150775], [52.4446746, 13.5750783, 6.2], [52.5490341, 13.4096682, 5.22], [52.492358, 13.3328274, 6.03], [52.4863013, 13.4351525, 5.31], [52.4943706, 13.3987826, 7.647909029568019], [52.5079028, 13.2968266, 5.44], [52.5401054, 13.4218073, 6.43], [52.5113994, 13.2913051, 6.77], [52.4881913, 13.3495969, 7.13], [52.5148927, 13.3135084, 5.27], [52.533931, 13.4215298, 5.83], [52.5473258, 13.4532671, 5.23], [52.5120252, 13.2105342, 6.51], [52.49184, 13.326919, 6.96], [52.4386319, 13.3019345, 7.24], [52.5381045, 13.4215886, 5.85], [52.5449712, 13.3683059, 5.1], [52.4927535, 13.4282612, 5.523099287014975]],
+                {
+  "minOpacity": 0.5,
+  "maxZoom": 1,
+  "radius": 15,
+  "blur": 10,
+  "gradient": {
+  0.2: "blue",
+  0.4: "lime",
+  0.6: "orange",
+  1: "red",
+},
+}
+            );
+        
+    
+            heat_map_2c375b6bc79293b931f23b3fafd3c016.addTo(map_3703d94702735421f219077fe10084f0);
+        
+    
+            var layer_control_935d28e7fc88a9a52b684c6323a3836a_layers = {
+                base_layers : {
+                    "cartodbpositron" : tile_layer_a48bd6ee84d66dfa81f32adbca281f80,
+                },
+                overlays :  {
+                    "Recent Activity Heatmap" : heat_map_2c375b6bc79293b931f23b3fafd3c016,
+                },
+            };
+            let layer_control_935d28e7fc88a9a52b684c6323a3836a = L.control.layers(
+                layer_control_935d28e7fc88a9a52b684c6323a3836a_layers.base_layers,
+                layer_control_935d28e7fc88a9a52b684c6323a3836a_layers.overlays,
+                {
+  "position": "topright",
+  "collapsed": true,
+  "autoZIndex": true,
+}
+            ).addTo(map_3703d94702735421f219077fe10084f0);
+
+        
+</script>
+</html>

@@ -1,0 +1,1057 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_dbf8afffa8e8ad92698f6a8f5e8313f4 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+</head>
+<body>
+    
+    
+    <h3 align="center" style="font-size:20px"><b>Berlin Winery Density Growth (2014-2024)</b></h3>
+    <p align="center" style="font-size:14px">Average Annual Growth Rate by District</p>
+    
+    
+    <div style="position: fixed; 
+                bottom: 50px; left: 50px; width: 220px; height: 200px; 
+                background-color: white; border:2px solid grey; z-index:9999; 
+                font-size:12px; padding: 10px">
+    <p><b>Annual Growth Rate (CAGR)</b></p>
+    <p><i class="fa fa-square" style="color:#006d2c"></i> 15%+ Very High Growth</p>
+    <p><i class="fa fa-square" style="color:#31a354"></i> 10-15% High Growth</p>
+    <p><i class="fa fa-square" style="color:#74c476"></i> 7-10% Medium Growth</p>
+    <p><i class="fa fa-square" style="color:#bae4b3"></i> 5-7% Low Growth</p>
+    <p><i class="fa fa-square" style="color:#edf8e9"></i> 2-5% Minimal Growth</p>
+    <p><i class="fa fa-square" style="color:#f7f7f7"></i> 0-2% Very Low</p>
+    <p><i class="fa fa-square" style="color:#d9d9d9"></i> No Growth</p>
+    <p style="margin-top: 10px;"><b>Percentages show 10-year CAGR</b></p>
+    </div>
+    
+    
+            <div class="folium-map" id="map_dbf8afffa8e8ad92698f6a8f5e8313f4" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_dbf8afffa8e8ad92698f6a8f5e8313f4 = L.map(
+                "map_dbf8afffa8e8ad92698f6a8f5e8313f4",
+                {
+                    center: [52.520008, 13.404954],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 11,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_dc030c6d470fb718821d3c6cc859a1a8 = L.tileLayer(
+                "https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 20,
+  "maxNativeZoom": 20,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors \u0026copy; \u003ca href=\"https://carto.com/attributions\"\u003eCARTO\u003c/a\u003e",
+  "subdomains": "abcd",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_dc030c6d470fb718821d3c6cc859a1a8.addTo(map_dbf8afffa8e8ad92698f6a8f5e8313f4);
+        
+    
+            var polygon_feef179bed5198e93038d7bfece36838 = L.polygon(
+                [[52.53, 13.33], [52.53, 13.38], [52.57, 13.38], [52.57, 13.33], [52.53, 13.33]],
+                {"bubblingMouseEvents": true, "color": "white", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#31a354", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 2}
+            ).addTo(map_dbf8afffa8e8ad92698f6a8f5e8313f4);
+        
+    
+        var popup_cd195822d36555ccac2e1c8d7b032b8a = L.popup({
+  "maxWidth": 350,
+});
+
+        
+            
+                var html_231abb4a99f32afbd632cf7fcee3a766 = $(`<div id="html_231abb4a99f32afbd632cf7fcee3a766" style="width: 100.0%; height: 100.0%;">             <b>Wedding</b><br>             <strong>Avg Annual Growth: 14.8%</strong><br>             Total Growth (2014-2024): 298.9%<br>             Peak Growth Year: 2017<br>             Peak Growth Rate: 41.1%<br>             <br>             Density 2014: 0.026/km²<br>             Density 2024: 0.105/km²<br>             <br>             <em>Latest growth area, rapid recent development</em>             </div>`)[0];
+                popup_cd195822d36555ccac2e1c8d7b032b8a.setContent(html_231abb4a99f32afbd632cf7fcee3a766);
+            
+        
+
+        polygon_feef179bed5198e93038d7bfece36838.bindPopup(popup_cd195822d36555ccac2e1c8d7b032b8a)
+        ;
+
+        
+    
+    
+            polygon_feef179bed5198e93038d7bfece36838.bindTooltip(
+                `<div>
+                     Wedding: 14.8% annual growth
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_2be036314bd8dd23abb5167468eb025f = L.marker(
+                [52.55, 13.355],
+                {
+}
+            ).addTo(map_dbf8afffa8e8ad92698f6a8f5e8313f4);
+        
+    
+            var div_icon_e1225bdc687c6d66b4565c884fa0bc3c = L.divIcon({
+  "html": "\u003cdiv style=\"text-align: center; font-weight: bold; font-size: 12px; color: white; background: rgba(0,0,0,0.7); border-radius: 5px; padding: 3px; min-width: 50px;\"\u003e14.8%\u003c/div\u003e",
+  "iconSize": [60, 20],
+  "iconAnchor": [30, 10],
+  "className": "empty",
+});
+        
+    
+        var popup_e9a620a6880491721003f4cdf81419bd = L.popup({
+  "maxWidth": 350,
+});
+
+        
+            
+                var html_3493fcbb54cc4ca014fe3fe852bc5431 = $(`<div id="html_3493fcbb54cc4ca014fe3fe852bc5431" style="width: 100.0%; height: 100.0%;">             <b>Wedding</b><br>             <strong>Avg Annual Growth: 14.8%</strong><br>             Total Growth (2014-2024): 298.9%<br>             Peak Growth Year: 2017<br>             Peak Growth Rate: 41.1%<br>             <br>             Density 2014: 0.026/km²<br>             Density 2024: 0.105/km²<br>             <br>             <em>Latest growth area, rapid recent development</em>             </div>`)[0];
+                popup_e9a620a6880491721003f4cdf81419bd.setContent(html_3493fcbb54cc4ca014fe3fe852bc5431);
+            
+        
+
+        marker_2be036314bd8dd23abb5167468eb025f.bindPopup(popup_e9a620a6880491721003f4cdf81419bd)
+        ;
+
+        
+    
+    
+            marker_2be036314bd8dd23abb5167468eb025f.bindTooltip(
+                `<div>
+                     Wedding: 14.8%
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_2be036314bd8dd23abb5167468eb025f.setIcon(div_icon_e1225bdc687c6d66b4565c884fa0bc3c);
+            
+    
+            var polygon_276f8e5470f64995a2aca893d96520fd = L.polygon(
+                [[52.52, 13.16], [52.52, 13.28], [52.58, 13.28], [52.58, 13.16], [52.52, 13.16]],
+                {"bubblingMouseEvents": true, "color": "white", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#31a354", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 2}
+            ).addTo(map_dbf8afffa8e8ad92698f6a8f5e8313f4);
+        
+    
+        var popup_07dd53e7b032a3b8ef90149eecacb1f9 = L.popup({
+  "maxWidth": 350,
+});
+
+        
+            
+                var html_753c2b389d7ff17dcef0f930c77f4c60 = $(`<div id="html_753c2b389d7ff17dcef0f930c77f4c60" style="width: 100.0%; height: 100.0%;">             <b>Spandau</b><br>             <strong>Avg Annual Growth: 13.0%</strong><br>             Total Growth (2014-2024): 240.6%<br>             Peak Growth Year: 2016<br>             Peak Growth Rate: 40.0%<br>             <br>             Density 2014: 0.003/km²<br>             Density 2024: 0.011/km²<br>             <br>             <em>Latest frontier, emerging growth</em>             </div>`)[0];
+                popup_07dd53e7b032a3b8ef90149eecacb1f9.setContent(html_753c2b389d7ff17dcef0f930c77f4c60);
+            
+        
+
+        polygon_276f8e5470f64995a2aca893d96520fd.bindPopup(popup_07dd53e7b032a3b8ef90149eecacb1f9)
+        ;
+
+        
+    
+    
+            polygon_276f8e5470f64995a2aca893d96520fd.bindTooltip(
+                `<div>
+                     Spandau: 13.0% annual growth
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_a7f9e13bdbfc9249bb65a431e85bcf0f = L.marker(
+                [52.55, 13.22],
+                {
+}
+            ).addTo(map_dbf8afffa8e8ad92698f6a8f5e8313f4);
+        
+    
+            var div_icon_42bc3f172db2e18a08061fa402e7816e = L.divIcon({
+  "html": "\u003cdiv style=\"text-align: center; font-weight: bold; font-size: 12px; color: white; background: rgba(0,0,0,0.7); border-radius: 5px; padding: 3px; min-width: 50px;\"\u003e13.0%\u003c/div\u003e",
+  "iconSize": [60, 20],
+  "iconAnchor": [30, 10],
+  "className": "empty",
+});
+        
+    
+        var popup_c55e43c3353263debd4f41a6ac7664dc = L.popup({
+  "maxWidth": 350,
+});
+
+        
+            
+                var html_134b5cd004ac92fc8e5cb87ab8c0948c = $(`<div id="html_134b5cd004ac92fc8e5cb87ab8c0948c" style="width: 100.0%; height: 100.0%;">             <b>Spandau</b><br>             <strong>Avg Annual Growth: 13.0%</strong><br>             Total Growth (2014-2024): 240.6%<br>             Peak Growth Year: 2016<br>             Peak Growth Rate: 40.0%<br>             <br>             Density 2014: 0.003/km²<br>             Density 2024: 0.011/km²<br>             <br>             <em>Latest frontier, emerging growth</em>             </div>`)[0];
+                popup_c55e43c3353263debd4f41a6ac7664dc.setContent(html_134b5cd004ac92fc8e5cb87ab8c0948c);
+            
+        
+
+        marker_a7f9e13bdbfc9249bb65a431e85bcf0f.bindPopup(popup_c55e43c3353263debd4f41a6ac7664dc)
+        ;
+
+        
+    
+    
+            marker_a7f9e13bdbfc9249bb65a431e85bcf0f.bindTooltip(
+                `<div>
+                     Spandau: 13.0%
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_a7f9e13bdbfc9249bb65a431e85bcf0f.setIcon(div_icon_42bc3f172db2e18a08061fa402e7816e);
+            
+    
+            var polygon_8d4a306f3e32ad7e9e06e0e07a7b3916 = L.polygon(
+                [[52.45, 13.4], [52.45, 13.47], [52.5, 13.47], [52.5, 13.4], [52.45, 13.4]],
+                {"bubblingMouseEvents": true, "color": "white", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#31a354", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 2}
+            ).addTo(map_dbf8afffa8e8ad92698f6a8f5e8313f4);
+        
+    
+        var popup_05f2e391959b38271c0d04eaeb7f1881 = L.popup({
+  "maxWidth": 350,
+});
+
+        
+            
+                var html_2a75ec9ab2b6f156c764d21c0e52ab77 = $(`<div id="html_2a75ec9ab2b6f156c764d21c0e52ab77" style="width: 100.0%; height: 100.0%;">             <b>Neukölln</b><br>             <strong>Avg Annual Growth: 12.9%</strong><br>             Total Growth (2014-2024): 235.8%<br>             Peak Growth Year: 2022<br>             Peak Growth Rate: 32.1%<br>             <br>             Density 2014: 0.086/km²<br>             Density 2024: 0.289/km²<br>             <br>             <em>Rapid recent development, cultural hub emergence</em>             </div>`)[0];
+                popup_05f2e391959b38271c0d04eaeb7f1881.setContent(html_2a75ec9ab2b6f156c764d21c0e52ab77);
+            
+        
+
+        polygon_8d4a306f3e32ad7e9e06e0e07a7b3916.bindPopup(popup_05f2e391959b38271c0d04eaeb7f1881)
+        ;
+
+        
+    
+    
+            polygon_8d4a306f3e32ad7e9e06e0e07a7b3916.bindTooltip(
+                `<div>
+                     Neukölln: 12.9% annual growth
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_a2a32e928f02f852669ee39bc010fb5e = L.marker(
+                [52.475, 13.435],
+                {
+}
+            ).addTo(map_dbf8afffa8e8ad92698f6a8f5e8313f4);
+        
+    
+            var div_icon_cc925f4da8393c6c60ad14b074dccf42 = L.divIcon({
+  "html": "\u003cdiv style=\"text-align: center; font-weight: bold; font-size: 12px; color: white; background: rgba(0,0,0,0.7); border-radius: 5px; padding: 3px; min-width: 50px;\"\u003e12.9%\u003c/div\u003e",
+  "iconSize": [60, 20],
+  "iconAnchor": [30, 10],
+  "className": "empty",
+});
+        
+    
+        var popup_9fa2accce60016c8e7e2a9c7643e8128 = L.popup({
+  "maxWidth": 350,
+});
+
+        
+            
+                var html_53365ab5c127d9e97b4f1d362e64bcfa = $(`<div id="html_53365ab5c127d9e97b4f1d362e64bcfa" style="width: 100.0%; height: 100.0%;">             <b>Neukölln</b><br>             <strong>Avg Annual Growth: 12.9%</strong><br>             Total Growth (2014-2024): 235.8%<br>             Peak Growth Year: 2022<br>             Peak Growth Rate: 32.1%<br>             <br>             Density 2014: 0.086/km²<br>             Density 2024: 0.289/km²<br>             <br>             <em>Rapid recent development, cultural hub emergence</em>             </div>`)[0];
+                popup_9fa2accce60016c8e7e2a9c7643e8128.setContent(html_53365ab5c127d9e97b4f1d362e64bcfa);
+            
+        
+
+        marker_a2a32e928f02f852669ee39bc010fb5e.bindPopup(popup_9fa2accce60016c8e7e2a9c7643e8128)
+        ;
+
+        
+    
+    
+            marker_a2a32e928f02f852669ee39bc010fb5e.bindTooltip(
+                `<div>
+                     Neukölln: 12.9%
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_a2a32e928f02f852669ee39bc010fb5e.setIcon(div_icon_cc925f4da8393c6c60ad14b074dccf42);
+            
+    
+            var polygon_348ec8d755a00b6cef796b06038c3449 = L.polygon(
+                [[52.5, 13.42], [52.5, 13.48], [52.53, 13.48], [52.53, 13.42], [52.5, 13.42]],
+                {"bubblingMouseEvents": true, "color": "white", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#31a354", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 2}
+            ).addTo(map_dbf8afffa8e8ad92698f6a8f5e8313f4);
+        
+    
+        var popup_e7467f53f64e807cee121cb62df60319 = L.popup({
+  "maxWidth": 350,
+});
+
+        
+            
+                var html_b70f780f453c021426f88f82ad6ab3a6 = $(`<div id="html_b70f780f453c021426f88f82ad6ab3a6" style="width: 100.0%; height: 100.0%;">             <b>Friedrichshain</b><br>             <strong>Avg Annual Growth: 11.7%</strong><br>             Total Growth (2014-2024): 201.0%<br>             Peak Growth Year: 2020<br>             Peak Growth Rate: 34.5%<br>             <br>             Density 2014: 0.203/km²<br>             Density 2024: 0.612/km²<br>             <br>             <em>Consistent strong growth, tech/creative scene</em>             </div>`)[0];
+                popup_e7467f53f64e807cee121cb62df60319.setContent(html_b70f780f453c021426f88f82ad6ab3a6);
+            
+        
+
+        polygon_348ec8d755a00b6cef796b06038c3449.bindPopup(popup_e7467f53f64e807cee121cb62df60319)
+        ;
+
+        
+    
+    
+            polygon_348ec8d755a00b6cef796b06038c3449.bindTooltip(
+                `<div>
+                     Friedrichshain: 11.7% annual growth
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_c6a30933a49ae3647c7a3b2f31b11131 = L.marker(
+                [52.515, 13.45],
+                {
+}
+            ).addTo(map_dbf8afffa8e8ad92698f6a8f5e8313f4);
+        
+    
+            var div_icon_3e3b30089486acb35168fab2c0e2ad43 = L.divIcon({
+  "html": "\u003cdiv style=\"text-align: center; font-weight: bold; font-size: 12px; color: white; background: rgba(0,0,0,0.7); border-radius: 5px; padding: 3px; min-width: 50px;\"\u003e11.7%\u003c/div\u003e",
+  "iconSize": [60, 20],
+  "iconAnchor": [30, 10],
+  "className": "empty",
+});
+        
+    
+        var popup_74313683397af691517ebb577c40cf3c = L.popup({
+  "maxWidth": 350,
+});
+
+        
+            
+                var html_26c31215cb972231c653426d80418a7d = $(`<div id="html_26c31215cb972231c653426d80418a7d" style="width: 100.0%; height: 100.0%;">             <b>Friedrichshain</b><br>             <strong>Avg Annual Growth: 11.7%</strong><br>             Total Growth (2014-2024): 201.0%<br>             Peak Growth Year: 2020<br>             Peak Growth Rate: 34.5%<br>             <br>             Density 2014: 0.203/km²<br>             Density 2024: 0.612/km²<br>             <br>             <em>Consistent strong growth, tech/creative scene</em>             </div>`)[0];
+                popup_74313683397af691517ebb577c40cf3c.setContent(html_26c31215cb972231c653426d80418a7d);
+            
+        
+
+        marker_c6a30933a49ae3647c7a3b2f31b11131.bindPopup(popup_74313683397af691517ebb577c40cf3c)
+        ;
+
+        
+    
+    
+            marker_c6a30933a49ae3647c7a3b2f31b11131.bindTooltip(
+                `<div>
+                     Friedrichshain: 11.7%
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_c6a30933a49ae3647c7a3b2f31b11131.setIcon(div_icon_3e3b30089486acb35168fab2c0e2ad43);
+            
+    
+            var polygon_47e2bbd471338af596f04f4252476e09 = L.polygon(
+                [[52.49, 13.38], [52.49, 13.42], [52.52, 13.42], [52.52, 13.38], [52.49, 13.38]],
+                {"bubblingMouseEvents": true, "color": "white", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#31a354", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 2}
+            ).addTo(map_dbf8afffa8e8ad92698f6a8f5e8313f4);
+        
+    
+        var popup_30670f403a538b9c3ba1857f14216d5f = L.popup({
+  "maxWidth": 350,
+});
+
+        
+            
+                var html_5e2bad131914cc1c9170211ce0fefd63 = $(`<div id="html_5e2bad131914cc1c9170211ce0fefd63" style="width: 100.0%; height: 100.0%;">             <b>Kreuzberg</b><br>             <strong>Avg Annual Growth: 10.2%</strong><br>             Total Growth (2014-2024): 164.0%<br>             Peak Growth Year: 2018<br>             Peak Growth Rate: 25.1%<br>             <br>             Density 2014: 0.125/km²<br>             Density 2024: 0.329/km²<br>             <br>             <em>Early adopter, now maturing market</em>             </div>`)[0];
+                popup_30670f403a538b9c3ba1857f14216d5f.setContent(html_5e2bad131914cc1c9170211ce0fefd63);
+            
+        
+
+        polygon_47e2bbd471338af596f04f4252476e09.bindPopup(popup_30670f403a538b9c3ba1857f14216d5f)
+        ;
+
+        
+    
+    
+            polygon_47e2bbd471338af596f04f4252476e09.bindTooltip(
+                `<div>
+                     Kreuzberg: 10.2% annual growth
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_74a23c53c307804e039cd1e3808ce6b3 = L.marker(
+                [52.505, 13.4],
+                {
+}
+            ).addTo(map_dbf8afffa8e8ad92698f6a8f5e8313f4);
+        
+    
+            var div_icon_ff30e48728df89fba1dd999c6d5fa944 = L.divIcon({
+  "html": "\u003cdiv style=\"text-align: center; font-weight: bold; font-size: 12px; color: white; background: rgba(0,0,0,0.7); border-radius: 5px; padding: 3px; min-width: 50px;\"\u003e10.2%\u003c/div\u003e",
+  "iconSize": [60, 20],
+  "iconAnchor": [30, 10],
+  "className": "empty",
+});
+        
+    
+        var popup_8b94332b1870bd4a7f35ef8064df8ffd = L.popup({
+  "maxWidth": 350,
+});
+
+        
+            
+                var html_faaa566b417c8f5e0d5f355d13340bef = $(`<div id="html_faaa566b417c8f5e0d5f355d13340bef" style="width: 100.0%; height: 100.0%;">             <b>Kreuzberg</b><br>             <strong>Avg Annual Growth: 10.2%</strong><br>             Total Growth (2014-2024): 164.0%<br>             Peak Growth Year: 2018<br>             Peak Growth Rate: 25.1%<br>             <br>             Density 2014: 0.125/km²<br>             Density 2024: 0.329/km²<br>             <br>             <em>Early adopter, now maturing market</em>             </div>`)[0];
+                popup_8b94332b1870bd4a7f35ef8064df8ffd.setContent(html_faaa566b417c8f5e0d5f355d13340bef);
+            
+        
+
+        marker_74a23c53c307804e039cd1e3808ce6b3.bindPopup(popup_8b94332b1870bd4a7f35ef8064df8ffd)
+        ;
+
+        
+    
+    
+            marker_74a23c53c307804e039cd1e3808ce6b3.bindTooltip(
+                `<div>
+                     Kreuzberg: 10.2%
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_74a23c53c307804e039cd1e3808ce6b3.setIcon(div_icon_ff30e48728df89fba1dd999c6d5fa944);
+            
+    
+            var polygon_ccc215182dc8fd9240e823a3836f84df = L.polygon(
+                [[52.52, 13.4], [52.52, 13.45], [52.56, 13.45], [52.56, 13.4], [52.52, 13.4]],
+                {"bubblingMouseEvents": true, "color": "white", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#74c476", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 2}
+            ).addTo(map_dbf8afffa8e8ad92698f6a8f5e8313f4);
+        
+    
+        var popup_9c38496c195ad6a84a0f852c9acfafe0 = L.popup({
+  "maxWidth": 350,
+});
+
+        
+            
+                var html_46b4ddd621f3235f3df82fc7f07b8ddc = $(`<div id="html_46b4ddd621f3235f3df82fc7f07b8ddc" style="width: 100.0%; height: 100.0%;">             <b>Prenzlauer Berg</b><br>             <strong>Avg Annual Growth: 8.4%</strong><br>             Total Growth (2014-2024): 124.7%<br>             Peak Growth Year: 2018<br>             Peak Growth Rate: 41.1%<br>             <br>             Density 2014: 1.143/km²<br>             Density 2024: 2.569/km²<br>             <br>             <em>Early gentrification leader, sustained growth</em>             </div>`)[0];
+                popup_9c38496c195ad6a84a0f852c9acfafe0.setContent(html_46b4ddd621f3235f3df82fc7f07b8ddc);
+            
+        
+
+        polygon_ccc215182dc8fd9240e823a3836f84df.bindPopup(popup_9c38496c195ad6a84a0f852c9acfafe0)
+        ;
+
+        
+    
+    
+            polygon_ccc215182dc8fd9240e823a3836f84df.bindTooltip(
+                `<div>
+                     Prenzlauer Berg: 8.4% annual growth
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_6b9dc8bc5c23d825a2b9232ac7ab2884 = L.marker(
+                [52.54, 13.425],
+                {
+}
+            ).addTo(map_dbf8afffa8e8ad92698f6a8f5e8313f4);
+        
+    
+            var div_icon_7881fdaa87586d21f2b0ad1b8c643657 = L.divIcon({
+  "html": "\u003cdiv style=\"text-align: center; font-weight: bold; font-size: 12px; color: white; background: rgba(0,0,0,0.7); border-radius: 5px; padding: 3px; min-width: 50px;\"\u003e8.4%\u003c/div\u003e",
+  "iconSize": [60, 20],
+  "iconAnchor": [30, 10],
+  "className": "empty",
+});
+        
+    
+        var popup_8b3ff64e47775c13f5b1e67b012ee892 = L.popup({
+  "maxWidth": 350,
+});
+
+        
+            
+                var html_f0fbafec286cf55ab95bd2b169f65ed0 = $(`<div id="html_f0fbafec286cf55ab95bd2b169f65ed0" style="width: 100.0%; height: 100.0%;">             <b>Prenzlauer Berg</b><br>             <strong>Avg Annual Growth: 8.4%</strong><br>             Total Growth (2014-2024): 124.7%<br>             Peak Growth Year: 2018<br>             Peak Growth Rate: 41.1%<br>             <br>             Density 2014: 1.143/km²<br>             Density 2024: 2.569/km²<br>             <br>             <em>Early gentrification leader, sustained growth</em>             </div>`)[0];
+                popup_8b3ff64e47775c13f5b1e67b012ee892.setContent(html_f0fbafec286cf55ab95bd2b169f65ed0);
+            
+        
+
+        marker_6b9dc8bc5c23d825a2b9232ac7ab2884.bindPopup(popup_8b3ff64e47775c13f5b1e67b012ee892)
+        ;
+
+        
+    
+    
+            marker_6b9dc8bc5c23d825a2b9232ac7ab2884.bindTooltip(
+                `<div>
+                     Prenzlauer Berg: 8.4%
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_6b9dc8bc5c23d825a2b9232ac7ab2884.setIcon(div_icon_7881fdaa87586d21f2b0ad1b8c643657);
+            
+    
+            var polygon_c904e03d986621f1a25425247459a2bb = L.polygon(
+                [[52.44, 13.31], [52.44, 13.36], [52.48, 13.36], [52.48, 13.31], [52.44, 13.31]],
+                {"bubblingMouseEvents": true, "color": "white", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#74c476", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 2}
+            ).addTo(map_dbf8afffa8e8ad92698f6a8f5e8313f4);
+        
+    
+        var popup_c37e44cd8dba432dfdd4551c6f221139 = L.popup({
+  "maxWidth": 350,
+});
+
+        
+            
+                var html_29655fab43e5deb56a23b5c7cbcbde5f = $(`<div id="html_29655fab43e5deb56a23b5c7cbcbde5f" style="width: 100.0%; height: 100.0%;">             <b>Steglitz</b><br>             <strong>Avg Annual Growth: 7.8%</strong><br>             Total Growth (2014-2024): 112.1%<br>             Peak Growth Year: 2021<br>             Peak Growth Rate: 18.3%<br>             <br>             Density 2014: 0.256/km²<br>             Density 2024: 0.543/km²<br>             <br>             <em>Family-oriented steady growth</em>             </div>`)[0];
+                popup_c37e44cd8dba432dfdd4551c6f221139.setContent(html_29655fab43e5deb56a23b5c7cbcbde5f);
+            
+        
+
+        polygon_c904e03d986621f1a25425247459a2bb.bindPopup(popup_c37e44cd8dba432dfdd4551c6f221139)
+        ;
+
+        
+    
+    
+            polygon_c904e03d986621f1a25425247459a2bb.bindTooltip(
+                `<div>
+                     Steglitz: 7.8% annual growth
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_1cd056d40df74f313802a53d4a8283f4 = L.marker(
+                [52.46, 13.335],
+                {
+}
+            ).addTo(map_dbf8afffa8e8ad92698f6a8f5e8313f4);
+        
+    
+            var div_icon_90bc0ed0396ca4d52aa6298e0ed8278e = L.divIcon({
+  "html": "\u003cdiv style=\"text-align: center; font-weight: bold; font-size: 12px; color: white; background: rgba(0,0,0,0.7); border-radius: 5px; padding: 3px; min-width: 50px;\"\u003e7.8%\u003c/div\u003e",
+  "iconSize": [60, 20],
+  "iconAnchor": [30, 10],
+  "className": "empty",
+});
+        
+    
+        var popup_196de12cde4f3d290b04410f2ba8b264 = L.popup({
+  "maxWidth": 350,
+});
+
+        
+            
+                var html_8b03291af7a5760f1f502162e00310e4 = $(`<div id="html_8b03291af7a5760f1f502162e00310e4" style="width: 100.0%; height: 100.0%;">             <b>Steglitz</b><br>             <strong>Avg Annual Growth: 7.8%</strong><br>             Total Growth (2014-2024): 112.1%<br>             Peak Growth Year: 2021<br>             Peak Growth Rate: 18.3%<br>             <br>             Density 2014: 0.256/km²<br>             Density 2024: 0.543/km²<br>             <br>             <em>Family-oriented steady growth</em>             </div>`)[0];
+                popup_196de12cde4f3d290b04410f2ba8b264.setContent(html_8b03291af7a5760f1f502162e00310e4);
+            
+        
+
+        marker_1cd056d40df74f313802a53d4a8283f4.bindPopup(popup_196de12cde4f3d290b04410f2ba8b264)
+        ;
+
+        
+    
+    
+            marker_1cd056d40df74f313802a53d4a8283f4.bindTooltip(
+                `<div>
+                     Steglitz: 7.8%
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_1cd056d40df74f313802a53d4a8283f4.setIcon(div_icon_90bc0ed0396ca4d52aa6298e0ed8278e);
+            
+    
+            var polygon_b07526494e071ac703b7c88f58895730 = L.polygon(
+                [[52.45, 13.38], [52.45, 13.42], [52.49, 13.42], [52.49, 13.38], [52.45, 13.38]],
+                {"bubblingMouseEvents": true, "color": "white", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#74c476", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 2}
+            ).addTo(map_dbf8afffa8e8ad92698f6a8f5e8313f4);
+        
+    
+        var popup_102774118a0fde6a0d52f1d9c324e943 = L.popup({
+  "maxWidth": 350,
+});
+
+        
+            
+                var html_01cfca93a7c943a115d17e4b6bf3a01b = $(`<div id="html_01cfca93a7c943a115d17e4b6bf3a01b" style="width: 100.0%; height: 100.0%;">             <b>Tempelhof</b><br>             <strong>Avg Annual Growth: 7.4%</strong><br>             Total Growth (2014-2024): 103.4%<br>             Peak Growth Year: 2015<br>             Peak Growth Rate: 14.1%<br>             <br>             Density 2014: 0.121/km²<br>             Density 2024: 0.246/km²<br>             <br>             <em>Gradual family-oriented development</em>             </div>`)[0];
+                popup_102774118a0fde6a0d52f1d9c324e943.setContent(html_01cfca93a7c943a115d17e4b6bf3a01b);
+            
+        
+
+        polygon_b07526494e071ac703b7c88f58895730.bindPopup(popup_102774118a0fde6a0d52f1d9c324e943)
+        ;
+
+        
+    
+    
+            polygon_b07526494e071ac703b7c88f58895730.bindTooltip(
+                `<div>
+                     Tempelhof: 7.4% annual growth
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_736ef0097f78e643504f883a76a2f8d8 = L.marker(
+                [52.47, 13.4],
+                {
+}
+            ).addTo(map_dbf8afffa8e8ad92698f6a8f5e8313f4);
+        
+    
+            var div_icon_8c996767853ac0cc404d5d7f7f4fb209 = L.divIcon({
+  "html": "\u003cdiv style=\"text-align: center; font-weight: bold; font-size: 12px; color: white; background: rgba(0,0,0,0.7); border-radius: 5px; padding: 3px; min-width: 50px;\"\u003e7.4%\u003c/div\u003e",
+  "iconSize": [60, 20],
+  "iconAnchor": [30, 10],
+  "className": "empty",
+});
+        
+    
+        var popup_87f38a3c4973efe2109d1f6ceaa386ef = L.popup({
+  "maxWidth": 350,
+});
+
+        
+            
+                var html_d9ca64728d5265e8d3e12b8a122ab78e = $(`<div id="html_d9ca64728d5265e8d3e12b8a122ab78e" style="width: 100.0%; height: 100.0%;">             <b>Tempelhof</b><br>             <strong>Avg Annual Growth: 7.4%</strong><br>             Total Growth (2014-2024): 103.4%<br>             Peak Growth Year: 2015<br>             Peak Growth Rate: 14.1%<br>             <br>             Density 2014: 0.121/km²<br>             Density 2024: 0.246/km²<br>             <br>             <em>Gradual family-oriented development</em>             </div>`)[0];
+                popup_87f38a3c4973efe2109d1f6ceaa386ef.setContent(html_d9ca64728d5265e8d3e12b8a122ab78e);
+            
+        
+
+        marker_736ef0097f78e643504f883a76a2f8d8.bindPopup(popup_87f38a3c4973efe2109d1f6ceaa386ef)
+        ;
+
+        
+    
+    
+            marker_736ef0097f78e643504f883a76a2f8d8.bindTooltip(
+                `<div>
+                     Tempelhof: 7.4%
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_736ef0097f78e643504f883a76a2f8d8.setIcon(div_icon_8c996767853ac0cc404d5d7f7f4fb209);
+            
+    
+            var polygon_c646c58d17df7170d22976335197bf34 = L.polygon(
+                [[52.46, 13.33], [52.46, 13.38], [52.5, 13.38], [52.5, 13.33], [52.46, 13.33]],
+                {"bubblingMouseEvents": true, "color": "white", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#74c476", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 2}
+            ).addTo(map_dbf8afffa8e8ad92698f6a8f5e8313f4);
+        
+    
+        var popup_02926d10b638a2552cdb507a0b3e3f32 = L.popup({
+  "maxWidth": 350,
+});
+
+        
+            
+                var html_a35fe0e220fcbe230064491e66af2b28 = $(`<div id="html_a35fe0e220fcbe230064491e66af2b28" style="width: 100.0%; height: 100.0%;">             <b>Schöneberg</b><br>             <strong>Avg Annual Growth: 7.2%</strong><br>             Total Growth (2014-2024): 100.6%<br>             Peak Growth Year: 2019<br>             Peak Growth Rate: 35.1%<br>             <br>             Density 2014: 0.285/km²<br>             Density 2024: 0.571/km²<br>             <br>             <em>Community-driven sustainable growth</em>             </div>`)[0];
+                popup_02926d10b638a2552cdb507a0b3e3f32.setContent(html_a35fe0e220fcbe230064491e66af2b28);
+            
+        
+
+        polygon_c646c58d17df7170d22976335197bf34.bindPopup(popup_02926d10b638a2552cdb507a0b3e3f32)
+        ;
+
+        
+    
+    
+            polygon_c646c58d17df7170d22976335197bf34.bindTooltip(
+                `<div>
+                     Schöneberg: 7.2% annual growth
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_0e7c86edbaf4ce52c0bf7c8e00a5141a = L.marker(
+                [52.48, 13.355],
+                {
+}
+            ).addTo(map_dbf8afffa8e8ad92698f6a8f5e8313f4);
+        
+    
+            var div_icon_4086ca45e407f9f2c07688e9d132daef = L.divIcon({
+  "html": "\u003cdiv style=\"text-align: center; font-weight: bold; font-size: 12px; color: white; background: rgba(0,0,0,0.7); border-radius: 5px; padding: 3px; min-width: 50px;\"\u003e7.2%\u003c/div\u003e",
+  "iconSize": [60, 20],
+  "iconAnchor": [30, 10],
+  "className": "empty",
+});
+        
+    
+        var popup_c3cccff098dd09d50c63a1c8a0e8aafa = L.popup({
+  "maxWidth": 350,
+});
+
+        
+            
+                var html_2af7306c51d88077a900f87220b456af = $(`<div id="html_2af7306c51d88077a900f87220b456af" style="width: 100.0%; height: 100.0%;">             <b>Schöneberg</b><br>             <strong>Avg Annual Growth: 7.2%</strong><br>             Total Growth (2014-2024): 100.6%<br>             Peak Growth Year: 2019<br>             Peak Growth Rate: 35.1%<br>             <br>             Density 2014: 0.285/km²<br>             Density 2024: 0.571/km²<br>             <br>             <em>Community-driven sustainable growth</em>             </div>`)[0];
+                popup_c3cccff098dd09d50c63a1c8a0e8aafa.setContent(html_2af7306c51d88077a900f87220b456af);
+            
+        
+
+        marker_0e7c86edbaf4ce52c0bf7c8e00a5141a.bindPopup(popup_c3cccff098dd09d50c63a1c8a0e8aafa)
+        ;
+
+        
+    
+    
+            marker_0e7c86edbaf4ce52c0bf7c8e00a5141a.bindTooltip(
+                `<div>
+                     Schöneberg: 7.2%
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_0e7c86edbaf4ce52c0bf7c8e00a5141a.setIcon(div_icon_4086ca45e407f9f2c07688e9d132daef);
+            
+    
+            var polygon_9e00e55c15b777051bea0315d1cb3a5a = L.polygon(
+                [[52.5, 13.35], [52.5, 13.42], [52.55, 13.42], [52.55, 13.35], [52.5, 13.35]],
+                {"bubblingMouseEvents": true, "color": "white", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#74c476", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 2}
+            ).addTo(map_dbf8afffa8e8ad92698f6a8f5e8313f4);
+        
+    
+        var popup_f4d739691b73b0a84891b1558e370c7f = L.popup({
+  "maxWidth": 350,
+});
+
+        
+            
+                var html_5e8e5d091e04ebb95f4cca39ff150e3e = $(`<div id="html_5e8e5d091e04ebb95f4cca39ff150e3e" style="width: 100.0%; height: 100.0%;">             <b>Mitte</b><br>             <strong>Avg Annual Growth: 7.1%</strong><br>             Total Growth (2014-2024): 99.4%<br>             Peak Growth Year: 2017<br>             Peak Growth Rate: 19.2%<br>             <br>             Density 2014: 0.051/km²<br>             Density 2024: 0.101/km²<br>             <br>             <em>Early development, now mature/saturated</em>             </div>`)[0];
+                popup_f4d739691b73b0a84891b1558e370c7f.setContent(html_5e8e5d091e04ebb95f4cca39ff150e3e);
+            
+        
+
+        polygon_9e00e55c15b777051bea0315d1cb3a5a.bindPopup(popup_f4d739691b73b0a84891b1558e370c7f)
+        ;
+
+        
+    
+    
+            polygon_9e00e55c15b777051bea0315d1cb3a5a.bindTooltip(
+                `<div>
+                     Mitte: 7.1% annual growth
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_1ba969755e9d828d3a19ecec498a7f05 = L.marker(
+                [52.525, 13.385],
+                {
+}
+            ).addTo(map_dbf8afffa8e8ad92698f6a8f5e8313f4);
+        
+    
+            var div_icon_e078e82f7d8124e43bb0f40e0b3251fd = L.divIcon({
+  "html": "\u003cdiv style=\"text-align: center; font-weight: bold; font-size: 12px; color: white; background: rgba(0,0,0,0.7); border-radius: 5px; padding: 3px; min-width: 50px;\"\u003e7.1%\u003c/div\u003e",
+  "iconSize": [60, 20],
+  "iconAnchor": [30, 10],
+  "className": "empty",
+});
+        
+    
+        var popup_e72ca71969e10e14f9588c50f2540596 = L.popup({
+  "maxWidth": 350,
+});
+
+        
+            
+                var html_199d715e7dd1e5df9cf9b87d0e63c498 = $(`<div id="html_199d715e7dd1e5df9cf9b87d0e63c498" style="width: 100.0%; height: 100.0%;">             <b>Mitte</b><br>             <strong>Avg Annual Growth: 7.1%</strong><br>             Total Growth (2014-2024): 99.4%<br>             Peak Growth Year: 2017<br>             Peak Growth Rate: 19.2%<br>             <br>             Density 2014: 0.051/km²<br>             Density 2024: 0.101/km²<br>             <br>             <em>Early development, now mature/saturated</em>             </div>`)[0];
+                popup_e72ca71969e10e14f9588c50f2540596.setContent(html_199d715e7dd1e5df9cf9b87d0e63c498);
+            
+        
+
+        marker_1ba969755e9d828d3a19ecec498a7f05.bindPopup(popup_e72ca71969e10e14f9588c50f2540596)
+        ;
+
+        
+    
+    
+            marker_1ba969755e9d828d3a19ecec498a7f05.bindTooltip(
+                `<div>
+                     Mitte: 7.1%
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_1ba969755e9d828d3a19ecec498a7f05.setIcon(div_icon_e078e82f7d8124e43bb0f40e0b3251fd);
+            
+    
+            var polygon_0bc595e9deb783d3cadb4e458d265cdd = L.polygon(
+                [[52.47, 13.28], [52.47, 13.33], [52.51, 13.33], [52.51, 13.28], [52.47, 13.28]],
+                {"bubblingMouseEvents": true, "color": "white", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#bae4b3", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 2}
+            ).addTo(map_dbf8afffa8e8ad92698f6a8f5e8313f4);
+        
+    
+        var popup_a5d767a1e74619e7494cd6045c6e48d9 = L.popup({
+  "maxWidth": 350,
+});
+
+        
+            
+                var html_e4b9d84a7c308ffec3f551a7d5f435ad = $(`<div id="html_e4b9d84a7c308ffec3f551a7d5f435ad" style="width: 100.0%; height: 100.0%;">             <b>Wilmersdorf</b><br>             <strong>Avg Annual Growth: 7.0%</strong><br>             Total Growth (2014-2024): 95.8%<br>             Peak Growth Year: 2018<br>             Peak Growth Rate: 14.8%<br>             <br>             Density 2014: 0.172/km²<br>             Density 2024: 0.337/km²<br>             <br>             <em>Upscale market, measured growth</em>             </div>`)[0];
+                popup_a5d767a1e74619e7494cd6045c6e48d9.setContent(html_e4b9d84a7c308ffec3f551a7d5f435ad);
+            
+        
+
+        polygon_0bc595e9deb783d3cadb4e458d265cdd.bindPopup(popup_a5d767a1e74619e7494cd6045c6e48d9)
+        ;
+
+        
+    
+    
+            polygon_0bc595e9deb783d3cadb4e458d265cdd.bindTooltip(
+                `<div>
+                     Wilmersdorf: 7.0% annual growth
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_f65dbd1bf358f5a8264772ec15104c9e = L.marker(
+                [52.49, 13.305],
+                {
+}
+            ).addTo(map_dbf8afffa8e8ad92698f6a8f5e8313f4);
+        
+    
+            var div_icon_b75d0c0a4588bfbd47ef0f508785958e = L.divIcon({
+  "html": "\u003cdiv style=\"text-align: center; font-weight: bold; font-size: 12px; color: white; background: rgba(0,0,0,0.7); border-radius: 5px; padding: 3px; min-width: 50px;\"\u003e7.0%\u003c/div\u003e",
+  "iconSize": [60, 20],
+  "iconAnchor": [30, 10],
+  "className": "empty",
+});
+        
+    
+        var popup_e0ba7fc020cb7f2c19ad5a9c17c61d69 = L.popup({
+  "maxWidth": 350,
+});
+
+        
+            
+                var html_16ec117114e46c7697675a1f5eed6af4 = $(`<div id="html_16ec117114e46c7697675a1f5eed6af4" style="width: 100.0%; height: 100.0%;">             <b>Wilmersdorf</b><br>             <strong>Avg Annual Growth: 7.0%</strong><br>             Total Growth (2014-2024): 95.8%<br>             Peak Growth Year: 2018<br>             Peak Growth Rate: 14.8%<br>             <br>             Density 2014: 0.172/km²<br>             Density 2024: 0.337/km²<br>             <br>             <em>Upscale market, measured growth</em>             </div>`)[0];
+                popup_e0ba7fc020cb7f2c19ad5a9c17c61d69.setContent(html_16ec117114e46c7697675a1f5eed6af4);
+            
+        
+
+        marker_f65dbd1bf358f5a8264772ec15104c9e.bindPopup(popup_e0ba7fc020cb7f2c19ad5a9c17c61d69)
+        ;
+
+        
+    
+    
+            marker_f65dbd1bf358f5a8264772ec15104c9e.bindTooltip(
+                `<div>
+                     Wilmersdorf: 7.0%
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_f65dbd1bf358f5a8264772ec15104c9e.setIcon(div_icon_b75d0c0a4588bfbd47ef0f508785958e);
+            
+    
+            var polygon_d6ecbd4ab6a7d7eb5eee0afdf012737b = L.polygon(
+                [[52.49, 13.28], [52.49, 13.35], [52.53, 13.35], [52.53, 13.28], [52.49, 13.28]],
+                {"bubblingMouseEvents": true, "color": "white", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#bae4b3", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 2}
+            ).addTo(map_dbf8afffa8e8ad92698f6a8f5e8313f4);
+        
+    
+        var popup_ae1542cd71ef8a8daa6435c19f17d292 = L.popup({
+  "maxWidth": 350,
+});
+
+        
+            
+                var html_77ef1e0b23c4d149c3377e8171877978 = $(`<div id="html_77ef1e0b23c4d149c3377e8171877978" style="width: 100.0%; height: 100.0%;">             <b>Charlottenburg</b><br>             <strong>Avg Annual Growth: 5.6%</strong><br>             Total Growth (2014-2024): 72.7%<br>             Peak Growth Year: 2020<br>             Peak Growth Rate: 14.9%<br>             <br>             Density 2014: 0.179/km²<br>             Density 2024: 0.309/km²<br>             <br>             <em>Stable, established growth pattern</em>             </div>`)[0];
+                popup_ae1542cd71ef8a8daa6435c19f17d292.setContent(html_77ef1e0b23c4d149c3377e8171877978);
+            
+        
+
+        polygon_d6ecbd4ab6a7d7eb5eee0afdf012737b.bindPopup(popup_ae1542cd71ef8a8daa6435c19f17d292)
+        ;
+
+        
+    
+    
+            polygon_d6ecbd4ab6a7d7eb5eee0afdf012737b.bindTooltip(
+                `<div>
+                     Charlottenburg: 5.6% annual growth
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_e6429246c008510021314ed9214c5313 = L.marker(
+                [52.51, 13.315],
+                {
+}
+            ).addTo(map_dbf8afffa8e8ad92698f6a8f5e8313f4);
+        
+    
+            var div_icon_acde6cab673c390201809b4c30b8cd42 = L.divIcon({
+  "html": "\u003cdiv style=\"text-align: center; font-weight: bold; font-size: 12px; color: white; background: rgba(0,0,0,0.7); border-radius: 5px; padding: 3px; min-width: 50px;\"\u003e5.6%\u003c/div\u003e",
+  "iconSize": [60, 20],
+  "iconAnchor": [30, 10],
+  "className": "empty",
+});
+        
+    
+        var popup_1fe6658f4f863ee31f1ef617fd59e13a = L.popup({
+  "maxWidth": 350,
+});
+
+        
+            
+                var html_bdbf1d5c68f2bb7e164ea759e124b99a = $(`<div id="html_bdbf1d5c68f2bb7e164ea759e124b99a" style="width: 100.0%; height: 100.0%;">             <b>Charlottenburg</b><br>             <strong>Avg Annual Growth: 5.6%</strong><br>             Total Growth (2014-2024): 72.7%<br>             Peak Growth Year: 2020<br>             Peak Growth Rate: 14.9%<br>             <br>             Density 2014: 0.179/km²<br>             Density 2024: 0.309/km²<br>             <br>             <em>Stable, established growth pattern</em>             </div>`)[0];
+                popup_1fe6658f4f863ee31f1ef617fd59e13a.setContent(html_bdbf1d5c68f2bb7e164ea759e124b99a);
+            
+        
+
+        marker_e6429246c008510021314ed9214c5313.bindPopup(popup_1fe6658f4f863ee31f1ef617fd59e13a)
+        ;
+
+        
+    
+    
+            marker_e6429246c008510021314ed9214c5313.bindTooltip(
+                `<div>
+                     Charlottenburg: 5.6%
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_e6429246c008510021314ed9214c5313.setIcon(div_icon_acde6cab673c390201809b4c30b8cd42);
+            
+</script>
+</html>

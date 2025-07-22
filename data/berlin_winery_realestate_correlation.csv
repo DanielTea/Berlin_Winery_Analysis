@@ -1,0 +1,13 @@
+district,winery_cagr,winery_total_growth,winery_peak_year,winery_volatility,winery_density_2024,re_annual_increase,re_total_increase,re_price_2014,re_price_2024,re_pattern,re_description,growth_intensity_score,gentrification_score,area_km2
+Wedding,0.1484,2.9886,2017,0.153,0.1053,0.086,0.857,2100,3900,late_acceleration,"Latest gentrification wave, rapid recent growth",0.0127624,0.1172,9.5
+Spandau,0.1304,2.4062,2016,0.122,0.0109,0.061,0.611,1800,2900,frontier_emerging,"Frontier area, emerging appreciation",0.007954399999999999,0.0957,91.9
+Neukölln,0.1288,2.3585,2022,0.1444,0.2895,0.092,0.917,2400,4600,explosive_recent,"Rapid gentrification, highest total appreciation",0.0118496,0.1104,44.9
+Friedrichshain,0.1165,2.0098,2020,0.1019,0.6122,0.081,0.813,3200,5800,explosive_growth,"Tech hub transformation, highest appreciation",0.0094365,0.09875,9.8
+Kreuzberg,0.1019,1.6396,2018,0.1099,0.3289,0.073,0.735,3400,5900,strong_consistent,"Cultural district premium, strong growth",0.0074386999999999995,0.08745,15.2
+Prenzlauer Berg,0.0843,1.2472,2018,0.1192,2.5688,0.062,0.619,4200,6800,early_high_then_moderate,"Early gentrification, now premium market",0.0052266,0.07314999999999999,10.9
+Steglitz,0.0781,1.1214,2021,0.0466,0.5435,0.047,0.467,3000,4400,family_steady,"Family residential, conservative growth",0.0036707000000000003,0.06255,9.2
+Tempelhof,0.0736,1.0339,2015,0.0571,0.2459,0.05,0.5,2800,4200,family_area_growth,"Family area, moderate steady growth",0.00368,0.0618,12.2
+Schöneberg,0.0721,1.0063,2019,0.1232,0.5714,0.055,0.545,3300,5100,cultural_driven,"Cultural district, steady appreciation",0.0039655,0.06355,10.5
+Mitte,0.0715,0.9941,2017,0.0546,0.1013,0.06,0.6,4500,7200,steady_high,"Central location premium, consistent growth",0.0042899999999999995,0.06575,39.5
+Wilmersdorf,0.0695,0.9576,2018,0.0539,0.3371,0.044,0.444,3600,5200,upscale_moderate,"Upscale residential, moderate growth",0.003058,0.05675,8.9
+Charlottenburg,0.0561,0.7268,2020,0.0509,0.3091,0.047,0.474,3800,5600,moderate_steady,"Established area, moderate appreciation",0.0026367,0.05155,64.7

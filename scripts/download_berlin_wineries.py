@@ -108,7 +108,7 @@ def get_berlin_wineries() -> List[Dict[str, Any]]:
         print(f"Error parsing JSON response: {e}")
         return []
 
-def save_to_json(wineries: List[Dict[str, Any]], filename: str = "berlin_wineries.json") -> None:
+def save_to_json(wineries: List[Dict[str, Any]], filename: str = "../data/berlin_wineries.json") -> None:
     """Save winery data to JSON file."""
     try:
         with open(filename, 'w', encoding='utf-8') as f:
@@ -117,7 +117,7 @@ def save_to_json(wineries: List[Dict[str, Any]], filename: str = "berlin_winerie
     except Exception as e:
         print(f"Error saving to JSON: {e}")
 
-def save_to_csv(wineries: List[Dict[str, Any]], filename: str = "berlin_wineries.csv") -> None:
+def save_to_csv(wineries: List[Dict[str, Any]], filename: str = "../data/berlin_wineries.csv") -> None:
     """Save winery data to CSV file."""
     if not wineries:
         print("No data to save to CSV")
@@ -219,8 +219,8 @@ def main():
     print_summary(wineries)
     
     print("\nDownload complete! Check the generated files:")
-    print("- berlin_wineries.json (JSON format)")
-    print("- berlin_wineries.csv (CSV format)")
+    print("- data/berlin_wineries.json (JSON format)")
+    print("- data/berlin_wineries.csv (CSV format)")
 
 if __name__ == "__main__":
     main()

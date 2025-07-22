@@ -1,0 +1,1067 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_1ba55b873f171ec663d850f3bb1099d3 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+</head>
+<body>
+    
+    
+    <h3 align="center" style="font-size:20px"><b>Berlin: Winery Growth vs Real Estate Appreciation (2014-2024)</b></h3>
+    <p align="center" style="font-size:14px">Correlation Analysis of Market Development</p>
+    
+    
+    <div style="position: fixed; 
+                bottom: 30px; left: 30px; width: 280px; height: 300px; 
+                background-color: white; border:2px solid grey; z-index:9999; 
+                font-size:11px; padding: 12px">
+    <h4 style="margin-top: 0;">Gentrification Intensity</h4>
+    <p><strong>Combined Score (Winery + Real Estate)</strong></p>
+    
+    <p><i class="fa fa-square" style="color:#8c2d04"></i> 0.09+ Extreme Gentrification</p>
+    <p><i class="fa fa-square" style="color:#cc4c02"></i> 0.08-0.09 High Gentrification</p>
+    <p><i class="fa fa-square" style="color:#ec7014"></i> 0.07-0.08 Medium-High</p>
+    <p><i class="fa fa-square" style="color:#fe9929"></i> 0.06-0.07 Medium</p>
+    <p><i class="fa fa-square" style="color:#fec44f"></i> 0.05-0.06 Low-Medium</p>
+    <p><i class="fa fa-square" style="color:#fee391"></i> 0.04-0.05 Low</p>
+    <p><i class="fa fa-square" style="color:#ffffd4"></i> <0.04 Minimal</p>
+    
+    <hr style="margin: 8px 0;">
+    <p><strong>Labels show:</strong></p>
+    <p><strong>W:</strong> Winery annual growth rate</p>
+    <p><strong>R:</strong> Real estate annual increase</p>
+    
+    <p style="margin-top: 10px; font-size: 10px; color: #666;">
+    Click districts for detailed analysis
+    </p>
+    </div>
+    
+    
+            <div class="folium-map" id="map_1ba55b873f171ec663d850f3bb1099d3" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_1ba55b873f171ec663d850f3bb1099d3 = L.map(
+                "map_1ba55b873f171ec663d850f3bb1099d3",
+                {
+                    center: [52.520008, 13.404954],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 11,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_c46b9a4718ee582e51b0832e888bd9c4 = L.tileLayer(
+                "https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 20,
+  "maxNativeZoom": 20,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors \u0026copy; \u003ca href=\"https://carto.com/attributions\"\u003eCARTO\u003c/a\u003e",
+  "subdomains": "abcd",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_c46b9a4718ee582e51b0832e888bd9c4.addTo(map_1ba55b873f171ec663d850f3bb1099d3);
+        
+    
+            var polygon_a7ce7330bd323ccea648689a091454a9 = L.polygon(
+                [[52.53, 13.33], [52.53, 13.38], [52.57, 13.38], [52.57, 13.33], [52.53, 13.33]],
+                {"bubblingMouseEvents": true, "color": "white", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#8c2d04", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 2}
+            ).addTo(map_1ba55b873f171ec663d850f3bb1099d3);
+        
+    
+        var popup_d65852887cd78c1ae42ae40efbcabcb0 = L.popup({
+  "maxWidth": 350,
+});
+
+        
+            
+                var html_2ee4e74fb386360bb3f35481b1261234 = $(`<div id="html_2ee4e74fb386360bb3f35481b1261234" style="width: 100.0%; height: 100.0%;">             <div style="width: 300px;">             <h4>Wedding</h4>                          <h5>🍷 Winery Growth (2014-2024):</h5>             <ul>             <li>Annual Growth: <strong>14.8%</strong></li>             <li>Total Growth: 298.9%</li>             <li>Current Density: 0.105/km²</li>             <li>Peak Year: 2017</li>             </ul>                          <h5>🏠 Real Estate Appreciation:</h5>             <ul>             <li>Annual Increase: <strong>8.6%</strong></li>             <li>Total Increase: 85.7%</li>             <li>Price 2014: €2,100/m²</li>             <li>Price 2024: €3,900/m²</li>             </ul>                          <h5>📊 Combined Analysis:</h5>             <ul>             <li>Gentrification Score: <strong>0.117</strong></li>             <li>Growth Intensity: 0.0128</li>             </ul>                          <p><em>Latest gentrification wave, rapid recent growth</em></p>             </div>             </div>`)[0];
+                popup_d65852887cd78c1ae42ae40efbcabcb0.setContent(html_2ee4e74fb386360bb3f35481b1261234);
+            
+        
+
+        polygon_a7ce7330bd323ccea648689a091454a9.bindPopup(popup_d65852887cd78c1ae42ae40efbcabcb0)
+        ;
+
+        
+    
+    
+            polygon_a7ce7330bd323ccea648689a091454a9.bindTooltip(
+                `<div>
+                     Wedding: Gentrif. Score 0.12
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_893ffe4da19280a3fa357efb062931d2 = L.marker(
+                [52.55, 13.355],
+                {
+}
+            ).addTo(map_1ba55b873f171ec663d850f3bb1099d3);
+        
+    
+            var div_icon_4e136599005543f364a6b61b154c41f7 = L.divIcon({
+  "html": "\u003cdiv style=\"text-align: center; font-weight: bold; font-size: 10px; color: white; background: rgba(0,0,0,0.8); border-radius: 5px; padding: 3px; min-width: 45px;\"\u003eW:14.8%\u003cbr\u003eR:8.6%\u003c/div\u003e",
+  "iconSize": [50, 30],
+  "iconAnchor": [25, 15],
+  "className": "empty",
+});
+        
+    
+        var popup_0724b85d60546837c61eaa488e63c5fe = L.popup({
+  "maxWidth": 350,
+});
+
+        
+            
+                var html_110a1488dd45dced8ec7f471b83102b1 = $(`<div id="html_110a1488dd45dced8ec7f471b83102b1" style="width: 100.0%; height: 100.0%;">             <div style="width: 300px;">             <h4>Wedding</h4>                          <h5>🍷 Winery Growth (2014-2024):</h5>             <ul>             <li>Annual Growth: <strong>14.8%</strong></li>             <li>Total Growth: 298.9%</li>             <li>Current Density: 0.105/km²</li>             <li>Peak Year: 2017</li>             </ul>                          <h5>🏠 Real Estate Appreciation:</h5>             <ul>             <li>Annual Increase: <strong>8.6%</strong></li>             <li>Total Increase: 85.7%</li>             <li>Price 2014: €2,100/m²</li>             <li>Price 2024: €3,900/m²</li>             </ul>                          <h5>📊 Combined Analysis:</h5>             <ul>             <li>Gentrification Score: <strong>0.117</strong></li>             <li>Growth Intensity: 0.0128</li>             </ul>                          <p><em>Latest gentrification wave, rapid recent growth</em></p>             </div>             </div>`)[0];
+                popup_0724b85d60546837c61eaa488e63c5fe.setContent(html_110a1488dd45dced8ec7f471b83102b1);
+            
+        
+
+        marker_893ffe4da19280a3fa357efb062931d2.bindPopup(popup_0724b85d60546837c61eaa488e63c5fe)
+        ;
+
+        
+    
+    
+            marker_893ffe4da19280a3fa357efb062931d2.bindTooltip(
+                `<div>
+                     Wedding
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_893ffe4da19280a3fa357efb062931d2.setIcon(div_icon_4e136599005543f364a6b61b154c41f7);
+            
+    
+            var polygon_c13653612e01f30c0a593fb715247d35 = L.polygon(
+                [[52.52, 13.16], [52.52, 13.28], [52.58, 13.28], [52.58, 13.16], [52.52, 13.16]],
+                {"bubblingMouseEvents": true, "color": "white", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#cc4c02", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 2}
+            ).addTo(map_1ba55b873f171ec663d850f3bb1099d3);
+        
+    
+        var popup_50e589c019996c6c0f75a9ed1276c51b = L.popup({
+  "maxWidth": 350,
+});
+
+        
+            
+                var html_5273b514b93bba13e149e17f37f06ac1 = $(`<div id="html_5273b514b93bba13e149e17f37f06ac1" style="width: 100.0%; height: 100.0%;">             <div style="width: 300px;">             <h4>Spandau</h4>                          <h5>🍷 Winery Growth (2014-2024):</h5>             <ul>             <li>Annual Growth: <strong>13.0%</strong></li>             <li>Total Growth: 240.6%</li>             <li>Current Density: 0.011/km²</li>             <li>Peak Year: 2016</li>             </ul>                          <h5>🏠 Real Estate Appreciation:</h5>             <ul>             <li>Annual Increase: <strong>6.1%</strong></li>             <li>Total Increase: 61.1%</li>             <li>Price 2014: €1,800/m²</li>             <li>Price 2024: €2,900/m²</li>             </ul>                          <h5>📊 Combined Analysis:</h5>             <ul>             <li>Gentrification Score: <strong>0.096</strong></li>             <li>Growth Intensity: 0.0080</li>             </ul>                          <p><em>Frontier area, emerging appreciation</em></p>             </div>             </div>`)[0];
+                popup_50e589c019996c6c0f75a9ed1276c51b.setContent(html_5273b514b93bba13e149e17f37f06ac1);
+            
+        
+
+        polygon_c13653612e01f30c0a593fb715247d35.bindPopup(popup_50e589c019996c6c0f75a9ed1276c51b)
+        ;
+
+        
+    
+    
+            polygon_c13653612e01f30c0a593fb715247d35.bindTooltip(
+                `<div>
+                     Spandau: Gentrif. Score 0.10
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_877474cdd19a31844ad8aba311b52ffa = L.marker(
+                [52.55, 13.22],
+                {
+}
+            ).addTo(map_1ba55b873f171ec663d850f3bb1099d3);
+        
+    
+            var div_icon_36409e6f99320594fb0b08c4824003b3 = L.divIcon({
+  "html": "\u003cdiv style=\"text-align: center; font-weight: bold; font-size: 10px; color: white; background: rgba(0,0,0,0.8); border-radius: 5px; padding: 3px; min-width: 45px;\"\u003eW:13.0%\u003cbr\u003eR:6.1%\u003c/div\u003e",
+  "iconSize": [50, 30],
+  "iconAnchor": [25, 15],
+  "className": "empty",
+});
+        
+    
+        var popup_6ad805ee2b903b81648d9acccaf35142 = L.popup({
+  "maxWidth": 350,
+});
+
+        
+            
+                var html_d036bdfb0ee5bcc1c4806572d6d251f6 = $(`<div id="html_d036bdfb0ee5bcc1c4806572d6d251f6" style="width: 100.0%; height: 100.0%;">             <div style="width: 300px;">             <h4>Spandau</h4>                          <h5>🍷 Winery Growth (2014-2024):</h5>             <ul>             <li>Annual Growth: <strong>13.0%</strong></li>             <li>Total Growth: 240.6%</li>             <li>Current Density: 0.011/km²</li>             <li>Peak Year: 2016</li>             </ul>                          <h5>🏠 Real Estate Appreciation:</h5>             <ul>             <li>Annual Increase: <strong>6.1%</strong></li>             <li>Total Increase: 61.1%</li>             <li>Price 2014: €1,800/m²</li>             <li>Price 2024: €2,900/m²</li>             </ul>                          <h5>📊 Combined Analysis:</h5>             <ul>             <li>Gentrification Score: <strong>0.096</strong></li>             <li>Growth Intensity: 0.0080</li>             </ul>                          <p><em>Frontier area, emerging appreciation</em></p>             </div>             </div>`)[0];
+                popup_6ad805ee2b903b81648d9acccaf35142.setContent(html_d036bdfb0ee5bcc1c4806572d6d251f6);
+            
+        
+
+        marker_877474cdd19a31844ad8aba311b52ffa.bindPopup(popup_6ad805ee2b903b81648d9acccaf35142)
+        ;
+
+        
+    
+    
+            marker_877474cdd19a31844ad8aba311b52ffa.bindTooltip(
+                `<div>
+                     Spandau
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_877474cdd19a31844ad8aba311b52ffa.setIcon(div_icon_36409e6f99320594fb0b08c4824003b3);
+            
+    
+            var polygon_98b2cc14a1bd41fbc31232125d60a2bd = L.polygon(
+                [[52.45, 13.4], [52.45, 13.47], [52.5, 13.47], [52.5, 13.4], [52.45, 13.4]],
+                {"bubblingMouseEvents": true, "color": "white", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#8c2d04", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 2}
+            ).addTo(map_1ba55b873f171ec663d850f3bb1099d3);
+        
+    
+        var popup_1cecf53355306d03c2d1a4c775171c55 = L.popup({
+  "maxWidth": 350,
+});
+
+        
+            
+                var html_830d0675cedaee2516658783e08d7556 = $(`<div id="html_830d0675cedaee2516658783e08d7556" style="width: 100.0%; height: 100.0%;">             <div style="width: 300px;">             <h4>Neukölln</h4>                          <h5>🍷 Winery Growth (2014-2024):</h5>             <ul>             <li>Annual Growth: <strong>12.9%</strong></li>             <li>Total Growth: 235.8%</li>             <li>Current Density: 0.289/km²</li>             <li>Peak Year: 2022</li>             </ul>                          <h5>🏠 Real Estate Appreciation:</h5>             <ul>             <li>Annual Increase: <strong>9.2%</strong></li>             <li>Total Increase: 91.7%</li>             <li>Price 2014: €2,400/m²</li>             <li>Price 2024: €4,600/m²</li>             </ul>                          <h5>📊 Combined Analysis:</h5>             <ul>             <li>Gentrification Score: <strong>0.110</strong></li>             <li>Growth Intensity: 0.0118</li>             </ul>                          <p><em>Rapid gentrification, highest total appreciation</em></p>             </div>             </div>`)[0];
+                popup_1cecf53355306d03c2d1a4c775171c55.setContent(html_830d0675cedaee2516658783e08d7556);
+            
+        
+
+        polygon_98b2cc14a1bd41fbc31232125d60a2bd.bindPopup(popup_1cecf53355306d03c2d1a4c775171c55)
+        ;
+
+        
+    
+    
+            polygon_98b2cc14a1bd41fbc31232125d60a2bd.bindTooltip(
+                `<div>
+                     Neukölln: Gentrif. Score 0.11
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_b99c770483c859a97beb906a2179cddf = L.marker(
+                [52.475, 13.435],
+                {
+}
+            ).addTo(map_1ba55b873f171ec663d850f3bb1099d3);
+        
+    
+            var div_icon_d8272a89718727a8e5a6b79a44da78a7 = L.divIcon({
+  "html": "\u003cdiv style=\"text-align: center; font-weight: bold; font-size: 10px; color: white; background: rgba(0,0,0,0.8); border-radius: 5px; padding: 3px; min-width: 45px;\"\u003eW:12.9%\u003cbr\u003eR:9.2%\u003c/div\u003e",
+  "iconSize": [50, 30],
+  "iconAnchor": [25, 15],
+  "className": "empty",
+});
+        
+    
+        var popup_4f0eed95f0a2176923fcfa547c7e28a0 = L.popup({
+  "maxWidth": 350,
+});
+
+        
+            
+                var html_9ddfd5c5b355d56356f0d688324e97a8 = $(`<div id="html_9ddfd5c5b355d56356f0d688324e97a8" style="width: 100.0%; height: 100.0%;">             <div style="width: 300px;">             <h4>Neukölln</h4>                          <h5>🍷 Winery Growth (2014-2024):</h5>             <ul>             <li>Annual Growth: <strong>12.9%</strong></li>             <li>Total Growth: 235.8%</li>             <li>Current Density: 0.289/km²</li>             <li>Peak Year: 2022</li>             </ul>                          <h5>🏠 Real Estate Appreciation:</h5>             <ul>             <li>Annual Increase: <strong>9.2%</strong></li>             <li>Total Increase: 91.7%</li>             <li>Price 2014: €2,400/m²</li>             <li>Price 2024: €4,600/m²</li>             </ul>                          <h5>📊 Combined Analysis:</h5>             <ul>             <li>Gentrification Score: <strong>0.110</strong></li>             <li>Growth Intensity: 0.0118</li>             </ul>                          <p><em>Rapid gentrification, highest total appreciation</em></p>             </div>             </div>`)[0];
+                popup_4f0eed95f0a2176923fcfa547c7e28a0.setContent(html_9ddfd5c5b355d56356f0d688324e97a8);
+            
+        
+
+        marker_b99c770483c859a97beb906a2179cddf.bindPopup(popup_4f0eed95f0a2176923fcfa547c7e28a0)
+        ;
+
+        
+    
+    
+            marker_b99c770483c859a97beb906a2179cddf.bindTooltip(
+                `<div>
+                     Neukölln
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_b99c770483c859a97beb906a2179cddf.setIcon(div_icon_d8272a89718727a8e5a6b79a44da78a7);
+            
+    
+            var polygon_5de3ce99de3ff8fedcf3ef41b468a9b9 = L.polygon(
+                [[52.5, 13.42], [52.5, 13.48], [52.53, 13.48], [52.53, 13.42], [52.5, 13.42]],
+                {"bubblingMouseEvents": true, "color": "white", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#cc4c02", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 2}
+            ).addTo(map_1ba55b873f171ec663d850f3bb1099d3);
+        
+    
+        var popup_4e613ac9a140a5fa72f145f5b2adef7b = L.popup({
+  "maxWidth": 350,
+});
+
+        
+            
+                var html_9cd192dd082e4f4b1ef50fe92d19c657 = $(`<div id="html_9cd192dd082e4f4b1ef50fe92d19c657" style="width: 100.0%; height: 100.0%;">             <div style="width: 300px;">             <h4>Friedrichshain</h4>                          <h5>🍷 Winery Growth (2014-2024):</h5>             <ul>             <li>Annual Growth: <strong>11.7%</strong></li>             <li>Total Growth: 201.0%</li>             <li>Current Density: 0.612/km²</li>             <li>Peak Year: 2020</li>             </ul>                          <h5>🏠 Real Estate Appreciation:</h5>             <ul>             <li>Annual Increase: <strong>8.1%</strong></li>             <li>Total Increase: 81.3%</li>             <li>Price 2014: €3,200/m²</li>             <li>Price 2024: €5,800/m²</li>             </ul>                          <h5>📊 Combined Analysis:</h5>             <ul>             <li>Gentrification Score: <strong>0.099</strong></li>             <li>Growth Intensity: 0.0094</li>             </ul>                          <p><em>Tech hub transformation, highest appreciation</em></p>             </div>             </div>`)[0];
+                popup_4e613ac9a140a5fa72f145f5b2adef7b.setContent(html_9cd192dd082e4f4b1ef50fe92d19c657);
+            
+        
+
+        polygon_5de3ce99de3ff8fedcf3ef41b468a9b9.bindPopup(popup_4e613ac9a140a5fa72f145f5b2adef7b)
+        ;
+
+        
+    
+    
+            polygon_5de3ce99de3ff8fedcf3ef41b468a9b9.bindTooltip(
+                `<div>
+                     Friedrichshain: Gentrif. Score 0.10
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_db1191feb2f5e055076f072249bcfe67 = L.marker(
+                [52.515, 13.45],
+                {
+}
+            ).addTo(map_1ba55b873f171ec663d850f3bb1099d3);
+        
+    
+            var div_icon_ff503f3393e5fa7438485ebdd2366270 = L.divIcon({
+  "html": "\u003cdiv style=\"text-align: center; font-weight: bold; font-size: 10px; color: white; background: rgba(0,0,0,0.8); border-radius: 5px; padding: 3px; min-width: 45px;\"\u003eW:11.7%\u003cbr\u003eR:8.1%\u003c/div\u003e",
+  "iconSize": [50, 30],
+  "iconAnchor": [25, 15],
+  "className": "empty",
+});
+        
+    
+        var popup_8234b8321a2ca0b5a172b6c8714f9d34 = L.popup({
+  "maxWidth": 350,
+});
+
+        
+            
+                var html_9b3d0408be0a6bc9bac6d603061b7872 = $(`<div id="html_9b3d0408be0a6bc9bac6d603061b7872" style="width: 100.0%; height: 100.0%;">             <div style="width: 300px;">             <h4>Friedrichshain</h4>                          <h5>🍷 Winery Growth (2014-2024):</h5>             <ul>             <li>Annual Growth: <strong>11.7%</strong></li>             <li>Total Growth: 201.0%</li>             <li>Current Density: 0.612/km²</li>             <li>Peak Year: 2020</li>             </ul>                          <h5>🏠 Real Estate Appreciation:</h5>             <ul>             <li>Annual Increase: <strong>8.1%</strong></li>             <li>Total Increase: 81.3%</li>             <li>Price 2014: €3,200/m²</li>             <li>Price 2024: €5,800/m²</li>             </ul>                          <h5>📊 Combined Analysis:</h5>             <ul>             <li>Gentrification Score: <strong>0.099</strong></li>             <li>Growth Intensity: 0.0094</li>             </ul>                          <p><em>Tech hub transformation, highest appreciation</em></p>             </div>             </div>`)[0];
+                popup_8234b8321a2ca0b5a172b6c8714f9d34.setContent(html_9b3d0408be0a6bc9bac6d603061b7872);
+            
+        
+
+        marker_db1191feb2f5e055076f072249bcfe67.bindPopup(popup_8234b8321a2ca0b5a172b6c8714f9d34)
+        ;
+
+        
+    
+    
+            marker_db1191feb2f5e055076f072249bcfe67.bindTooltip(
+                `<div>
+                     Friedrichshain
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_db1191feb2f5e055076f072249bcfe67.setIcon(div_icon_ff503f3393e5fa7438485ebdd2366270);
+            
+    
+            var polygon_5d0bd0cbe955e44a7ec3963ae88968ff = L.polygon(
+                [[52.49, 13.38], [52.49, 13.42], [52.52, 13.42], [52.52, 13.38], [52.49, 13.38]],
+                {"bubblingMouseEvents": true, "color": "white", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ec7014", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 2}
+            ).addTo(map_1ba55b873f171ec663d850f3bb1099d3);
+        
+    
+        var popup_7c6803462b7c983f4d8272feade18d49 = L.popup({
+  "maxWidth": 350,
+});
+
+        
+            
+                var html_663da9401a279f17f714c3e7c5b742af = $(`<div id="html_663da9401a279f17f714c3e7c5b742af" style="width: 100.0%; height: 100.0%;">             <div style="width: 300px;">             <h4>Kreuzberg</h4>                          <h5>🍷 Winery Growth (2014-2024):</h5>             <ul>             <li>Annual Growth: <strong>10.2%</strong></li>             <li>Total Growth: 164.0%</li>             <li>Current Density: 0.329/km²</li>             <li>Peak Year: 2018</li>             </ul>                          <h5>🏠 Real Estate Appreciation:</h5>             <ul>             <li>Annual Increase: <strong>7.3%</strong></li>             <li>Total Increase: 73.5%</li>             <li>Price 2014: €3,400/m²</li>             <li>Price 2024: €5,900/m²</li>             </ul>                          <h5>📊 Combined Analysis:</h5>             <ul>             <li>Gentrification Score: <strong>0.087</strong></li>             <li>Growth Intensity: 0.0074</li>             </ul>                          <p><em>Cultural district premium, strong growth</em></p>             </div>             </div>`)[0];
+                popup_7c6803462b7c983f4d8272feade18d49.setContent(html_663da9401a279f17f714c3e7c5b742af);
+            
+        
+
+        polygon_5d0bd0cbe955e44a7ec3963ae88968ff.bindPopup(popup_7c6803462b7c983f4d8272feade18d49)
+        ;
+
+        
+    
+    
+            polygon_5d0bd0cbe955e44a7ec3963ae88968ff.bindTooltip(
+                `<div>
+                     Kreuzberg: Gentrif. Score 0.09
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_4d5ceb81b13be410bbc7c1138dabb3b7 = L.marker(
+                [52.505, 13.4],
+                {
+}
+            ).addTo(map_1ba55b873f171ec663d850f3bb1099d3);
+        
+    
+            var div_icon_a25e2af991c45d782c011d5f2681df05 = L.divIcon({
+  "html": "\u003cdiv style=\"text-align: center; font-weight: bold; font-size: 10px; color: white; background: rgba(0,0,0,0.8); border-radius: 5px; padding: 3px; min-width: 45px;\"\u003eW:10.2%\u003cbr\u003eR:7.3%\u003c/div\u003e",
+  "iconSize": [50, 30],
+  "iconAnchor": [25, 15],
+  "className": "empty",
+});
+        
+    
+        var popup_85ab44df1649ca02d625afb1754adc2f = L.popup({
+  "maxWidth": 350,
+});
+
+        
+            
+                var html_6272f7481a72ae7df4d3981090457386 = $(`<div id="html_6272f7481a72ae7df4d3981090457386" style="width: 100.0%; height: 100.0%;">             <div style="width: 300px;">             <h4>Kreuzberg</h4>                          <h5>🍷 Winery Growth (2014-2024):</h5>             <ul>             <li>Annual Growth: <strong>10.2%</strong></li>             <li>Total Growth: 164.0%</li>             <li>Current Density: 0.329/km²</li>             <li>Peak Year: 2018</li>             </ul>                          <h5>🏠 Real Estate Appreciation:</h5>             <ul>             <li>Annual Increase: <strong>7.3%</strong></li>             <li>Total Increase: 73.5%</li>             <li>Price 2014: €3,400/m²</li>             <li>Price 2024: €5,900/m²</li>             </ul>                          <h5>📊 Combined Analysis:</h5>             <ul>             <li>Gentrification Score: <strong>0.087</strong></li>             <li>Growth Intensity: 0.0074</li>             </ul>                          <p><em>Cultural district premium, strong growth</em></p>             </div>             </div>`)[0];
+                popup_85ab44df1649ca02d625afb1754adc2f.setContent(html_6272f7481a72ae7df4d3981090457386);
+            
+        
+
+        marker_4d5ceb81b13be410bbc7c1138dabb3b7.bindPopup(popup_85ab44df1649ca02d625afb1754adc2f)
+        ;
+
+        
+    
+    
+            marker_4d5ceb81b13be410bbc7c1138dabb3b7.bindTooltip(
+                `<div>
+                     Kreuzberg
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_4d5ceb81b13be410bbc7c1138dabb3b7.setIcon(div_icon_a25e2af991c45d782c011d5f2681df05);
+            
+    
+            var polygon_421b09a092448e9c79e55815f25fb57d = L.polygon(
+                [[52.52, 13.4], [52.52, 13.45], [52.56, 13.45], [52.56, 13.4], [52.52, 13.4]],
+                {"bubblingMouseEvents": true, "color": "white", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fe9929", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 2}
+            ).addTo(map_1ba55b873f171ec663d850f3bb1099d3);
+        
+    
+        var popup_ac11460b0aa9eb0a71e9db17dfe04213 = L.popup({
+  "maxWidth": 350,
+});
+
+        
+            
+                var html_7d80ffb29a6f709531accc45ce3f1e7d = $(`<div id="html_7d80ffb29a6f709531accc45ce3f1e7d" style="width: 100.0%; height: 100.0%;">             <div style="width: 300px;">             <h4>Prenzlauer Berg</h4>                          <h5>🍷 Winery Growth (2014-2024):</h5>             <ul>             <li>Annual Growth: <strong>8.4%</strong></li>             <li>Total Growth: 124.7%</li>             <li>Current Density: 2.569/km²</li>             <li>Peak Year: 2018</li>             </ul>                          <h5>🏠 Real Estate Appreciation:</h5>             <ul>             <li>Annual Increase: <strong>6.2%</strong></li>             <li>Total Increase: 61.9%</li>             <li>Price 2014: €4,200/m²</li>             <li>Price 2024: €6,800/m²</li>             </ul>                          <h5>📊 Combined Analysis:</h5>             <ul>             <li>Gentrification Score: <strong>0.073</strong></li>             <li>Growth Intensity: 0.0052</li>             </ul>                          <p><em>Early gentrification, now premium market</em></p>             </div>             </div>`)[0];
+                popup_ac11460b0aa9eb0a71e9db17dfe04213.setContent(html_7d80ffb29a6f709531accc45ce3f1e7d);
+            
+        
+
+        polygon_421b09a092448e9c79e55815f25fb57d.bindPopup(popup_ac11460b0aa9eb0a71e9db17dfe04213)
+        ;
+
+        
+    
+    
+            polygon_421b09a092448e9c79e55815f25fb57d.bindTooltip(
+                `<div>
+                     Prenzlauer Berg: Gentrif. Score 0.07
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_d0eee15eef2eab2e90605d7218f36481 = L.marker(
+                [52.54, 13.425],
+                {
+}
+            ).addTo(map_1ba55b873f171ec663d850f3bb1099d3);
+        
+    
+            var div_icon_9b2d78cfa79e19ae48ebcf71edc24140 = L.divIcon({
+  "html": "\u003cdiv style=\"text-align: center; font-weight: bold; font-size: 10px; color: white; background: rgba(0,0,0,0.8); border-radius: 5px; padding: 3px; min-width: 45px;\"\u003eW:8.4%\u003cbr\u003eR:6.2%\u003c/div\u003e",
+  "iconSize": [50, 30],
+  "iconAnchor": [25, 15],
+  "className": "empty",
+});
+        
+    
+        var popup_5e98c64afe41d8f059cfe5ddab891c9c = L.popup({
+  "maxWidth": 350,
+});
+
+        
+            
+                var html_d1d1a8ae7a01ebe7030e7ebf1b044acb = $(`<div id="html_d1d1a8ae7a01ebe7030e7ebf1b044acb" style="width: 100.0%; height: 100.0%;">             <div style="width: 300px;">             <h4>Prenzlauer Berg</h4>                          <h5>🍷 Winery Growth (2014-2024):</h5>             <ul>             <li>Annual Growth: <strong>8.4%</strong></li>             <li>Total Growth: 124.7%</li>             <li>Current Density: 2.569/km²</li>             <li>Peak Year: 2018</li>             </ul>                          <h5>🏠 Real Estate Appreciation:</h5>             <ul>             <li>Annual Increase: <strong>6.2%</strong></li>             <li>Total Increase: 61.9%</li>             <li>Price 2014: €4,200/m²</li>             <li>Price 2024: €6,800/m²</li>             </ul>                          <h5>📊 Combined Analysis:</h5>             <ul>             <li>Gentrification Score: <strong>0.073</strong></li>             <li>Growth Intensity: 0.0052</li>             </ul>                          <p><em>Early gentrification, now premium market</em></p>             </div>             </div>`)[0];
+                popup_5e98c64afe41d8f059cfe5ddab891c9c.setContent(html_d1d1a8ae7a01ebe7030e7ebf1b044acb);
+            
+        
+
+        marker_d0eee15eef2eab2e90605d7218f36481.bindPopup(popup_5e98c64afe41d8f059cfe5ddab891c9c)
+        ;
+
+        
+    
+    
+            marker_d0eee15eef2eab2e90605d7218f36481.bindTooltip(
+                `<div>
+                     Prenzlauer Berg
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_d0eee15eef2eab2e90605d7218f36481.setIcon(div_icon_9b2d78cfa79e19ae48ebcf71edc24140);
+            
+    
+            var polygon_d4337347428a473f4adfeda09f218153 = L.polygon(
+                [[52.44, 13.31], [52.44, 13.36], [52.48, 13.36], [52.48, 13.31], [52.44, 13.31]],
+                {"bubblingMouseEvents": true, "color": "white", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fec44f", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 2}
+            ).addTo(map_1ba55b873f171ec663d850f3bb1099d3);
+        
+    
+        var popup_9077241301a4f9a5fdce733ba81f9a2e = L.popup({
+  "maxWidth": 350,
+});
+
+        
+            
+                var html_dddd0669d9b57056fc3cc8413982616b = $(`<div id="html_dddd0669d9b57056fc3cc8413982616b" style="width: 100.0%; height: 100.0%;">             <div style="width: 300px;">             <h4>Steglitz</h4>                          <h5>🍷 Winery Growth (2014-2024):</h5>             <ul>             <li>Annual Growth: <strong>7.8%</strong></li>             <li>Total Growth: 112.1%</li>             <li>Current Density: 0.543/km²</li>             <li>Peak Year: 2021</li>             </ul>                          <h5>🏠 Real Estate Appreciation:</h5>             <ul>             <li>Annual Increase: <strong>4.7%</strong></li>             <li>Total Increase: 46.7%</li>             <li>Price 2014: €3,000/m²</li>             <li>Price 2024: €4,400/m²</li>             </ul>                          <h5>📊 Combined Analysis:</h5>             <ul>             <li>Gentrification Score: <strong>0.063</strong></li>             <li>Growth Intensity: 0.0037</li>             </ul>                          <p><em>Family residential, conservative growth</em></p>             </div>             </div>`)[0];
+                popup_9077241301a4f9a5fdce733ba81f9a2e.setContent(html_dddd0669d9b57056fc3cc8413982616b);
+            
+        
+
+        polygon_d4337347428a473f4adfeda09f218153.bindPopup(popup_9077241301a4f9a5fdce733ba81f9a2e)
+        ;
+
+        
+    
+    
+            polygon_d4337347428a473f4adfeda09f218153.bindTooltip(
+                `<div>
+                     Steglitz: Gentrif. Score 0.06
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_a0717f217e464c5b11b9e8a3bc0c1e6a = L.marker(
+                [52.46, 13.335],
+                {
+}
+            ).addTo(map_1ba55b873f171ec663d850f3bb1099d3);
+        
+    
+            var div_icon_2367d9c4859ebbfbf8da0ee9f1b030bf = L.divIcon({
+  "html": "\u003cdiv style=\"text-align: center; font-weight: bold; font-size: 10px; color: white; background: rgba(0,0,0,0.8); border-radius: 5px; padding: 3px; min-width: 45px;\"\u003eW:7.8%\u003cbr\u003eR:4.7%\u003c/div\u003e",
+  "iconSize": [50, 30],
+  "iconAnchor": [25, 15],
+  "className": "empty",
+});
+        
+    
+        var popup_ffb1d551b1a284d0d8b2fd87b563b97d = L.popup({
+  "maxWidth": 350,
+});
+
+        
+            
+                var html_266cd11260937747002877cdc47f54a6 = $(`<div id="html_266cd11260937747002877cdc47f54a6" style="width: 100.0%; height: 100.0%;">             <div style="width: 300px;">             <h4>Steglitz</h4>                          <h5>🍷 Winery Growth (2014-2024):</h5>             <ul>             <li>Annual Growth: <strong>7.8%</strong></li>             <li>Total Growth: 112.1%</li>             <li>Current Density: 0.543/km²</li>             <li>Peak Year: 2021</li>             </ul>                          <h5>🏠 Real Estate Appreciation:</h5>             <ul>             <li>Annual Increase: <strong>4.7%</strong></li>             <li>Total Increase: 46.7%</li>             <li>Price 2014: €3,000/m²</li>             <li>Price 2024: €4,400/m²</li>             </ul>                          <h5>📊 Combined Analysis:</h5>             <ul>             <li>Gentrification Score: <strong>0.063</strong></li>             <li>Growth Intensity: 0.0037</li>             </ul>                          <p><em>Family residential, conservative growth</em></p>             </div>             </div>`)[0];
+                popup_ffb1d551b1a284d0d8b2fd87b563b97d.setContent(html_266cd11260937747002877cdc47f54a6);
+            
+        
+
+        marker_a0717f217e464c5b11b9e8a3bc0c1e6a.bindPopup(popup_ffb1d551b1a284d0d8b2fd87b563b97d)
+        ;
+
+        
+    
+    
+            marker_a0717f217e464c5b11b9e8a3bc0c1e6a.bindTooltip(
+                `<div>
+                     Steglitz
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_a0717f217e464c5b11b9e8a3bc0c1e6a.setIcon(div_icon_2367d9c4859ebbfbf8da0ee9f1b030bf);
+            
+    
+            var polygon_30cc17bae5943fd0196c34c11dec54c4 = L.polygon(
+                [[52.45, 13.38], [52.45, 13.42], [52.49, 13.42], [52.49, 13.38], [52.45, 13.38]],
+                {"bubblingMouseEvents": true, "color": "white", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fec44f", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 2}
+            ).addTo(map_1ba55b873f171ec663d850f3bb1099d3);
+        
+    
+        var popup_e786079298ba1f039a205f7d932c3700 = L.popup({
+  "maxWidth": 350,
+});
+
+        
+            
+                var html_101c2a8aba8c9a2bafa16d37e933d2a3 = $(`<div id="html_101c2a8aba8c9a2bafa16d37e933d2a3" style="width: 100.0%; height: 100.0%;">             <div style="width: 300px;">             <h4>Tempelhof</h4>                          <h5>🍷 Winery Growth (2014-2024):</h5>             <ul>             <li>Annual Growth: <strong>7.4%</strong></li>             <li>Total Growth: 103.4%</li>             <li>Current Density: 0.246/km²</li>             <li>Peak Year: 2015</li>             </ul>                          <h5>🏠 Real Estate Appreciation:</h5>             <ul>             <li>Annual Increase: <strong>5.0%</strong></li>             <li>Total Increase: 50.0%</li>             <li>Price 2014: €2,800/m²</li>             <li>Price 2024: €4,200/m²</li>             </ul>                          <h5>📊 Combined Analysis:</h5>             <ul>             <li>Gentrification Score: <strong>0.062</strong></li>             <li>Growth Intensity: 0.0037</li>             </ul>                          <p><em>Family area, moderate steady growth</em></p>             </div>             </div>`)[0];
+                popup_e786079298ba1f039a205f7d932c3700.setContent(html_101c2a8aba8c9a2bafa16d37e933d2a3);
+            
+        
+
+        polygon_30cc17bae5943fd0196c34c11dec54c4.bindPopup(popup_e786079298ba1f039a205f7d932c3700)
+        ;
+
+        
+    
+    
+            polygon_30cc17bae5943fd0196c34c11dec54c4.bindTooltip(
+                `<div>
+                     Tempelhof: Gentrif. Score 0.06
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_ef37380acb985ccbe87eac2eefb90e36 = L.marker(
+                [52.47, 13.4],
+                {
+}
+            ).addTo(map_1ba55b873f171ec663d850f3bb1099d3);
+        
+    
+            var div_icon_b57efc56b80069726091f73c0c173bc5 = L.divIcon({
+  "html": "\u003cdiv style=\"text-align: center; font-weight: bold; font-size: 10px; color: white; background: rgba(0,0,0,0.8); border-radius: 5px; padding: 3px; min-width: 45px;\"\u003eW:7.4%\u003cbr\u003eR:5.0%\u003c/div\u003e",
+  "iconSize": [50, 30],
+  "iconAnchor": [25, 15],
+  "className": "empty",
+});
+        
+    
+        var popup_0ff33d4daa2d4d38af7f0a2e5e2728f0 = L.popup({
+  "maxWidth": 350,
+});
+
+        
+            
+                var html_ce604b79d32cd3f942e4e4b1d83de436 = $(`<div id="html_ce604b79d32cd3f942e4e4b1d83de436" style="width: 100.0%; height: 100.0%;">             <div style="width: 300px;">             <h4>Tempelhof</h4>                          <h5>🍷 Winery Growth (2014-2024):</h5>             <ul>             <li>Annual Growth: <strong>7.4%</strong></li>             <li>Total Growth: 103.4%</li>             <li>Current Density: 0.246/km²</li>             <li>Peak Year: 2015</li>             </ul>                          <h5>🏠 Real Estate Appreciation:</h5>             <ul>             <li>Annual Increase: <strong>5.0%</strong></li>             <li>Total Increase: 50.0%</li>             <li>Price 2014: €2,800/m²</li>             <li>Price 2024: €4,200/m²</li>             </ul>                          <h5>📊 Combined Analysis:</h5>             <ul>             <li>Gentrification Score: <strong>0.062</strong></li>             <li>Growth Intensity: 0.0037</li>             </ul>                          <p><em>Family area, moderate steady growth</em></p>             </div>             </div>`)[0];
+                popup_0ff33d4daa2d4d38af7f0a2e5e2728f0.setContent(html_ce604b79d32cd3f942e4e4b1d83de436);
+            
+        
+
+        marker_ef37380acb985ccbe87eac2eefb90e36.bindPopup(popup_0ff33d4daa2d4d38af7f0a2e5e2728f0)
+        ;
+
+        
+    
+    
+            marker_ef37380acb985ccbe87eac2eefb90e36.bindTooltip(
+                `<div>
+                     Tempelhof
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_ef37380acb985ccbe87eac2eefb90e36.setIcon(div_icon_b57efc56b80069726091f73c0c173bc5);
+            
+    
+            var polygon_c7ce33167e5ea897ef6cf733300dc09c = L.polygon(
+                [[52.46, 13.33], [52.46, 13.38], [52.5, 13.38], [52.5, 13.33], [52.46, 13.33]],
+                {"bubblingMouseEvents": true, "color": "white", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fec44f", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 2}
+            ).addTo(map_1ba55b873f171ec663d850f3bb1099d3);
+        
+    
+        var popup_5de97cbce36e388bd781906af9ebb133 = L.popup({
+  "maxWidth": 350,
+});
+
+        
+            
+                var html_326bc4e403e3dccebdd1c14e7f6d299d = $(`<div id="html_326bc4e403e3dccebdd1c14e7f6d299d" style="width: 100.0%; height: 100.0%;">             <div style="width: 300px;">             <h4>Schöneberg</h4>                          <h5>🍷 Winery Growth (2014-2024):</h5>             <ul>             <li>Annual Growth: <strong>7.2%</strong></li>             <li>Total Growth: 100.6%</li>             <li>Current Density: 0.571/km²</li>             <li>Peak Year: 2019</li>             </ul>                          <h5>🏠 Real Estate Appreciation:</h5>             <ul>             <li>Annual Increase: <strong>5.5%</strong></li>             <li>Total Increase: 54.5%</li>             <li>Price 2014: €3,300/m²</li>             <li>Price 2024: €5,100/m²</li>             </ul>                          <h5>📊 Combined Analysis:</h5>             <ul>             <li>Gentrification Score: <strong>0.064</strong></li>             <li>Growth Intensity: 0.0040</li>             </ul>                          <p><em>Cultural district, steady appreciation</em></p>             </div>             </div>`)[0];
+                popup_5de97cbce36e388bd781906af9ebb133.setContent(html_326bc4e403e3dccebdd1c14e7f6d299d);
+            
+        
+
+        polygon_c7ce33167e5ea897ef6cf733300dc09c.bindPopup(popup_5de97cbce36e388bd781906af9ebb133)
+        ;
+
+        
+    
+    
+            polygon_c7ce33167e5ea897ef6cf733300dc09c.bindTooltip(
+                `<div>
+                     Schöneberg: Gentrif. Score 0.06
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_afb3672bc230be21449dfe7f5e34ec2a = L.marker(
+                [52.48, 13.355],
+                {
+}
+            ).addTo(map_1ba55b873f171ec663d850f3bb1099d3);
+        
+    
+            var div_icon_97233275f2ce5262bf8df0ca30f9a16d = L.divIcon({
+  "html": "\u003cdiv style=\"text-align: center; font-weight: bold; font-size: 10px; color: white; background: rgba(0,0,0,0.8); border-radius: 5px; padding: 3px; min-width: 45px;\"\u003eW:7.2%\u003cbr\u003eR:5.5%\u003c/div\u003e",
+  "iconSize": [50, 30],
+  "iconAnchor": [25, 15],
+  "className": "empty",
+});
+        
+    
+        var popup_3226961d9f579024a3538bc5ebdd81a0 = L.popup({
+  "maxWidth": 350,
+});
+
+        
+            
+                var html_16a040e40b5494f9fee77971826d4a39 = $(`<div id="html_16a040e40b5494f9fee77971826d4a39" style="width: 100.0%; height: 100.0%;">             <div style="width: 300px;">             <h4>Schöneberg</h4>                          <h5>🍷 Winery Growth (2014-2024):</h5>             <ul>             <li>Annual Growth: <strong>7.2%</strong></li>             <li>Total Growth: 100.6%</li>             <li>Current Density: 0.571/km²</li>             <li>Peak Year: 2019</li>             </ul>                          <h5>🏠 Real Estate Appreciation:</h5>             <ul>             <li>Annual Increase: <strong>5.5%</strong></li>             <li>Total Increase: 54.5%</li>             <li>Price 2014: €3,300/m²</li>             <li>Price 2024: €5,100/m²</li>             </ul>                          <h5>📊 Combined Analysis:</h5>             <ul>             <li>Gentrification Score: <strong>0.064</strong></li>             <li>Growth Intensity: 0.0040</li>             </ul>                          <p><em>Cultural district, steady appreciation</em></p>             </div>             </div>`)[0];
+                popup_3226961d9f579024a3538bc5ebdd81a0.setContent(html_16a040e40b5494f9fee77971826d4a39);
+            
+        
+
+        marker_afb3672bc230be21449dfe7f5e34ec2a.bindPopup(popup_3226961d9f579024a3538bc5ebdd81a0)
+        ;
+
+        
+    
+    
+            marker_afb3672bc230be21449dfe7f5e34ec2a.bindTooltip(
+                `<div>
+                     Schöneberg
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_afb3672bc230be21449dfe7f5e34ec2a.setIcon(div_icon_97233275f2ce5262bf8df0ca30f9a16d);
+            
+    
+            var polygon_ec93b0e5704827317cb5f8a2f516c763 = L.polygon(
+                [[52.5, 13.35], [52.5, 13.42], [52.55, 13.42], [52.55, 13.35], [52.5, 13.35]],
+                {"bubblingMouseEvents": true, "color": "white", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fec44f", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 2}
+            ).addTo(map_1ba55b873f171ec663d850f3bb1099d3);
+        
+    
+        var popup_69ab112cba04b4ef7276f3001581984d = L.popup({
+  "maxWidth": 350,
+});
+
+        
+            
+                var html_b4703e51d3ddd0ba8d7c16b109e6769b = $(`<div id="html_b4703e51d3ddd0ba8d7c16b109e6769b" style="width: 100.0%; height: 100.0%;">             <div style="width: 300px;">             <h4>Mitte</h4>                          <h5>🍷 Winery Growth (2014-2024):</h5>             <ul>             <li>Annual Growth: <strong>7.1%</strong></li>             <li>Total Growth: 99.4%</li>             <li>Current Density: 0.101/km²</li>             <li>Peak Year: 2017</li>             </ul>                          <h5>🏠 Real Estate Appreciation:</h5>             <ul>             <li>Annual Increase: <strong>6.0%</strong></li>             <li>Total Increase: 60.0%</li>             <li>Price 2014: €4,500/m²</li>             <li>Price 2024: €7,200/m²</li>             </ul>                          <h5>📊 Combined Analysis:</h5>             <ul>             <li>Gentrification Score: <strong>0.066</strong></li>             <li>Growth Intensity: 0.0043</li>             </ul>                          <p><em>Central location premium, consistent growth</em></p>             </div>             </div>`)[0];
+                popup_69ab112cba04b4ef7276f3001581984d.setContent(html_b4703e51d3ddd0ba8d7c16b109e6769b);
+            
+        
+
+        polygon_ec93b0e5704827317cb5f8a2f516c763.bindPopup(popup_69ab112cba04b4ef7276f3001581984d)
+        ;
+
+        
+    
+    
+            polygon_ec93b0e5704827317cb5f8a2f516c763.bindTooltip(
+                `<div>
+                     Mitte: Gentrif. Score 0.07
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_be547c293e5576af4f259704e756c285 = L.marker(
+                [52.525, 13.385],
+                {
+}
+            ).addTo(map_1ba55b873f171ec663d850f3bb1099d3);
+        
+    
+            var div_icon_c1c81cc490a3962e58ad8d48ec1753f3 = L.divIcon({
+  "html": "\u003cdiv style=\"text-align: center; font-weight: bold; font-size: 10px; color: white; background: rgba(0,0,0,0.8); border-radius: 5px; padding: 3px; min-width: 45px;\"\u003eW:7.1%\u003cbr\u003eR:6.0%\u003c/div\u003e",
+  "iconSize": [50, 30],
+  "iconAnchor": [25, 15],
+  "className": "empty",
+});
+        
+    
+        var popup_a9258c2240e455bfc4dfc102efc2d3bb = L.popup({
+  "maxWidth": 350,
+});
+
+        
+            
+                var html_2dd014af7ed2ee3fe2ab217810ea6e61 = $(`<div id="html_2dd014af7ed2ee3fe2ab217810ea6e61" style="width: 100.0%; height: 100.0%;">             <div style="width: 300px;">             <h4>Mitte</h4>                          <h5>🍷 Winery Growth (2014-2024):</h5>             <ul>             <li>Annual Growth: <strong>7.1%</strong></li>             <li>Total Growth: 99.4%</li>             <li>Current Density: 0.101/km²</li>             <li>Peak Year: 2017</li>             </ul>                          <h5>🏠 Real Estate Appreciation:</h5>             <ul>             <li>Annual Increase: <strong>6.0%</strong></li>             <li>Total Increase: 60.0%</li>             <li>Price 2014: €4,500/m²</li>             <li>Price 2024: €7,200/m²</li>             </ul>                          <h5>📊 Combined Analysis:</h5>             <ul>             <li>Gentrification Score: <strong>0.066</strong></li>             <li>Growth Intensity: 0.0043</li>             </ul>                          <p><em>Central location premium, consistent growth</em></p>             </div>             </div>`)[0];
+                popup_a9258c2240e455bfc4dfc102efc2d3bb.setContent(html_2dd014af7ed2ee3fe2ab217810ea6e61);
+            
+        
+
+        marker_be547c293e5576af4f259704e756c285.bindPopup(popup_a9258c2240e455bfc4dfc102efc2d3bb)
+        ;
+
+        
+    
+    
+            marker_be547c293e5576af4f259704e756c285.bindTooltip(
+                `<div>
+                     Mitte
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_be547c293e5576af4f259704e756c285.setIcon(div_icon_c1c81cc490a3962e58ad8d48ec1753f3);
+            
+    
+            var polygon_b695c23a86936c96928bdbc1b2769939 = L.polygon(
+                [[52.47, 13.28], [52.47, 13.33], [52.51, 13.33], [52.51, 13.28], [52.47, 13.28]],
+                {"bubblingMouseEvents": true, "color": "white", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fee391", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 2}
+            ).addTo(map_1ba55b873f171ec663d850f3bb1099d3);
+        
+    
+        var popup_1a247cb45fd6ba67d2d7c1b2b0d08e52 = L.popup({
+  "maxWidth": 350,
+});
+
+        
+            
+                var html_dad25a0ab4bf57ddeb418cb3ec8b87f9 = $(`<div id="html_dad25a0ab4bf57ddeb418cb3ec8b87f9" style="width: 100.0%; height: 100.0%;">             <div style="width: 300px;">             <h4>Wilmersdorf</h4>                          <h5>🍷 Winery Growth (2014-2024):</h5>             <ul>             <li>Annual Growth: <strong>7.0%</strong></li>             <li>Total Growth: 95.8%</li>             <li>Current Density: 0.337/km²</li>             <li>Peak Year: 2018</li>             </ul>                          <h5>🏠 Real Estate Appreciation:</h5>             <ul>             <li>Annual Increase: <strong>4.4%</strong></li>             <li>Total Increase: 44.4%</li>             <li>Price 2014: €3,600/m²</li>             <li>Price 2024: €5,200/m²</li>             </ul>                          <h5>📊 Combined Analysis:</h5>             <ul>             <li>Gentrification Score: <strong>0.057</strong></li>             <li>Growth Intensity: 0.0031</li>             </ul>                          <p><em>Upscale residential, moderate growth</em></p>             </div>             </div>`)[0];
+                popup_1a247cb45fd6ba67d2d7c1b2b0d08e52.setContent(html_dad25a0ab4bf57ddeb418cb3ec8b87f9);
+            
+        
+
+        polygon_b695c23a86936c96928bdbc1b2769939.bindPopup(popup_1a247cb45fd6ba67d2d7c1b2b0d08e52)
+        ;
+
+        
+    
+    
+            polygon_b695c23a86936c96928bdbc1b2769939.bindTooltip(
+                `<div>
+                     Wilmersdorf: Gentrif. Score 0.06
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_93100f53de5df5d4f5f32170054aa32e = L.marker(
+                [52.49, 13.305],
+                {
+}
+            ).addTo(map_1ba55b873f171ec663d850f3bb1099d3);
+        
+    
+            var div_icon_773d125df9a36fe69f3fb2f1e7a6ee40 = L.divIcon({
+  "html": "\u003cdiv style=\"text-align: center; font-weight: bold; font-size: 10px; color: white; background: rgba(0,0,0,0.8); border-radius: 5px; padding: 3px; min-width: 45px;\"\u003eW:7.0%\u003cbr\u003eR:4.4%\u003c/div\u003e",
+  "iconSize": [50, 30],
+  "iconAnchor": [25, 15],
+  "className": "empty",
+});
+        
+    
+        var popup_03adadf547b399fabb40c0ee06f00d9c = L.popup({
+  "maxWidth": 350,
+});
+
+        
+            
+                var html_c9b7636388781135ffebbece37bb6129 = $(`<div id="html_c9b7636388781135ffebbece37bb6129" style="width: 100.0%; height: 100.0%;">             <div style="width: 300px;">             <h4>Wilmersdorf</h4>                          <h5>🍷 Winery Growth (2014-2024):</h5>             <ul>             <li>Annual Growth: <strong>7.0%</strong></li>             <li>Total Growth: 95.8%</li>             <li>Current Density: 0.337/km²</li>             <li>Peak Year: 2018</li>             </ul>                          <h5>🏠 Real Estate Appreciation:</h5>             <ul>             <li>Annual Increase: <strong>4.4%</strong></li>             <li>Total Increase: 44.4%</li>             <li>Price 2014: €3,600/m²</li>             <li>Price 2024: €5,200/m²</li>             </ul>                          <h5>📊 Combined Analysis:</h5>             <ul>             <li>Gentrification Score: <strong>0.057</strong></li>             <li>Growth Intensity: 0.0031</li>             </ul>                          <p><em>Upscale residential, moderate growth</em></p>             </div>             </div>`)[0];
+                popup_03adadf547b399fabb40c0ee06f00d9c.setContent(html_c9b7636388781135ffebbece37bb6129);
+            
+        
+
+        marker_93100f53de5df5d4f5f32170054aa32e.bindPopup(popup_03adadf547b399fabb40c0ee06f00d9c)
+        ;
+
+        
+    
+    
+            marker_93100f53de5df5d4f5f32170054aa32e.bindTooltip(
+                `<div>
+                     Wilmersdorf
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_93100f53de5df5d4f5f32170054aa32e.setIcon(div_icon_773d125df9a36fe69f3fb2f1e7a6ee40);
+            
+    
+            var polygon_1e377cde87e8c472612efc59511af255 = L.polygon(
+                [[52.49, 13.28], [52.49, 13.35], [52.53, 13.35], [52.53, 13.28], [52.49, 13.28]],
+                {"bubblingMouseEvents": true, "color": "white", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fee391", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 2}
+            ).addTo(map_1ba55b873f171ec663d850f3bb1099d3);
+        
+    
+        var popup_acdebdc7fb5ff9fa3e180b03cc04c7c6 = L.popup({
+  "maxWidth": 350,
+});
+
+        
+            
+                var html_fe6e5170351f03ada7b3cd76fa1b5aec = $(`<div id="html_fe6e5170351f03ada7b3cd76fa1b5aec" style="width: 100.0%; height: 100.0%;">             <div style="width: 300px;">             <h4>Charlottenburg</h4>                          <h5>🍷 Winery Growth (2014-2024):</h5>             <ul>             <li>Annual Growth: <strong>5.6%</strong></li>             <li>Total Growth: 72.7%</li>             <li>Current Density: 0.309/km²</li>             <li>Peak Year: 2020</li>             </ul>                          <h5>🏠 Real Estate Appreciation:</h5>             <ul>             <li>Annual Increase: <strong>4.7%</strong></li>             <li>Total Increase: 47.4%</li>             <li>Price 2014: €3,800/m²</li>             <li>Price 2024: €5,600/m²</li>             </ul>                          <h5>📊 Combined Analysis:</h5>             <ul>             <li>Gentrification Score: <strong>0.052</strong></li>             <li>Growth Intensity: 0.0026</li>             </ul>                          <p><em>Established area, moderate appreciation</em></p>             </div>             </div>`)[0];
+                popup_acdebdc7fb5ff9fa3e180b03cc04c7c6.setContent(html_fe6e5170351f03ada7b3cd76fa1b5aec);
+            
+        
+
+        polygon_1e377cde87e8c472612efc59511af255.bindPopup(popup_acdebdc7fb5ff9fa3e180b03cc04c7c6)
+        ;
+
+        
+    
+    
+            polygon_1e377cde87e8c472612efc59511af255.bindTooltip(
+                `<div>
+                     Charlottenburg: Gentrif. Score 0.05
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_5254b4de0a07fcd693d82ef73f25d49a = L.marker(
+                [52.51, 13.315],
+                {
+}
+            ).addTo(map_1ba55b873f171ec663d850f3bb1099d3);
+        
+    
+            var div_icon_9fada8dd93729e09eb31ebcf99dc9cf4 = L.divIcon({
+  "html": "\u003cdiv style=\"text-align: center; font-weight: bold; font-size: 10px; color: white; background: rgba(0,0,0,0.8); border-radius: 5px; padding: 3px; min-width: 45px;\"\u003eW:5.6%\u003cbr\u003eR:4.7%\u003c/div\u003e",
+  "iconSize": [50, 30],
+  "iconAnchor": [25, 15],
+  "className": "empty",
+});
+        
+    
+        var popup_f5887983b37a5e59eefaa38d017d2205 = L.popup({
+  "maxWidth": 350,
+});
+
+        
+            
+                var html_c60f6b7d6fd47d033f4f1da8a72c8c73 = $(`<div id="html_c60f6b7d6fd47d033f4f1da8a72c8c73" style="width: 100.0%; height: 100.0%;">             <div style="width: 300px;">             <h4>Charlottenburg</h4>                          <h5>🍷 Winery Growth (2014-2024):</h5>             <ul>             <li>Annual Growth: <strong>5.6%</strong></li>             <li>Total Growth: 72.7%</li>             <li>Current Density: 0.309/km²</li>             <li>Peak Year: 2020</li>             </ul>                          <h5>🏠 Real Estate Appreciation:</h5>             <ul>             <li>Annual Increase: <strong>4.7%</strong></li>             <li>Total Increase: 47.4%</li>             <li>Price 2014: €3,800/m²</li>             <li>Price 2024: €5,600/m²</li>             </ul>                          <h5>📊 Combined Analysis:</h5>             <ul>             <li>Gentrification Score: <strong>0.052</strong></li>             <li>Growth Intensity: 0.0026</li>             </ul>                          <p><em>Established area, moderate appreciation</em></p>             </div>             </div>`)[0];
+                popup_f5887983b37a5e59eefaa38d017d2205.setContent(html_c60f6b7d6fd47d033f4f1da8a72c8c73);
+            
+        
+
+        marker_5254b4de0a07fcd693d82ef73f25d49a.bindPopup(popup_f5887983b37a5e59eefaa38d017d2205)
+        ;
+
+        
+    
+    
+            marker_5254b4de0a07fcd693d82ef73f25d49a.bindTooltip(
+                `<div>
+                     Charlottenburg
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_5254b4de0a07fcd693d82ef73f25d49a.setIcon(div_icon_9fada8dd93729e09eb31ebcf99dc9cf4);
+            
+</script>
+</html>

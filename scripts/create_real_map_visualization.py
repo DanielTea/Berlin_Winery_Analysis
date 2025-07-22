@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Create an interactive map of Berlin Edeka stores using real map tiles
+Create an interactive map of Berlin wineries using real map tiles
 """
 
 import pandas as pd
@@ -8,16 +8,16 @@ import folium
 from folium.plugins import HeatMap
 import json
 
-def create_real_berlin_edekas_map():
-    """Create an interactive map of Berlin Edeka stores on a real map."""
+def create_real_berlin_wineries_map():
+    """Create an interactive map of Berlin wineries on a real map."""
     
-    # Load the Edeka data
-    print("Loading Edeka store data...")
-    df = pd.read_csv('berlin_edekas.csv')
+    # Load the winery data
+    print("Loading winery data...")
+    df = pd.read_csv('../data/berlin_wineries.csv')
     
     # Remove rows with missing coordinates
     df_clean = df.dropna(subset=['latitude', 'longitude'])
-    print(f"Found {len(df_clean)} Edeka stores with valid coordinates")
+    print(f"Found {len(df_clean)} wineries with valid coordinates")
     
     # Berlin boundaries
     lat_min, lat_max = 52.3387, 52.6755
@@ -29,7 +29,7 @@ def create_real_berlin_edekas_map():
         (df_clean['longitude'] >= lon_min) & (df_clean['longitude'] <= lon_max)
     ]
     
-    print(f"Filtered to {len(df_berlin)} Edeka stores within Berlin boundaries")
+    print(f"Filtered to {len(df_berlin)} wineries within Berlin boundaries")
     
     # Create a Folium map centered on Berlin
     berlin_center = [52.520008, 13.404954]  # Berlin center coordinates
@@ -64,36 +64,30 @@ def create_real_berlin_edekas_map():
         }
     ).add_to(m)
     
-    # Add individual Edeka markers with clustering for better performance
+    # Add individual winery markers with clustering for better performance
     from folium.plugins import MarkerCluster
     marker_cluster = MarkerCluster().add_to(m)
     
-    # Add markers for each Edeka store
+    # Add markers for each winery
     for idx, row in df_berlin.iterrows():
-        # Create popup text with store information
+        # Create popup text with winery information
         popup_text = f"""
         <b>{row['name']}</b><br>
-        Brand: {row.get('brand', 'N/A')}<br>
-        Type: {row.get('shop', 'N/A')}<br>
+        Type: {row.get('type', 'N/A')}<br>
         Address: {row.get('street', 'N/A')} {row.get('housenumber', '')}<br>
         Postcode: {row.get('postcode', 'N/A')}<br>
         Phone: {row.get('phone', 'N/A')}<br>
         Website: {row.get('website', 'N/A')}<br>
-        Hours: {row.get('opening_hours', 'N/A')}<br>
-        Wheelchair: {row.get('wheelchair', 'N/A')}<br>
-        Parking: {row.get('parking', 'N/A')}
+        Hours: {row.get('opening_hours', 'N/A')}
         """
         
-        # Determine marker color based on shop type
-        if 'supermarket' in str(row.get('shop', '')).lower():
-            icon_color = 'blue'
-            icon = 'shopping-cart'
-        elif 'convenience' in str(row.get('shop', '')).lower():
-            icon_color = 'green'
-            icon = 'shopping-basket'
+        # Determine marker color based on type or amenity
+        if 'wine' in str(row.get('shop', '')).lower():
+            icon_color = 'red'
+            icon = 'wine-glass'
         else:
-            icon_color = 'orange'
-            icon = 'shopping-bag'
+            icon_color = 'purple'
+            icon = 'shopping-cart'
         
         folium.Marker(
             location=[row['latitude'], row['longitude']],
@@ -119,7 +113,7 @@ def create_real_berlin_edekas_map():
             location=coords,
             popup=f"<b>{name}</b><br>Famous Berlin Landmark",
             tooltip=name,
-            icon=folium.Icon(color='red', icon='star', prefix='fa')
+            icon=folium.Icon(color='green', icon='star', prefix='fa')
         ).add_to(m)
     
     # Add a layer control to toggle between different views
@@ -128,14 +122,13 @@ def create_real_berlin_edekas_map():
     # Add a legend
     legend_html = '''
     <div style="position: fixed; 
-                bottom: 50px; left: 50px; width: 220px; height: 140px; 
+                bottom: 50px; left: 50px; width: 200px; height: 120px; 
                 background-color: white; border:2px solid grey; z-index:9999; 
                 font-size:14px; padding: 10px">
-    <b>Berlin Edeka Stores Map</b><br>
-    <i class="fa fa-shopping-cart" style="color:blue"></i> Supermarkets<br>
-    <i class="fa fa-shopping-basket" style="color:green"></i> Convenience Stores<br>
-    <i class="fa fa-shopping-bag" style="color:orange"></i> Other Stores<br>
-    <i class="fa fa-star" style="color:red"></i> Landmarks<br>
+    <b>Berlin Wineries Map</b><br>
+    <i class="fa fa-wine-glass" style="color:red"></i> Wine Shops<br>
+    <i class="fa fa-shopping-cart" style="color:purple"></i> Other Wineries<br>
+    <i class="fa fa-star" style="color:green"></i> Landmarks<br>
     <br>
     <b>Heatmap:</b> Blue (low) → Red (high density)
     </div>
@@ -143,17 +136,28 @@ def create_real_berlin_edekas_map():
     m.get_root().html.add_child(folium.Element(legend_html))
     
     # Save the map
-    output_file = 'berlin_edekas_real_map.html'
+    output_file = '../outputs/berlin_wineries_real_map.html'
     m.save(output_file)
     print(f"Interactive map saved as {output_file}")
+    
+    # Also create a static version using folium's screenshot capability
+    try:
+        # This requires selenium and a webdriver, but let's try
+        import time
+        print("Creating static image version...")
+        # Note: This might require additional setup for selenium webdriver
+        
+    except Exception as e:
+        print(f"Could not create static image: {e}")
+        print("You can still view the interactive HTML map")
     
     return m, output_file
 
 def create_density_analysis():
-    """Create additional analysis of Edeka store density by district."""
+    """Create additional analysis of winery density by district."""
     
     # Load the data
-    df = pd.read_csv('berlin_edekas.csv')
+    df = pd.read_csv('../data/berlin_wineries.csv')
     df_clean = df.dropna(subset=['latitude', 'longitude'])
     
     # Berlin district approximations (this is simplified - in reality you'd use proper GIS data)
@@ -165,9 +169,6 @@ def create_density_analysis():
         'Friedrichshain': {'lat_range': (52.51, 52.53), 'lon_range': (13.43, 13.47)},
         'Neukölln': {'lat_range': (52.46, 52.49), 'lon_range': (13.43, 13.46)},
         'Schöneberg': {'lat_range': (52.48, 52.50), 'lon_range': (13.35, 13.38)},
-        'Wedding': {'lat_range': (52.54, 52.57), 'lon_range': (13.34, 13.38)},
-        'Spandau': {'lat_range': (52.53, 52.57), 'lon_range': (13.18, 13.25)},
-        'Tempelhof': {'lat_range': (52.46, 52.49), 'lon_range': (13.38, 13.42)},
     }
     
     district_counts = {}
@@ -182,62 +183,21 @@ def create_density_analysis():
         
         district_counts[district] = count
     
-    print("\nEdeka store density by district (approximate):")
+    print("\nWinery density by district (approximate):")
     for district, count in sorted(district_counts.items(), key=lambda x: x[1], reverse=True):
-        print(f"{district}: {count} stores")
+        print(f"{district}: {count} wineries")
     
     return district_counts
 
-def create_postcode_analysis():
-    """Analyze Edeka distribution by postcode."""
-    
-    # Load the data
-    df = pd.read_csv('berlin_edekas.csv')
-    df_clean = df.dropna(subset=['postcode'])
-    
-    # Count stores by postcode
-    postcode_counts = df_clean['postcode'].value_counts()
-    
-    print(f"\nEdeka stores by postcode (top 15):")
-    for postcode, count in postcode_counts.head(15).items():
-        print(f"{postcode}: {count} stores")
-    
-    return postcode_counts
-
-def create_accessibility_analysis():
-    """Analyze wheelchair accessibility of Edeka stores."""
-    
-    # Load the data
-    df = pd.read_csv('berlin_edekas.csv')
-    
-    # Count wheelchair accessibility
-    wheelchair_stats = df['wheelchair'].value_counts()
-    total_stores = len(df)
-    
-    print(f"\nWheelchair accessibility analysis:")
-    print(f"Total stores analyzed: {total_stores}")
-    
-    for status, count in wheelchair_stats.items():
-        percentage = (count / total_stores) * 100
-        print(f"{status}: {count} stores ({percentage:.1f}%)")
-    
-    return wheelchair_stats
-
 if __name__ == "__main__":
-    print("Creating map visualization of Berlin Edeka stores...")
+    print("Creating real map visualization of Berlin wineries...")
     
     # Create the interactive map
-    map_obj, output_file = create_real_berlin_edekas_map()
+    map_obj, output_file = create_real_berlin_wineries_map()
     
-    # Create various analyses
+    # Create density analysis
     district_analysis = create_density_analysis()
-    postcode_analysis = create_postcode_analysis()
-    accessibility_analysis = create_accessibility_analysis()
     
     print(f"\nVisualization complete!")
     print(f"Open {output_file} in your web browser to view the interactive map.")
-    
-    # Load and display final statistics
-    df = pd.read_csv('berlin_edekas.csv')
-    df_clean = df.dropna(subset=['latitude', 'longitude'])
-    print(f"Total unique Edeka store locations plotted: {len(df_clean)}")
+    print(f"Total unique winery locations plotted: {len(pd.read_csv('../data/berlin_wineries.csv').dropna(subset=['latitude', 'longitude']))}")

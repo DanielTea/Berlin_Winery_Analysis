@@ -1,0 +1,133 @@
+district,year,density,count,area_km2,growth_pattern,base_growth_rate,description,yoy_growth_rate
+Prenzlauer Berg,2014,1.1431,12,10.9,early_strong_then_stable,0.08,"Early gentrification leader, sustained growth",0.0
+Prenzlauer Berg,2015,1.0973,11,10.9,early_strong_then_stable,0.08,"Early gentrification leader, sustained growth",-0.0401
+Prenzlauer Berg,2016,1.0989,11,10.9,early_strong_then_stable,0.08,"Early gentrification leader, sustained growth",0.0015
+Prenzlauer Berg,2017,1.1589,12,10.9,early_strong_then_stable,0.08,"Early gentrification leader, sustained growth",0.0546
+Prenzlauer Berg,2018,1.6357,17,10.9,early_strong_then_stable,0.08,"Early gentrification leader, sustained growth",0.4114
+Prenzlauer Berg,2019,1.7635,19,10.9,early_strong_then_stable,0.08,"Early gentrification leader, sustained growth",0.0781
+Prenzlauer Berg,2020,1.8053,19,10.9,early_strong_then_stable,0.08,"Early gentrification leader, sustained growth",0.0237
+Prenzlauer Berg,2021,2.0101,21,10.9,early_strong_then_stable,0.08,"Early gentrification leader, sustained growth",0.1134
+Prenzlauer Berg,2022,2.2069,24,10.9,early_strong_then_stable,0.08,"Early gentrification leader, sustained growth",0.0979
+Prenzlauer Berg,2023,2.3698,25,10.9,early_strong_then_stable,0.08,"Early gentrification leader, sustained growth",0.0738
+Prenzlauer Berg,2024,2.5688,28,10.9,early_strong_then_stable,0.08,"Early gentrification leader, sustained growth",0.084
+Neukölln,2014,0.0862,3,44.9,explosive_recent,0.15,"Rapid recent development, cultural hub emergence",0.0
+Neukölln,2015,0.0916,4,44.9,explosive_recent,0.15,"Rapid recent development, cultural hub emergence",0.0626
+Neukölln,2016,0.0916,4,44.9,explosive_recent,0.15,"Rapid recent development, cultural hub emergence",0.0
+Neukölln,2017,0.1195,5,44.9,explosive_recent,0.15,"Rapid recent development, cultural hub emergence",0.3046
+Neukölln,2018,0.1051,4,44.9,explosive_recent,0.15,"Rapid recent development, cultural hub emergence",-0.1205
+Neukölln,2019,0.137,6,44.9,explosive_recent,0.15,"Rapid recent development, cultural hub emergence",0.3035
+Neukölln,2020,0.1612,7,44.9,explosive_recent,0.15,"Rapid recent development, cultural hub emergence",0.1766
+Neukölln,2021,0.1677,7,44.9,explosive_recent,0.15,"Rapid recent development, cultural hub emergence",0.0403
+Neukölln,2022,0.2216,9,44.9,explosive_recent,0.15,"Rapid recent development, cultural hub emergence",0.3214
+Neukölln,2023,0.2533,11,44.9,explosive_recent,0.15,"Rapid recent development, cultural hub emergence",0.1431
+Neukölln,2024,0.2895,13,44.9,explosive_recent,0.15,"Rapid recent development, cultural hub emergence",0.1429
+Friedrichshain,2014,0.2034,1,9.8,steady_strong,0.12,"Consistent strong growth, tech/creative scene",0.0
+Friedrichshain,2015,0.234,2,9.8,steady_strong,0.12,"Consistent strong growth, tech/creative scene",0.1504
+Friedrichshain,2016,0.2395,2,9.8,steady_strong,0.12,"Consistent strong growth, tech/creative scene",0.0235
+Friedrichshain,2017,0.2476,2,9.8,steady_strong,0.12,"Consistent strong growth, tech/creative scene",0.0338
+Friedrichshain,2018,0.2543,2,9.8,steady_strong,0.12,"Consistent strong growth, tech/creative scene",0.0271
+Friedrichshain,2019,0.3077,3,9.8,steady_strong,0.12,"Consistent strong growth, tech/creative scene",0.21
+Friedrichshain,2020,0.4138,4,9.8,steady_strong,0.12,"Consistent strong growth, tech/creative scene",0.3448
+Friedrichshain,2021,0.4348,4,9.8,steady_strong,0.12,"Consistent strong growth, tech/creative scene",0.0507
+Friedrichshain,2022,0.4904,4,9.8,steady_strong,0.12,"Consistent strong growth, tech/creative scene",0.1279
+Friedrichshain,2023,0.5382,5,9.8,steady_strong,0.12,"Consistent strong growth, tech/creative scene",0.0975
+Friedrichshain,2024,0.6122,6,9.8,steady_strong,0.12,"Consistent strong growth, tech/creative scene",0.1375
+Kreuzberg,2014,0.1246,1,15.2,early_strong_maturing,0.1,"Early adopter, now maturing market",0.0
+Kreuzberg,2015,0.1556,2,15.2,early_strong_maturing,0.1,"Early adopter, now maturing market",0.2488
+Kreuzberg,2016,0.1485,2,15.2,early_strong_maturing,0.1,"Early adopter, now maturing market",-0.0456
+Kreuzberg,2017,0.1375,2,15.2,early_strong_maturing,0.1,"Early adopter, now maturing market",-0.0741
+Kreuzberg,2018,0.172,2,15.2,early_strong_maturing,0.1,"Early adopter, now maturing market",0.2509
+Kreuzberg,2019,0.1968,2,15.2,early_strong_maturing,0.1,"Early adopter, now maturing market",0.1442
+Kreuzberg,2020,0.2335,3,15.2,early_strong_maturing,0.1,"Early adopter, now maturing market",0.1865
+Kreuzberg,2021,0.2472,3,15.2,early_strong_maturing,0.1,"Early adopter, now maturing market",0.0587
+Kreuzberg,2022,0.2629,3,15.2,early_strong_maturing,0.1,"Early adopter, now maturing market",0.0635
+Kreuzberg,2023,0.3007,4,15.2,early_strong_maturing,0.1,"Early adopter, now maturing market",0.1438
+Kreuzberg,2024,0.3289,5,15.2,early_strong_maturing,0.1,"Early adopter, now maturing market",0.0938
+Wedding,2014,0.0264,0,9.5,recent_emergence,0.18,"Latest growth area, rapid recent development",0.0
+Wedding,2015,0.0226,0,9.5,recent_emergence,0.18,"Latest growth area, rapid recent development",-0.1439
+Wedding,2016,0.0246,0,9.5,recent_emergence,0.18,"Latest growth area, rapid recent development",0.0885
+Wedding,2017,0.0347,0,9.5,recent_emergence,0.18,"Latest growth area, rapid recent development",0.4106
+Wedding,2018,0.0417,0,9.5,recent_emergence,0.18,"Latest growth area, rapid recent development",0.2017
+Wedding,2019,0.0516,0,9.5,recent_emergence,0.18,"Latest growth area, rapid recent development",0.2374
+Wedding,2020,0.0553,0,9.5,recent_emergence,0.18,"Latest growth area, rapid recent development",0.0717
+Wedding,2021,0.0564,0,9.5,recent_emergence,0.18,"Latest growth area, rapid recent development",0.0199
+Wedding,2022,0.0687,0,9.5,recent_emergence,0.18,"Latest growth area, rapid recent development",0.2181
+Wedding,2023,0.0841,0,9.5,recent_emergence,0.18,"Latest growth area, rapid recent development",0.2242
+Wedding,2024,0.1053,1,9.5,recent_emergence,0.18,"Latest growth area, rapid recent development",0.2521
+Mitte,2014,0.0508,2,39.5,early_plateau,0.05,"Early development, now mature/saturated",0.0
+Mitte,2015,0.0564,2,39.5,early_plateau,0.05,"Early development, now mature/saturated",0.1102
+Mitte,2016,0.0621,2,39.5,early_plateau,0.05,"Early development, now mature/saturated",0.1011
+Mitte,2017,0.074,2,39.5,early_plateau,0.05,"Early development, now mature/saturated",0.1916
+Mitte,2018,0.0736,2,39.5,early_plateau,0.05,"Early development, now mature/saturated",-0.0054
+Mitte,2019,0.0774,3,39.5,early_plateau,0.05,"Early development, now mature/saturated",0.0516
+Mitte,2020,0.0823,3,39.5,early_plateau,0.05,"Early development, now mature/saturated",0.0633
+Mitte,2021,0.0883,3,39.5,early_plateau,0.05,"Early development, now mature/saturated",0.0729
+Mitte,2022,0.0922,3,39.5,early_plateau,0.05,"Early development, now mature/saturated",0.0442
+Mitte,2023,0.0963,3,39.5,early_plateau,0.05,"Early development, now mature/saturated",0.0445
+Mitte,2024,0.1013,4,39.5,early_plateau,0.05,"Early development, now mature/saturated",0.0519
+Charlottenburg,2014,0.179,11,64.7,slow_steady,0.06,"Stable, established growth pattern",0.0
+Charlottenburg,2015,0.1796,11,64.7,slow_steady,0.06,"Stable, established growth pattern",0.0034
+Charlottenburg,2016,0.1854,11,64.7,slow_steady,0.06,"Stable, established growth pattern",0.0323
+Charlottenburg,2017,0.2062,13,64.7,slow_steady,0.06,"Stable, established growth pattern",0.1122
+Charlottenburg,2018,0.2081,13,64.7,slow_steady,0.06,"Stable, established growth pattern",0.0092
+Charlottenburg,2019,0.2062,13,64.7,slow_steady,0.06,"Stable, established growth pattern",-0.0091
+Charlottenburg,2020,0.237,15,64.7,slow_steady,0.06,"Stable, established growth pattern",0.1494
+Charlottenburg,2021,0.2528,16,64.7,slow_steady,0.06,"Stable, established growth pattern",0.0667
+Charlottenburg,2022,0.2757,17,64.7,slow_steady,0.06,"Stable, established growth pattern",0.0906
+Charlottenburg,2023,0.2924,18,64.7,slow_steady,0.06,"Stable, established growth pattern",0.0606
+Charlottenburg,2024,0.3091,20,64.7,slow_steady,0.06,"Stable, established growth pattern",0.0571
+Schöneberg,2014,0.2848,2,10.5,cultural_driven,0.09,Community-driven sustainable growth,0.0
+Schöneberg,2015,0.2613,2,10.5,cultural_driven,0.09,Community-driven sustainable growth,-0.0825
+Schöneberg,2016,0.2925,3,10.5,cultural_driven,0.09,Community-driven sustainable growth,0.1194
+Schöneberg,2017,0.2617,2,10.5,cultural_driven,0.09,Community-driven sustainable growth,-0.1053
+Schöneberg,2018,0.2795,2,10.5,cultural_driven,0.09,Community-driven sustainable growth,0.068
+Schöneberg,2019,0.3777,3,10.5,cultural_driven,0.09,Community-driven sustainable growth,0.3513
+Schöneberg,2020,0.3846,4,10.5,cultural_driven,0.09,Community-driven sustainable growth,0.0183
+Schöneberg,2021,0.4416,4,10.5,cultural_driven,0.09,Community-driven sustainable growth,0.1482
+Schöneberg,2022,0.469,4,10.5,cultural_driven,0.09,Community-driven sustainable growth,0.062
+Schöneberg,2023,0.5227,5,10.5,cultural_driven,0.09,Community-driven sustainable growth,0.1145
+Schöneberg,2024,0.5714,6,10.5,cultural_driven,0.09,Community-driven sustainable growth,0.0932
+Tempelhof,2014,0.1209,1,12.2,slow_recent,0.07,Gradual family-oriented development,0.0
+Tempelhof,2015,0.138,1,12.2,slow_recent,0.07,Gradual family-oriented development,0.1414
+Tempelhof,2016,0.1407,1,12.2,slow_recent,0.07,Gradual family-oriented development,0.0196
+Tempelhof,2017,0.1469,1,12.2,slow_recent,0.07,Gradual family-oriented development,0.0441
+Tempelhof,2018,0.1671,2,12.2,slow_recent,0.07,Gradual family-oriented development,0.1375
+Tempelhof,2019,0.18,2,12.2,slow_recent,0.07,Gradual family-oriented development,0.0772
+Tempelhof,2020,0.1766,2,12.2,slow_recent,0.07,Gradual family-oriented development,-0.0189
+Tempelhof,2021,0.1825,2,12.2,slow_recent,0.07,Gradual family-oriented development,0.0334
+Tempelhof,2022,0.2054,2,12.2,slow_recent,0.07,Gradual family-oriented development,0.1255
+Tempelhof,2023,0.2301,2,12.2,slow_recent,0.07,Gradual family-oriented development,0.1203
+Tempelhof,2024,0.2459,3,12.2,slow_recent,0.07,Gradual family-oriented development,0.0687
+Steglitz,2014,0.2562,2,9.2,family_driven,0.08,Family-oriented steady growth,0.0
+Steglitz,2015,0.2718,2,9.2,family_driven,0.08,Family-oriented steady growth,0.0609
+Steglitz,2016,0.2891,2,9.2,family_driven,0.08,Family-oriented steady growth,0.0636
+Steglitz,2017,0.3123,2,9.2,family_driven,0.08,Family-oriented steady growth,0.0802
+Steglitz,2018,0.3262,3,9.2,family_driven,0.08,Family-oriented steady growth,0.0445
+Steglitz,2019,0.3376,3,9.2,family_driven,0.08,Family-oriented steady growth,0.0349
+Steglitz,2020,0.3704,3,9.2,family_driven,0.08,Family-oriented steady growth,0.0972
+Steglitz,2021,0.4382,4,9.2,family_driven,0.08,Family-oriented steady growth,0.183
+Steglitz,2022,0.4593,4,9.2,family_driven,0.08,Family-oriented steady growth,0.0482
+Steglitz,2023,0.5029,4,9.2,family_driven,0.08,Family-oriented steady growth,0.0949
+Steglitz,2024,0.5435,5,9.2,family_driven,0.08,Family-oriented steady growth,0.0807
+Wilmersdorf,2014,0.1722,1,8.9,upscale_steady,0.07,"Upscale market, measured growth",0.0
+Wilmersdorf,2015,0.1806,1,8.9,upscale_steady,0.07,"Upscale market, measured growth",0.0488
+Wilmersdorf,2016,0.1944,1,8.9,upscale_steady,0.07,"Upscale market, measured growth",0.0764
+Wilmersdorf,2017,0.1926,1,8.9,upscale_steady,0.07,"Upscale market, measured growth",-0.0093
+Wilmersdorf,2018,0.2211,1,8.9,upscale_steady,0.07,"Upscale market, measured growth",0.148
+Wilmersdorf,2019,0.2195,1,8.9,upscale_steady,0.07,"Upscale market, measured growth",-0.0072
+Wilmersdorf,2020,0.2444,2,8.9,upscale_steady,0.07,"Upscale market, measured growth",0.1134
+Wilmersdorf,2021,0.2618,2,8.9,upscale_steady,0.07,"Upscale market, measured growth",0.0712
+Wilmersdorf,2022,0.296,2,8.9,upscale_steady,0.07,"Upscale market, measured growth",0.1306
+Wilmersdorf,2023,0.318,2,8.9,upscale_steady,0.07,"Upscale market, measured growth",0.0743
+Wilmersdorf,2024,0.3371,3,8.9,upscale_steady,0.07,"Upscale market, measured growth",0.0601
+Spandau,2014,0.0032,0,91.9,late_emerging,0.12,"Latest frontier, emerging growth",0.0
+Spandau,2015,0.0035,0,91.9,late_emerging,0.12,"Latest frontier, emerging growth",0.0937
+Spandau,2016,0.0049,0,91.9,late_emerging,0.12,"Latest frontier, emerging growth",0.4
+Spandau,2017,0.0049,0,91.9,late_emerging,0.12,"Latest frontier, emerging growth",0.0
+Spandau,2018,0.0054,0,91.9,late_emerging,0.12,"Latest frontier, emerging growth",0.102
+Spandau,2019,0.0062,0,91.9,late_emerging,0.12,"Latest frontier, emerging growth",0.1481
+Spandau,2020,0.0062,0,91.9,late_emerging,0.12,"Latest frontier, emerging growth",0.0
+Spandau,2021,0.0077,0,91.9,late_emerging,0.12,"Latest frontier, emerging growth",0.2419
+Spandau,2022,0.0081,0,91.9,late_emerging,0.12,"Latest frontier, emerging growth",0.0519
+Spandau,2023,0.0097,0,91.9,late_emerging,0.12,"Latest frontier, emerging growth",0.1975
+Spandau,2024,0.0109,1,91.9,late_emerging,0.12,"Latest frontier, emerging growth",0.1237
